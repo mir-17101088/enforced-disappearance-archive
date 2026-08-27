@@ -441,7 +441,7 @@ class Component extends DCLogic {
     this.rootRef = React.createRef();
     this._buildData();
     this._buildCoordData();
-    this.state = { activeTab: 0, openSites: { 'police-hq': true }, sheet: null, sheetOpen: false };
+    this.state = { activeTab: 0, openSites: {}, sheet: null, sheetOpen: false };
   }
 
   _buildData(){
@@ -816,7 +816,7 @@ class Component extends DCLogic {
       NSI:    { id:'NSI',    label:'NSI',    full:'National Security Intelligence',             n:2,  type:'Civilian intelligence',      kind:'agency' }
     };
     const U = {
-      RABI:  { id:'RABI',  label:'Int.', full:'RAB Intelligence', n:39, kind:'wing',     hub:true },
+      RABI:  { id:'RABI',  label:'Rab Int.', full:'RAB Intelligence', n:39, kind:'wing',     hub:true },
       RAB2:  { id:'RAB2',  label:'2',    full:'RAB-2',            n:19, kind:'unit' },
       RAB10: { id:'RAB10', label:'10',   full:'RAB-10',           n:16, kind:'unit' },
       RAB11: { id:'RAB11', label:'11',   full:'RAB-11',           n:15, kind:'unit' },
@@ -829,17 +829,18 @@ class Component extends DCLogic {
       RAB5:  { id:'RAB5',  label:'5',    full:'RAB-5',            n:4,  kind:'unit' },
       RAB13: { id:'RAB13', label:'13',   full:'RAB-13',           n:2,  kind:'unit' },
       TFI:   { id:'TFI',   label:'TFI',  full:'TFI Centre',       n:2,  kind:'facility', facility:true },
+      TFI:   { id:'TFI',   label:'TFI',  full:'TFI Centre',       n:2,  kind:'facility', facility:true },
       RAB6:  { id:'RAB6',  label:'6',    full:'RAB-6',            n:1,  kind:'unit' },
       RAB15: { id:'RAB15', label:'15',   full:'RAB-15',           n:1,  kind:'unit' }
     };
     this._CG = {
       A, U,
       agEdges: [['RAB','DGFI',23],['RAB','DB',5],['DGFI','DB',4],['RAB','NSI',2],['RAB','Police',1]],
-      unEdges: [['RABI','RAB7',12],['RABI','RAB1',6],['RABI','RAB14',5],['RABI','RAB12',5],['RABI','RAB2',5],['RABI','RAB3',3],['RABI','RAB4',2],['RABI','RAB13',2],['RABI','RAB5',1],['RABI','RAB11',1],['RABI','TFI',1],['RAB2','RAB7',6],['RAB2','RAB10',2],['RAB7','RAB14',3],['RAB7','RAB4',1],['RAB7','RAB15',1],['RAB7','TFI',1],['RAB4','RAB11',1],['RAB14','TFI',1]],
+      unEdges: [['RABI','RAB7',12],['RABI','RAB1',6],['RABI','RAB14',5],['RABI','RAB12',5],['RABI','RAB2',5],['RABI','RAB3',3],['RABI','RAB4',2],['RABI','RAB13',2],['RABI','RAB5',1],['RABI','RAB11',1],['RAB2','RAB7',6],['RAB2','RAB10',2],['RAB7','RAB14',3],['RAB7','RAB4',1],['RAB7','RAB15',1],['RAB4','RAB11',1]],
       exEdges: [['DGFI','RABI',13],['DGFI','RAB2',11],['DGFI','RAB7',9],['DGFI','RAB1',5],['DGFI','RAB4',3],['DGFI','RAB10',2],['DGFI','RAB3',2],['DB','RAB2',4],['DB','RABI',1],['NSI','RAB10',1],['NSI','RAB4',1],['Police','RAB11',1]],
       softEdges: [['CTTC','DB','Held detainees in the same cells for years']],
       blurb: {
-        RAB:'The largest operator in this record and the hub of the whole network \u2014 present in more documented cases than every other agency combined, and sharing captives with all of them. Fifteen numbered battalions and a central Intelligence wing sit inside.',
+        RAB:'The largest operator in this record and the hub of the whole network \u2014 present in more documented cases than every other agency combined, and sharing captives with all of them. Its numbered battalions and a central Intelligence wing sit inside.',
         DGFI:'Military intelligence. Runs the Joint Interrogation Cell \u2014 the facility survivors called the Aynaghor, the House of Mirrors. It seldom acts alone: it directs operations and takes custody of captives, pairing with RAB in 23 documented cases and with the Detective Branch in 4.',
         CTTC:'A specialised police unit, with ground-floor cells and seventh-floor rooms kept for \u201cspecial detainees.\u201d It ran its own operations, but it did not hold its captives in isolation: CTTC and the Detective Branch kept detainees in the same cells for years.',
         DB:'The Detective Branch of the police, headquartered at Minto Road in Dhaka. A feeder into the core of the network \u2014 it handed captives to RAB in 5 documented cases and to military intelligence in 4. It also shared its detention cells with the Counter Terrorism unit (CTTC) for years.',
@@ -858,8 +859,7 @@ class Component extends DCLogic {
         RAB5:'Appears alongside RAB Intelligence.',
         RAB13:'Appears only alongside RAB Intelligence.',
         RAB6:'Recorded once in this subset, acting alone.',
-        RAB15:'Recorded once in this subset, alongside RAB-7.',
-        TFI:'The Task Force for Interrogation centre, concealed inside the RAB-1 compound and run with RAB Intelligence. A shared torture facility: captives first held by RAB-7 and RAB-14 were transferred here.'
+        RAB15:'Recorded once in this subset, alongside RAB-7.'
       }
     };
   }
@@ -890,11 +890,11 @@ class Component extends DCLogic {
       const notes = wide ? [
         { x:CG.agEdges, t:'the core \u2014 23 cases run together', px:600, py:250, lx:596, ly:352, align:'middle' },
         { t:'same cells as DB, for years', px:906, py:516, lx:806, ly:478, align:'middle' },
-        { t:'click to open \u2014 15 units within', px:450, py:498, lx:450, ly:456, align:'middle' }
+        { t:'click to open \u2014 the units inside', px:450, py:498, lx:450, ly:456, align:'middle' }
       ] : [];
       return { vb, nodes, edges, notes };
     }
-    const order = ['RAB14','TFI','RAB15','RAB7','RAB2','RAB1','RAB3','RAB10','RAB4','RAB11','RAB13','RAB5','RAB12','RAB6'];
+    const order = ['RAB14','RAB15','RAB7','RAB2','RAB1','RAB3','RAB10','RAB4','RAB11','RAB13','RAB5','RAB12','RAB6'];
     const vb = wide ? {w:1180,h:712} : {w:680,h:1000};
     const cx = wide?556:340, cy = wide?388:462, R = wide?240:196;
     const nodes = [ Object.assign({}, CG.U.RABI, { x:cx, y:cy, r:rw(39) }) ];
@@ -949,6 +949,7 @@ class Component extends DCLogic {
     const cg = this._cg, mode = this._cgMode0 = this._cgMode(), wide = mode==='wide';
     const exp = this._cgState.expanded;
     const geo = this._cgGeo(mode, exp);
+    this._cgHideTip();
     const g = window.gsap, reduce = this._reduce;
     const INK='#2a2114', LINE='226,210,170', RED='#e0554b', PAPER='#f1e9d6', HAIR='rgba(74,58,36,0.5)', CART='#221c12', CORE='226,86,74';
 
@@ -979,7 +980,7 @@ class Component extends DCLogic {
     // click-away background
     const bgHit = E('rect',{ x:0, y:0, width:geo.vb.w, height:geo.vb.h, fill:'transparent' });
     bgHit.style.cursor='default';
-    bgHit.addEventListener('click', () => { if (this._cgState.sel){ this._cgState.sel=null; this._cgFocus(null); } });
+    bgHit.addEventListener('click', () => { this._cgHideTip(); if (this._cgState.sel){ this._cgState.sel=null; this._cgFocus(null); } });
     cg.svg.appendChild(bgHit);
 
     // edges
@@ -1063,7 +1064,7 @@ class Component extends DCLogic {
         grp.appendChild(E('circle',{ r:r, fill:'none', stroke:INK, 'stroke-width':0.6 }));
       }
       // label
-      const lblSize = n.kind==='unit' ? Math.max(wide?15:13, r*0.82) : (n.label.length>3 ? r*0.44 : r*0.6);
+      const lblSize = n.id==='RABI' ? r*0.34 : (n.kind==='unit' ? Math.max(wide?15:13, r*0.82) : (n.label.length>3 ? r*0.44 : r*0.6));
       const lbl = E('text',{ x:0, y: n.kind==='unit'? (isFac?-1:0) : (-r*0.06), 'text-anchor':'middle', 'dominant-baseline':'central', 'font-family': n.kind==='unit' ? "'Newsreader',serif" : "'IBM Plex Mono',monospace", 'font-weight': n.kind==='unit'?500:700, 'font-size':lblSize.toFixed(1), 'letter-spacing': n.kind==='unit'?'0':'0.02em', fill:'#171009' });
       lbl.textContent = n.label; grp.appendChild(lbl);
       // count
@@ -1108,7 +1109,7 @@ class Component extends DCLogic {
         edgeEls.forEach((rec,i) => animateDraw(rec, 0.15 + i*0.04));
       }
     }
-    function idxDelay(e){ const ord=['RABI','RAB7','RAB2','RAB1','RAB10','RAB11','RAB14','TFI','RAB4','RAB3','RAB12','RAB5','RAB13','RAB15','RAB6']; const i=ord.indexOf(e.id); return (i<0?7:i)*0.045; }
+    function idxDelay(e){ const ord=['RABI','RAB7','RAB2','RAB1','RAB10','RAB11','RAB14','RAB4','RAB3','RAB12','RAB5','RAB13','RAB15','RAB6']; const i=ord.indexOf(e.id); return (i<0?7:i)*0.045; }
     function animateDraw(rec, delay){ try{ const len=rec.path.getTotalLength(); rec.path.style.strokeDasharray=len; rec.path.style.strokeDashoffset=len; if (rec.cart) g.set(rec.cart,{opacity:0}); g.to(rec.path,{ strokeDashoffset:0, duration:0.7, delay, ease:'power2.out', onComplete:()=>{ rec.path.style.strokeDasharray='none'; } }); if (rec.cart) g.to(rec.cart,{ opacity:1, duration:0.4, delay:delay+0.4 }); }catch(e){} }
   }
 
@@ -1125,8 +1126,8 @@ class Component extends DCLogic {
       back.addEventListener('click', () => this._cgToggle());
       kick.appendChild(back);
       const tag = document.createElement('span');
-      tag.style.cssText = 'font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#8a7c62;font-weight:600;';
-      tag.textContent = 'Inside RAB';
+      tag.style.cssText = "display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:#a3160f;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;box-shadow:0 8px 22px -10px rgba(163,22,15,0.95);";
+      tag.innerHTML = '<span style="width:8px;height:8px;border-radius:50%;background:#fff;display:inline-block;box-shadow:0 0 0 3px rgba(255,255,255,0.28);"></span> Inside RAB';
       kick.appendChild(tag);
     } else {
     }
@@ -1137,13 +1138,65 @@ class Component extends DCLogic {
     if (id==='RAB' && !this._cgState.expanded){ this._cgToggle(); return; }
     this._cgState.sel = id;
     this._cgFocus(id);
-    this._cgDrawer(id);
+    if (this._cgMode()==='tall') this._cgDrawer(id); else this._cgTooltip(id);
   }
 
   _cgToggle(){
+    this._cgHideTip();
     this._cgState.expanded = !this._cgState.expanded;
     this._cgState.sel = null;
     this._cgRender(!this._reduce);
+  }
+
+  _cgHideTip(){
+    const ov = this._cg && this._cg.overlay; if (!ov) return;
+    const t = ov.querySelector('[data-cgtip]'); if (t) t.remove();
+  }
+
+  _cgTooltip(id){
+    const cg = this._cg, node = this._cgNode(id);
+    const nd = this._cgEls.nodes.find(e => e.id===id); if (!nd) return;
+    this._cgHideTip();
+    const parts = this._cgPartners(id);
+    const soft = (this._CG.softEdges||[]).filter(e => e[0]===id || e[1]===id).map(e => { const pid = e[0]===id?e[1]:e[0]; return { node:this._cgNode(pid), lab:e[2] }; });
+    const kindLbl = node.kind==='agency' ? 'Agency' : node.kind==='wing' ? 'RAB intelligence wing' : node.kind==='facility' ? 'Shared facility' : 'RAB battalion';
+    const maxp = parts.reduce((m,p)=>Math.max(m,p.w),1);
+    let rows = '';
+    if (parts.length){
+      const CAP = 7, shown = parts.slice(0, CAP), extra = parts.length - shown.length;
+      rows = '<div style="font-family:\'IBM Plex Mono\',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:#a08a5f;font-weight:700;margin:13px 0 8px;">Coordinated with</div>'
+        + shown.map(p => { const w=Math.round(100*p.w/maxp); return '<div style="margin-bottom:7px;"><div style="display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#f0e8d4;margin-bottom:3px;"><span>'+p.node.full+'</span><span style="font-family:\'IBM Plex Mono\',monospace;color:#c9b98f;">'+p.w+'</span></div><div style="height:4px;border-radius:3px;background:rgba(233,224,201,0.14);overflow:hidden;"><div style="height:100%;width:'+w+'%;background:linear-gradient(90deg,#e0554b,#f0a24a);border-radius:3px;"></div></div></div>'; }).join('')
+        + (extra>0 ? '<div style="font-size:11px;color:#a08a5f;font-style:italic;margin-top:2px;">+ '+extra+' more unit'+(extra===1?'':'s')+'</div>' : '');
+    }
+    let softRows = soft.map(s => '<div style="display:flex;gap:8px;align-items:baseline;margin-top:9px;font-size:12px;color:#d8cba8;"><span style="flex:0 0 auto;width:16px;border-top:2px dashed rgba(233,224,201,0.7);margin-top:7px;"></span><span><span style="color:#f0e8d4;">'+s.node.full+'</span> \u2014 '+s.lab+'</span></div>').join('');
+    if (!parts.length && !soft.length) softRows = '<div style="margin-top:11px;font-size:12px;line-height:1.5;color:#b3a687;font-style:italic;">Recorded acting alone in this subset.</div>';
+    const tip = document.createElement('div');
+    tip.setAttribute('data-cgtip','');
+    tip.style.cssText = 'position:absolute;z-index:6;width:min(300px,72vw);max-height:min(78vh,540px);overflow-y:auto;pointer-events:auto;background:linear-gradient(180deg,#241d12,#1b150d);color:#e9e0cc;border:1px solid rgba(226,210,170,0.24);border-top:3px solid #a3160f;border-radius:6px;padding:16px 17px 17px;box-shadow:0 24px 60px -20px rgba(0,0,0,0.9),0 2px 0 rgba(255,255,255,0.03) inset;opacity:0;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease;';
+    tip.innerHTML =
+      '<button type="button" data-cgtipx aria-label="Close" style="position:absolute;top:9px;right:9px;width:26px;height:26px;border:0;border-radius:50%;background:rgba(233,224,201,0.1);color:#e9e0cc;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;">&times;</button>'
+      + '<div style="font-family:\'IBM Plex Mono\',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:#e0554b;font-weight:700;">'+kindLbl+'</div>'
+      + '<div style="font-family:\'Newsreader\',serif;font-size:21px;line-height:1.12;color:#f6efdd;margin-top:6px;padding-right:20px;text-wrap:pretty;">'+node.full+'</div>'
+      + '<div style="display:flex;align-items:baseline;gap:6px;margin-top:8px;"><span style="font-family:\'Newsreader\',serif;font-size:28px;line-height:1;color:#f0a24a;">'+node.n+'</span><span style="font-size:11px;color:#b3a687;">documented case'+(node.n===1?'':'s')+'</span></div>'
+      + '<p style="margin:11px 0 0;font-size:12.5px;line-height:1.56;color:#d3c9ae;text-wrap:pretty;">'+this._CG.blurb[id]+'</p>'
+      + rows + softRows;
+    cg.overlay.appendChild(tip);
+    tip.querySelector('[data-cgtipx]').addEventListener('click', (ev) => { ev.stopPropagation(); this._cgHideTip(); this._cgState.sel=null; this._cgFocus(null); });
+    // anchor: map node SVG coords -> overlay pixel space
+    const place = () => {
+      const sr = cg.svg.getBoundingClientRect(), or = cg.overlay.getBoundingClientRect();
+      const vb = cg.svg.viewBox.baseVal, sc = sr.width/vb.width;
+      const nx = sr.left - or.left + nd.n.x*sc, ny = sr.top - or.top + nd.n.y*sc, nr = nd.n.r*sc;
+      const tw = tip.offsetWidth, th = tip.offsetHeight, ow = or.width, oh = or.height, gap = 14;
+      let left = nx - tw/2;
+      left = Math.max(6, Math.min(left, ow - tw - 6));
+      let top = ny - nr - gap - th; // prefer above
+      if (top < 2) top = ny + nr + gap; // else below
+      if (top + th > oh) top = Math.max(6, oh - th - 6);
+      tip.style.left = left+'px'; tip.style.top = top+'px';
+    };
+    place();
+    requestAnimationFrame(() => { tip.style.opacity='1'; tip.style.transform='translateY(0)'; });
   }
 
   _cgFocus(id){
