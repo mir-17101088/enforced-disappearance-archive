@@ -3,6 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inside the Architecture of Secret Detention | The Daily Star</title>
+<meta name="description" content="An evidence-based archive of the secret detention and torture sites run by Bangladesh's police, paramilitary, and intelligence agencies between 2009 and 2024, reconstructed from survivor testimony and the Commission of Inquiry on Enforced Disappearances.">
+<meta name="author" content="The Daily Star">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#17140f">
+<link rel="canonical" href="https://campaign.thedailystar.net/enforced-disappearance-archive/">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Daily Star">
+<meta property="og:title" content="Inside the Architecture of Secret Detention">
+<meta property="og:description" content="An evidence-based archive of Bangladesh's secret detention and torture sites (2009-2024), reconstructed from survivor testimony and the Commission of Inquiry on Enforced Disappearances.">
+<meta property="og:url" content="https://campaign.thedailystar.net/enforced-disappearance-archive/">
+<meta property="og:image" content="https://campaign.thedailystar.net/enforced-disappearance-archive/assets/og-image.jpg">
+<meta property="og:image:secure_url" content="https://campaign.thedailystar.net/enforced-disappearance-archive/assets/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="681">
+<meta property="og:image:alt" content="A reconstructed solitary confinement cell from The Daily Star's archive of secret detention in Bangladesh.">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@dailystarnews">
+<meta name="twitter:title" content="Inside the Architecture of Secret Detention">
+<meta name="twitter:description" content="An evidence-based archive of Bangladesh's secret detention and torture sites (2009-2024), reconstructed from survivor testimony and the Commission of Inquiry on Enforced Disappearances.">
+<meta name="twitter:image" content="https://campaign.thedailystar.net/enforced-disappearance-archive/assets/og-image.jpg">
+<meta name="twitter:image:alt" content="A reconstructed solitary confinement cell from The Daily Star's archive of secret detention in Bangladesh.">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NewsArticle","headline":"Inside the Architecture of Secret Detention","description":"An evidence-based archive of the secret detention and torture sites run by Bangladesh's police, paramilitary, and intelligence agencies between 2009 and 2024.","image":["https://campaign.thedailystar.net/enforced-disappearance-archive/assets/og-image.jpg"],"url":"https://campaign.thedailystar.net/enforced-disappearance-archive/","inLanguage":"en","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"The Daily Star","logo":{"@type":"ImageObject","url":"https://campaign.thedailystar.net/enforced-disappearance-archive/assets/logo.svg"}}}
+</script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -10,7 +41,7 @@
 <helmet>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
   <style>
     *{box-sizing:border-box}
@@ -29,7 +60,7 @@
     @keyframes wordin{from{opacity:0;filter:blur(7px)}to{opacity:1;filter:blur(0)}}
     @keyframes floaty{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-7px,0)}}
     @keyframes caretblink{0%,44%{opacity:1}45%,100%{opacity:0}}
-    .wtext{display:inline-block;opacity:0;animation:wordin 1.1s ease var(--d,0s) forwards, floaty var(--f,7s) ease-in-out infinite}
+    .wtext{display:inline-block;opacity:0;animation:wordin 0.62s ease var(--d,0s) forwards, floaty var(--f,7s) ease-in-out infinite}
     .caret{display:inline-block;width:0.58em;height:1.02em;margin-left:2px;background:#a3160f;vertical-align:-0.13em;animation:caretblink 0.9s step-end infinite}
     .leaflet-container{background:#0a0d10;font-family:'IBM Plex Mono',monospace;outline:none}
     .leaflet-tooltip.fac{background:rgba(13,18,24,0.95);border:1px solid rgba(255,255,255,0.16);color:#f2efe8;border-radius:3px;padding:12px 17px;box-shadow:0 18px 40px -16px rgba(0,0,0,0.9);white-space:normal;width:max-content;max-width:360px;font-family:'IBM Plex Mono',monospace}
@@ -37,6 +68,13 @@
     .leaflet-tooltip.fac span{display:block;font-size:11.5px;line-height:1.5;color:rgba(242,239,232,0.7);font-weight:400}
     .leaflet-tooltip.fac.tfi{border-color:rgba(232,80,60,0.85)}
     .leaflet-tooltip.fac:before{border-top-color:rgba(13,18,24,0.95)!important}
+    .leaflet-tooltip.fac.leaflet-tooltip-left:before{border-left-color:rgba(13,18,24,0.95)!important}
+    .leaflet-tooltip.fac.leaflet-tooltip-right:before{border-right-color:rgba(13,18,24,0.95)!important}
+    .leaflet-tooltip.fac.leaflet-tooltip-bottom:before{border-bottom-color:rgba(13,18,24,0.95)!important}
+    .leaflet-tooltip.dhakalist{max-width:320px}
+    .leaflet-tooltip.dhakalist b{margin-bottom:8px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#e0554b}
+    .leaflet-tooltip.dhakalist span{padding:3px 0;font-size:12px;line-height:1.35;color:#f2efe8;border-top:1px solid rgba(255,255,255,0.09);font-weight:400}
+    .leaflet-tooltip.dhakalist span:first-of-type{border-top:none}
     .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(0.86) contrast(0.92) saturate(0.42)}
     #bdmap,.leaflet-tile{transform:translateZ(0);backface-visibility:hidden}
     #bdmap .leaflet-tile-container{will-change:transform}
@@ -88,20 +126,20 @@
       <div data-herobg style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 50% 46%,#17120d 0%,#0c0906 62%,#070504 100%);will-change:transform,opacity;"></div>
 
       <div data-words style="position:absolute;inset:0;pointer-events:none;">
-        <span class="word mono" data-op="0.18" style="position:absolute;left:26%;top:14%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(10px,1.2vw,17px);letter-spacing:0.22em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:1.9s;--f:8s;">Rapid Action Battalion</span></span>
-        <span class="word mono" data-op="0.12" style="position:absolute;left:76%;top:19%;transform:translate(-50%,-50%);opacity:0;color:rgba(186,30,20,1);font-size:clamp(20px,3.4vw,50px);letter-spacing:0.05em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.7s;--f:9s;">DGFI</span></span>
-        <span class="word mono" data-op="0.16" style="position:absolute;left:12%;top:45%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(12px,1.7vw,25px);letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:1.4s;--f:7.5s;">Rab Intelligence</span></span>
-        <span class="word mono" data-op="0.5" style="position:absolute;left:84%;top:47%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(16px,2.5vw,38px);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:1.1s;--f:8.5s;">Abducted</span></span>
-        <span class="word mono" data-op="0.13" style="position:absolute;left:17%;top:26%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(16px,2.9vw,44px);letter-spacing:0.08em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.95s;--f:7.8s;">NSI</span></span>
-        <span class="word mono" data-op="0.5" style="position:absolute;left:46%;top:84%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(14px,2.0vw,30px);letter-spacing:0.12em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:1.25s;--f:8.2s;">disappeared</span></span>
-        <span class="word mono" data-op="0.13" style="position:absolute;left:77%;top:73%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(16px,2.6vw,40px);letter-spacing:0.09em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:1.55s;--f:9.2s;">CTTC</span></span>
-        <span class="word mono" data-op="0.15" style="position:absolute;left:19%;top:71%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(12px,1.8vw,27px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:1.7s;--f:7.2s;">Rab-7</span></span>
-        <span class="word mono" data-op="0.52" style="position:absolute;left:61%;top:12%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(14px,2.2vw,33px);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.85s;--f:8.8s;">Missing</span></span>
-        <span class="word mono" data-op="0.13" style="position:absolute;left:11%;top:60%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(11px,1.5vw,22px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:2.05s;--f:7.6s;">Rab-4</span></span>
-        <span class="word mono" data-op="0.13" style="position:absolute;left:88%;top:31%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(11px,1.5vw,22px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:1.35s;--f:8.4s;">Rab-11</span></span>
-        <span class="word mono" data-op="0.13" style="position:absolute;left:34%;top:88%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(10px,1.4vw,21px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:2.2s;--f:7.1s;">Rab-10</span></span>
-        <span class="word mono" data-op="0.12" style="position:absolute;left:89%;top:66%;transform:translate(-50%,-50%);opacity:0;color:rgba(186,30,20,1);font-size:clamp(16px,2.7vw,42px);letter-spacing:0.08em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:1.6s;--f:9s;">DB</span></span>
-        <span class="word mono" data-op="0.13" style="position:absolute;left:8%;top:34%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(13px,2.1vw,32px);letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:1.15s;--f:8.6s;">Rab</span></span>
+        <span class="word mono" data-op="0.30" style="position:absolute;left:26%;top:14%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(10px,1.2vw,17px);letter-spacing:0.22em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:0.95s;--f:8s;">Rapid Action Battalion</span></span>
+        <span class="word mono" data-op="0.24" style="position:absolute;left:76%;top:19%;transform:translate(-50%,-50%);opacity:0;color:rgba(186,30,20,1);font-size:clamp(20px,3.4vw,50px);letter-spacing:0.05em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.35s;--f:9s;">DGFI</span></span>
+        <span class="word mono" data-op="0.30" style="position:absolute;left:12%;top:45%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(12px,1.7vw,25px);letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:0.7s;--f:7.5s;">Rab Intelligence</span></span>
+        <span class="word mono" data-op="0.58" style="position:absolute;left:84%;top:47%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(16px,2.5vw,38px);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.55s;--f:8.5s;">Abducted</span></span>
+        <span class="word mono" data-op="0.25" style="position:absolute;left:17%;top:26%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(16px,2.9vw,44px);letter-spacing:0.08em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.48s;--f:7.8s;">NSI</span></span>
+        <span class="word mono" data-op="0.58" style="position:absolute;left:46%;top:84%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(14px,2.0vw,30px);letter-spacing:0.12em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.63s;--f:8.2s;">disappeared</span></span>
+        <span class="word mono" data-op="0.25" style="position:absolute;left:77%;top:73%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(16px,2.6vw,40px);letter-spacing:0.09em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.78s;--f:9.2s;">CTTC</span></span>
+        <span class="word mono" data-op="0.28" style="position:absolute;left:19%;top:71%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(12px,1.8vw,27px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:0.85s;--f:7.2s;">Rab-7</span></span>
+        <span class="word mono" data-op="0.60" style="position:absolute;left:61%;top:12%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(14px,2.2vw,33px);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.43s;--f:8.8s;">Missing</span></span>
+        <span class="word mono" data-op="0.25" style="position:absolute;left:11%;top:60%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(11px,1.5vw,22px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:1.02s;--f:7.6s;">Rab-4</span></span>
+        <span class="word mono" data-op="0.25" style="position:absolute;left:88%;top:31%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(11px,1.5vw,22px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:0.68s;--f:8.4s;">Rab-11</span></span>
+        <span class="word mono" data-op="0.25" style="position:absolute;left:34%;top:88%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(10px,1.4vw,21px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:1.1s;--f:7.1s;">Rab-10</span></span>
+        <span class="word mono" data-op="0.24" style="position:absolute;left:89%;top:66%;transform:translate(-50%,-50%);opacity:0;color:rgba(186,30,20,1);font-size:clamp(16px,2.7vw,42px);letter-spacing:0.08em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.8s;--f:9s;">DB</span></span>
+        <span class="word mono" data-op="0.25" style="position:absolute;left:8%;top:34%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(13px,2.1vw,32px);letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:0.57s;--f:8.6s;">Rab</span></span>
       </div>
 
       <div data-casewrap style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;">
@@ -175,8 +213,8 @@
 
     <div style="max-width:960px;margin:0 auto;padding:clamp(28px,5vh,54px) clamp(16px,5vw,36px) clamp(48px,9vh,92px);">
 
-      <div style="border-bottom:1px solid rgba(28,26,22,0.14);padding-bottom:clamp(18px,3vh,28px);margin-bottom:clamp(20px,3.4vh,34px);">
-        <div style="text-align:center;"><div class="mono" style="font-size:14.5px;letter-spacing:0.22em;text-transform:uppercase;color:#8f120c;font-weight:700;">{{ active.authority }}</div>
+      <div data-intro style="border-bottom:1px solid rgba(28,26,22,0.14);padding-bottom:clamp(18px,3vh,28px);margin-bottom:clamp(20px,3.4vh,34px);scroll-margin-top:70px;">
+        <div style="text-align:center;"><div class="mono" style="font-size:clamp(15px,1.7vw,17.5px);letter-spacing:0.02em;text-transform:uppercase;color:#8f120c;font-weight:700;line-height:1.25;">{{ active.authority }}</div>
         <h3 style="margin:clamp(12px,1.8vh,18px) auto 0;max-width:26ch;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(33px,5.8vw,56px);line-height:1.04;letter-spacing:-0.015em;color:#1c1a16;text-wrap:balance;">{{ active.title }}</h3>
         <div class="mono" style="margin-top:clamp(12px,1.8vh,16px);font-size:14px;letter-spacing:0.05em;color:#4a4438;">{{ active.count }}</div></div>
         <div style="margin-top:clamp(20px,3vh,30px);display:flex;flex-direction:column;gap:0.95em;">
@@ -352,6 +390,30 @@
 
   </section>
 
+  <div data-sheet-scrim style="{{ scrimStyle }}" onClick="{{ closeSheet }}" aria-hidden="true"></div>
+  <aside data-sheet data-lenis-prevent role="dialog" aria-modal="true" aria-label="Site details" style="{{ sheetStyle }}">
+    <div style="display:flex;justify-content:center;padding:6px 0 12px;"><span style="width:42px;height:4px;border-radius:999px;background:rgba(255,255,255,0.24);display:block;"></span></div>
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+      <div style="min-width:0;">
+        <div style="font-family:'Newsreader',serif;font-size:19px;font-weight:600;color:#fff;line-height:1.24;text-wrap:pretty;">{{ sheet.title }}</div>
+        <sc-if value="{{ sheet.subtitle }}" hint-placeholder-val="{{ false }}"><div class="mono" style="margin-top:5px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#e0554b;">{{ sheet.subtitle }}</div></sc-if>
+      </div>
+      <button type="button" onClick="{{ closeSheet }}" aria-label="Close" style="flex-shrink:0;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.06);color:#f2efe8;font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#215;</button>
+    </div>
+    <sc-if value="{{ sheet.hasDesc }}" hint-placeholder-val="{{ false }}">
+      <p style="margin:14px 0 0;font-size:13px;line-height:1.6;color:rgba(242,239,232,0.74);text-wrap:pretty;">{{ sheet.desc }}</p>
+    </sc-if>
+    <sc-if value="{{ sheet.hasItems }}" hint-placeholder-val="{{ false }}">
+      <div style="margin:16px 0 0;display:flex;flex-direction:column;gap:0;">
+        <sc-for list="{{ sheet.items }}" as="it" hint-placeholder-count="3">
+          <div style="border-top:1px solid rgba(255,255,255,0.09);padding:11px 0;">
+            <div style="font-family:'Newsreader',serif;font-size:15px;font-weight:600;color:#fff;line-height:1.28;">{{ it.name }}</div>
+            <div style="margin-top:3px;font-size:11.5px;line-height:1.5;color:rgba(242,239,232,0.62);text-wrap:pretty;">{{ it.desc }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+  </aside>
 
 </div>
 </x-dc>
@@ -361,7 +423,7 @@ class Component extends DCLogic {
     super(props);
     this.rootRef = React.createRef();
     this._buildData();
-    this.state = { activeTab: 0, openSites: { 'police-hq': true }, scrolled: false, hideLogo: false };
+    this.state = { activeTab: 0, openSites: { 'police-hq': true }, sheet: null, sheetOpen: false };
   }
 
   _buildData(){
@@ -709,12 +771,32 @@ class Component extends DCLogic {
     };
   }
 
+  _selectTab(i){
+    const root = this.rootRef.current;
+    const tb = root && root.querySelector('[data-tabbar]');
+    const sticky = tb ? tb.getBoundingClientRect().top <= 1 : false;
+    this.setState({ activeTab: i });
+    if (!sticky) return;
+    // wait two frames so the new agency's intro has laid out before we measure it
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const intro = root && root.querySelector('[data-intro]');
+      const bar = root && root.querySelector('[data-tabbar]');
+      if (!intro || !bar) return;
+      const y = window.scrollY + intro.getBoundingClientRect().top - bar.offsetHeight - 6;
+      if (this._lenis && !this._reduce) this._lenis.scrollTo(y, { duration: 0.6 });
+      else window.scrollTo({ top: y, behavior: this._reduce ? 'auto' : 'smooth' });
+    }));
+  }
+
+  _openSheet(data){ this.setState({ sheet: data, sheetOpen: true }); }
+  _closeSheet(){ this.setState({ sheetOpen: false }); }
+
   renderVals(){
     const tabs = this._AG.map((a, i) => {
       const on = i === this.state.activeTab;
       return {
         short: a.short, count: a.badge || '',
-        onClick: () => this.setState({ activeTab: i }),
+        onClick: () => this._selectTab(i),
         style: Object.assign({
           display:'inline-flex', alignItems:'center', gap:'8px',
           padding:'10px 17px', borderRadius:'999px',
@@ -734,43 +816,48 @@ class Component extends DCLogic {
       crossBorderParas: ag.crossBorder ? ag.crossBorder.paras : []
     };
     const sites = (ag.sites || []).map(s => this._decorateSite(s));
-    const sc = this.state.scrolled;
+    const sh = this.state.sheet || {};
     return {
       rootRef: this.rootRef,
       tabs, active, sites,
       logoLinkStyle: {
-        position:'fixed',
-        opacity: this.state.hideLogo ? 0 : 1,
-        pointerEvents: this.state.hideLogo ? 'none' : 'auto',
-        top: sc ? 'clamp(12px,2vh,18px)' : 'clamp(18px,3vh,30px)',
-        left: sc ? 'clamp(12px,2.5vw,22px)' : 'clamp(20px,4vw,44px)',
-        zIndex:120, display:'inline-flex', alignItems:'center', textDecoration:'none',
-        transformOrigin:'left top', transition:'all .55s cubic-bezier(.22,.61,.36,1)', borderRadius:'11px',
-        padding: sc ? '7px 11px' : '0px',
-        background: sc ? 'rgba(250,249,245,0.86)' : 'rgba(250,249,245,0)',
-        backdropFilter: sc ? 'blur(10px)' : 'none', WebkitBackdropFilter: sc ? 'blur(10px)' : 'none',
-        boxShadow: sc ? '0 10px 30px -14px rgba(0,0,0,0.55)' : '0 0 0 rgba(0,0,0,0)',
-        border: sc ? '1px solid rgba(0,0,0,0.07)' : '1px solid rgba(0,0,0,0)'
+        position:'absolute',
+        top:'clamp(18px,3vh,30px)', left:'clamp(20px,4vw,44px)',
+        zIndex:120, display:'inline-flex', alignItems:'center', textDecoration:'none'
       },
       logoImgStyle: {
         display:'block', width:'auto',
-        height: sc ? '22px' : 'clamp(30px,4.4vw,48px)',
-        filter: sc ? 'none' : 'brightness(0) invert(1)',
-        transition:'height .55s cubic-bezier(.22,.61,.36,1), filter .4s ease'
-      }
+        height:'clamp(30px,4.4vw,48px)',
+        filter:'brightness(0) invert(1)'
+      },
+      scrimStyle: {
+        position:'fixed', inset:0, zIndex:1999, background:'rgba(8,10,12,0.55)',
+        backdropFilter:'blur(2px)', WebkitBackdropFilter:'blur(2px)',
+        opacity: this.state.sheetOpen ? 1 : 0,
+        pointerEvents: this.state.sheetOpen ? 'auto' : 'none',
+        transition:'opacity .3s ease'
+      },
+      sheetStyle: {
+        position:'fixed', left:0, right:0, bottom:0, zIndex:2000,
+        background:'#12100c', color:'#f2efe8',
+        borderTopLeftRadius:'16px', borderTopRightRadius:'16px',
+        borderTop:'1px solid rgba(255,255,255,0.14)',
+        boxShadow:'0 -24px 60px -20px rgba(0,0,0,0.8)',
+        padding:'8px 20px calc(24px + env(safe-area-inset-bottom))',
+        maxHeight:'78vh', overflowY:'auto',
+        transform: this.state.sheetOpen ? 'translateY(0)' : 'translateY(102%)',
+        transition:'transform .4s cubic-bezier(.22,.61,.36,1)', willChange:'transform'
+      },
+      sheet: {
+        title: sh.title || '', subtitle: sh.subtitle || '', desc: sh.desc || '',
+        items: sh.items || [], hasItems: !!(sh.items && sh.items.length), hasDesc: !!sh.desc
+      },
+      closeSheet: () => this._closeSheet()
     };
   }
 
   componentDidMount(){
     this._reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    this._onScroll = () => {
-      const sc = (window.scrollY || window.pageYOffset || 0) > 40;
-      const tb = this.rootRef.current && this.rootRef.current.querySelector('[data-tabbar]');
-      const hide = tb ? tb.getBoundingClientRect().top <= 1 : false;
-      if (sc !== this.state.scrolled || hide !== this.state.hideLogo) this.setState({ scrolled: sc, hideLogo: hide });
-    };
-    window.addEventListener('scroll', this._onScroll, { passive: true });
-    this._onScroll();
     this._typewriter();
     const boot = () => {
       const g = window.gsap, ST = window.ScrollTrigger, L = window.Lenis;
@@ -799,7 +886,6 @@ class Component extends DCLogic {
   }
 
   componentWillUnmount(){
-    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
     if (this._iv) clearInterval(this._iv);
     if (this._miv) clearInterval(this._miv);
     if (this._tw) clearTimeout(this._tw);
@@ -1001,7 +1087,7 @@ class Component extends DCLogic {
 
     // keep the compound's shrink origin locked onto the TFI cell so the zoom-out reads as leaving that room
     if (this._mapReady && b < ARRIVE && this._mapState === 'dhaka' && !this._flying){
-      const tp = this._map.latLngToContainerPoint(this._tfi);
+      const tp = this._map.latLngToContainerPoint(this._focus);
       this._tfiOrigin = tp.x.toFixed(1) + 'px ' + tp.y.toFixed(1) + 'px';
     }
 
@@ -1034,6 +1120,8 @@ class Component extends DCLogic {
       touchZoom:false, inertia:true, worldCopyJump:false });
     this._map = map;
     this._tfi = L.latLng(23.85742, 90.40339);
+    this._focus = L.latLng(23.78908, 90.41376); // NSI Gulshan office — Dhaka map recentred here per feedback
+    this._isMobile = !!(window.matchMedia && window.matchMedia('(max-width: 767px)').matches);
     this._bdBounds = L.latLngBounds([[20.55, 88.00], [26.72, 92.72]]);
     this._bdCenter = this._bdBounds.getCenter();
     map.setView(this._tfi, 11.4);
@@ -1070,22 +1158,34 @@ class Component extends DCLogic {
         radius: f.tfi ? 8 : 5.5, color:'#fffdf6', weight: f.tfi ? 2 : 1.4,
         fillColor:'#d2281a', fillOpacity:0.95, className:'facmark'
       });
-      cm.bindTooltip('<b>'+f.n+'</b><span>'+f.d+'</span>', { className:'fac'+(f.tfi?' tfi':''), direction:'top', offset:[0,-7], sticky:false, opacity:1 });
       cm.on('mouseover', function(){ this.setStyle({ radius:(f.tfi?10:7.5) }); });
       cm.on('mouseout', function(){ this.setStyle({ radius:(f.tfi?8:5.5) }); });
-      cm.on('click', function(){ this.openTooltip(); });
+      if (this._isMobile){
+        cm.on('click', () => this._openSheet({ title:f.n, subtitle:(f.tfi?'The facility mapped in this story':''), desc:f.d, items:null }));
+      } else {
+        cm.bindTooltip('<b>'+f.n+'</b><span>'+f.d+'</span>', { className:'fac'+(f.tfi?' tfi':''), direction:'auto', offset:[0,0], sticky:false, opacity:1 });
+        cm.on('click', function(){ this.openTooltip(); });
+      }
       if (f.city === 'dhaka') this._dhakaGroup.addLayer(cm); else cm.addTo(map);
     });
     this._dhakaGroup.addTo(map);
 
-    const dpts = FAC.filter(f => f.city==='dhaka').map(f => [f.lat, f.lng]);
-    // Dhaka framed on the TFI cell (the story's facility). Mirror every site across TFI so the fit stays
-    // symmetric -> TFI sits dead-centre and no marker hugs an edge (upward tooltips never clip). Kept a bit
-    // zoomed-out on purpose: a smaller gap to the country view => a shorter, smoother fly.
-    const sym = L.latLngBounds([this._tfi]);
-    dpts.forEach(([la, ln]) => { sym.extend([la, ln]); sym.extend([2*this._tfi.lat - la, 2*this._tfi.lng - ln]); });
-    this._dhakaCenter = { lat: this._tfi.lat, lng: this._tfi.lng };
-    this._dhakaPing = L.marker([this._tfi.lat, this._tfi.lng], { interactive:false, keyboard:false, icon: L.divIcon({ className:'', html:'<div class="dhaka-ping"><span class="pr"></span><span class="dot"></span><span class="tag">Dhaka · '+dpts.length+' sites</span></div>', iconSize:[26,26], iconAnchor:[13,13] }) });
+    const dhakaFacs = FAC.filter(f => f.city==='dhaka');
+    const dpts = dhakaFacs.map(f => [f.lat, f.lng]);
+    this._dhakaItems = dhakaFacs.map(f => ({ name:f.n, desc:f.d }));
+    // Dhaka framed on the NSI Gulshan office (per feedback). Mirror every site across the focus so the fit
+    // stays symmetric -> the focus sits dead-centre and no marker hugs an edge (tooltips never clip).
+    const sym = L.latLngBounds([this._focus]);
+    dpts.forEach(([la, ln]) => { sym.extend([la, ln]); sym.extend([2*this._focus.lat - la, 2*this._focus.lng - ln]); });
+    this._dhakaCenter = { lat: this._focus.lat, lng: this._focus.lng };
+    const pingHtml = '<div class="dhaka-ping"><span class="pr"></span><span class="dot"></span><span class="tag">Dhaka · '+dpts.length+' sites</span></div>';
+    this._dhakaPing = L.marker([this._tfi.lat, this._tfi.lng], { interactive:true, keyboard:false, icon: L.divIcon({ className:'', html: pingHtml, iconSize:[26,26], iconAnchor:[13,13] }) });
+    if (this._isMobile){
+      this._dhakaPing.on('click', () => this._openSheet({ title:'Dhaka', subtitle: dpts.length+' detention sites in this archive', desc:'', items: this._dhakaItems }));
+    } else {
+      const listHtml = '<b>Dhaka · '+dpts.length+' sites</b>' + dhakaFacs.map(f => '<span>'+f.n+'</span>').join('');
+      this._dhakaPing.bindTooltip(listHtml, { className:'fac dhakalist', direction:'auto', offset:[0,0], sticky:false, opacity:1 });
+    }
 
     map.invalidateSize();
     this._fitZ = map.getBoundsZoom(this._bdBounds, false, L.point(24,24));
@@ -1094,7 +1194,7 @@ class Component extends DCLogic {
     map.setMaxBounds(this._bdBounds.pad(0.6));
     map.setView([this._dhakaCenter.lat, this._dhakaCenter.lng], this._dhakaZoom, { animate:false });
     map.getContainer().style.transform = 'none';
-    const tp0 = map.latLngToContainerPoint(this._tfi);
+    const tp0 = map.latLngToContainerPoint(this._focus);
     this._tfiOrigin = tp0.x.toFixed(1) + 'px ' + tp0.y.toFixed(1) + 'px';
     this._mapState = 'dhaka';
     this._flying = false;
