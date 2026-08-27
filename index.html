@@ -86,8 +86,7 @@
     @keyframes accIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
     @keyframes lbIn{from{opacity:0}to{opacity:1}}
     @keyframes cgpulse{0%,100%{opacity:0.5;transform:scale(1)}50%{opacity:0.9;transform:scale(1.08)}}
-    [data-cgnode]{cursor:pointer}
-    [data-cgnode] *{pointer-events:none}
+    [data-cgnode]{cursor:pointer;-webkit-user-select:none;user-select:none}
     @media (hover:hover) and (pointer:fine){[data-cgctl]:hover{background:#a3160f!important;color:#fff!important;border-color:#a3160f!important}}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -1341,6 +1340,7 @@ class Component extends DCLogic {
     if (this._miv) clearInterval(this._miv);
     if (this._cgiv) clearInterval(this._cgiv);
     if (this._cgResize) window.removeEventListener('resize', this._cgResize);
+    if (this._cgTabIO) this._cgTabIO.disconnect();
     if (this._tw) clearTimeout(this._tw);
     if (this._resize) window.removeEventListener('resize', this._resize);
     if (this._rt) clearTimeout(this._rt);
@@ -1525,7 +1525,11 @@ class Component extends DCLogic {
     if (_tabbar && _coordSec){
       _tabbar.style.transition = 'transform .4s cubic-bezier(.4,0,.2,1), opacity .3s ease';
       const setTabHidden = (h) => { _tabbar.style.transform = h ? 'translateY(-120%)' : 'translateY(0)'; _tabbar.style.opacity = h ? '0' : '1'; _tabbar.style.pointerEvents = h ? 'none' : 'auto'; };
-      ST.create({ trigger:_coordSec, start:'top top+=54', onEnter:()=>setTabHidden(true), onLeaveBack:()=>setTabHidden(false) });
+      if ('IntersectionObserver' in window){
+        // hide the agency tab bar only once THE NETWORK section itself has scrolled up under the top edge
+        this._cgTabIO = new IntersectionObserver((es) => { es.forEach(e => setTabHidden(e.isIntersecting)); }, { rootMargin: '0px 0px -100% 0px', threshold: 0 });
+        this._cgTabIO.observe(_coordSec);
+      }
     }
     Object.values(this._el).forEach(v => { if (v && v.tagName === 'IMG') v.addEventListener('load', () => ST.refresh()); });
     setTimeout(() => ST.refresh(), 500);
