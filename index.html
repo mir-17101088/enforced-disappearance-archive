@@ -88,11 +88,119 @@
     @keyframes cgpulse{0%,100%{opacity:0.5;transform:scale(1)}50%{opacity:0.9;transform:scale(1.08)}}
     [data-cgnode]{cursor:pointer;-webkit-user-select:none;user-select:none}
     @media (hover:hover) and (pointer:fine){[data-cgctl]:hover{background:#a3160f!important;color:#fff!important;border-color:#a3160f!important}}
+    /* --- detention-gallery (image carousel) --- */
+    detention-gallery{display:block}
+    .dg-stage{position:relative;width:100%;height:min(58vh,540px);min-height:230px;background:#e7e1d4;border:1px solid rgba(28,26,22,0.14);border-radius:5px;overflow:hidden}
+    .dg-slide{position:absolute;inset:0;margin:0;padding:0;border:0;width:100%;background:transparent;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .55s ease;cursor:zoom-in}
+    .dg-slide.on{opacity:1;visibility:visible}
+    .dg-slide img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+    .dg-nav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(20,17,12,.6);color:#fff;font-size:23px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);transition:background .18s ease}
+    .dg-prev{left:12px}.dg-next{right:12px}
+    .dg-count{position:absolute;bottom:10px;right:12px;z-index:3;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:#fff;background:rgba(20,17,12,.66);padding:4px 9px;border-radius:999px}
+    .dg-cap{margin:11px 0 0;font-size:13px;line-height:1.6;color:#5c5648;text-wrap:pretty;max-width:82ch;min-height:2.4em}
+    .dg-dots{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:13px}
+    .dg-dot{width:8px;height:8px;border-radius:50%;border:0;background:rgba(28,26,22,.22);cursor:pointer;padding:0;transition:background .2s ease,transform .2s ease}
+    .dg-dot.on{background:#a3160f;transform:scale(1.3)}
+    @media (hover:hover){.dg-nav:hover{background:#a3160f}.dg-dot:hover{background:rgba(28,26,22,.42)}}
+    .dg-lb{position:fixed;inset:0;z-index:9999;background:rgba(9,7,4,.95);display:none;align-items:center;justify-content:center;padding:clamp(52px,7vw,72px) clamp(14px,4vw,64px)}
+    .dg-lb.on{display:flex;animation:lbIn .26s ease}
+    .dg-lb-fig{margin:0;display:flex;flex-direction:column;align-items:center;gap:16px;max-width:100%;max-height:100%}
+    .dg-lb-fig img{max-width:92vw;max-height:80vh;width:auto;height:auto;object-fit:contain;box-shadow:0 30px 90px -30px rgba(0,0,0,.9)}
+    .dg-lb-fig figcaption{font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.55;color:#e7ddc9;max-width:820px;text-align:center;text-wrap:pretty}
+    .dg-lb button{position:fixed;border-radius:50%;border:1px solid rgba(255,255,255,.32);background:rgba(255,255,255,.08);color:#fff;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .18s ease,border-color .18s ease}
+    .dg-lb-x{top:16px;right:18px;width:44px;height:44px;font-size:26px}
+    .dg-lb-prev,.dg-lb-next{top:50%;transform:translateY(-50%);width:52px;height:52px;font-size:30px}
+    .dg-lb-prev{left:18px}.dg-lb-next{right:18px}
+    @media (hover:hover){.dg-lb button:hover{background:#a3160f;border-color:#a3160f}}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+  <script>
+  (function(){
+    if (!('customElements' in window) || customElements.get('detention-gallery')) return;
+    var REDUCE = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var DELAY = 4200, LB = null;
+    function lb(){
+      if (LB) return LB;
+      var el = document.createElement('div'); el.className = 'dg-lb';
+      el.innerHTML = '<button class="dg-lb-x" type="button" aria-label="Close">&times;</button>'
+        + '<button class="dg-lb-prev" type="button" aria-label="Previous image">&#8249;</button>'
+        + '<figure class="dg-lb-fig"><img alt=""><figcaption></figcaption></figure>'
+        + '<button class="dg-lb-next" type="button" aria-label="Next image">&#8250;</button>';
+      document.body.appendChild(el);
+      var img = el.querySelector('img'), cap = el.querySelector('figcaption');
+      var prev = el.querySelector('.dg-lb-prev'), next = el.querySelector('.dg-lb-next');
+      var list = [], i = 0, owner = null;
+      function show(){ var it = list[i] || {}; img.src = it.file || ''; img.alt = it.caption || ''; cap.textContent = it.caption || ''; var m = list.length > 1 ? 'flex' : 'none'; prev.style.display = m; next.style.display = m; if (owner) owner._sync(i); }
+      function open(l, idx, o){ list = l; i = idx; owner = o; el.classList.add('on'); document.documentElement.style.overflow = 'hidden'; show(); }
+      function close(){ el.classList.remove('on'); document.documentElement.style.overflow = ''; owner = null; }
+      function step(d){ i = (i + d + list.length) % list.length; show(); }
+      el.querySelector('.dg-lb-x').addEventListener('click', close);
+      el.addEventListener('click', function(e){ if (e.target === el) close(); });
+      prev.addEventListener('click', function(e){ e.stopPropagation(); step(-1); });
+      next.addEventListener('click', function(e){ e.stopPropagation(); step(1); });
+      document.addEventListener('keydown', function(e){ if (!el.classList.contains('on')) return; if (e.key === 'Escape') close(); else if (e.key === 'ArrowLeft') step(-1); else if (e.key === 'ArrowRight') step(1); });
+      LB = { open: open };
+      return LB;
+    }
+    class DetentionGallery extends HTMLElement {
+      connectedCallback(){ if (this._built) return; this._built = true;
+        var imgs = []; try { imgs = JSON.parse(this.getAttribute('data-images') || '[]'); } catch(e){}
+        this._imgs = imgs; this._i = 0; this._engaged = false; this._timer = null;
+        this._build();
+      }
+      disconnectedCallback(){ this._stop(); if (this._io) this._io.disconnect(); }
+      _build(){
+        var self = this, multi = this._imgs.length > 1;
+        var stage = document.createElement('div'); stage.className = 'dg-stage';
+        this._slides = this._imgs.map(function(it, idx){
+          var s = document.createElement('button'); s.type = 'button'; s.className = 'dg-slide' + (idx === 0 ? ' on' : ''); s.setAttribute('aria-label', 'View full screen');
+          var im = document.createElement('img'); im.src = it.file; im.alt = it.caption || ''; im.loading = 'lazy'; im.decoding = 'async';
+          s.appendChild(im);
+          s.addEventListener('click', function(){ self._engage(); lb().open(self._imgs, idx, self); });
+          stage.appendChild(s); return s;
+        });
+        if (multi){
+          var prev = document.createElement('button'); prev.type = 'button'; prev.className = 'dg-nav dg-prev'; prev.setAttribute('aria-label', 'Previous image'); prev.innerHTML = '&#8249;';
+          var next = document.createElement('button'); next.type = 'button'; next.className = 'dg-nav dg-next'; next.setAttribute('aria-label', 'Next image'); next.innerHTML = '&#8250;';
+          prev.addEventListener('click', function(){ self._engage(); self._go(self._i - 1); });
+          next.addEventListener('click', function(){ self._engage(); self._go(self._i + 1); });
+          stage.appendChild(prev); stage.appendChild(next);
+          this._counter = document.createElement('span'); this._counter.className = 'dg-count'; stage.appendChild(this._counter);
+          stage.addEventListener('mouseenter', function(){ if (!self._engaged) self._stop(); });
+          stage.addEventListener('mouseleave', function(){ if (!self._engaged && self._inview) self._start(); });
+        }
+        this.appendChild(stage);
+        this._cap = document.createElement('figcaption'); this._cap.className = 'dg-cap'; this.appendChild(this._cap);
+        if (multi){
+          var dots = document.createElement('div'); dots.className = 'dg-dots';
+          this._dots = this._imgs.map(function(_, idx){ var d = document.createElement('button'); d.type = 'button'; d.className = 'dg-dot' + (idx === 0 ? ' on' : ''); d.setAttribute('aria-label', 'Go to image ' + (idx + 1)); d.addEventListener('click', function(){ self._engage(); self._go(idx); }); dots.appendChild(d); return d; });
+          this.appendChild(dots);
+        }
+        this._render();
+        if (multi && !REDUCE && 'IntersectionObserver' in window){
+          this._io = new IntersectionObserver(function(es){ es.forEach(function(e){ self._inview = e.isIntersecting && e.intersectionRatio > 0.4; if (self._inview) self._start(); else self._stop(); }); }, { threshold: [0, 0.4, 0.75] });
+          this._io.observe(this);
+        }
+      }
+      _render(){
+        var i = this._i;
+        this._slides.forEach(function(s, idx){ s.classList.toggle('on', idx === i); });
+        if (this._dots) this._dots.forEach(function(d, idx){ d.classList.toggle('on', idx === i); });
+        if (this._cap) this._cap.textContent = (this._imgs[i] || {}).caption || '';
+        if (this._counter) this._counter.textContent = (i + 1) + ' / ' + this._imgs.length;
+      }
+      _go(n){ var L = this._imgs.length; this._i = ((n % L) + L) % L; this._render(); }
+      _start(){ if (this._engaged || this._timer || this._imgs.length < 2) return; var self = this; this._timer = setInterval(function(){ self._go(self._i + 1); }, DELAY); }
+      _stop(){ if (this._timer){ clearInterval(this._timer); this._timer = null; } }
+      _engage(){ this._engaged = true; this._stop(); }
+      _sync(i){ this._go(i); }
+    }
+    customElements.define('detention-gallery', DetentionGallery);
+  })();
+  </script>
 </helmet>
 <div ref="{{ rootRef }}" style="position:relative;width:100%;background:#ffffff;">
 
@@ -274,15 +382,8 @@
                 </div>
 
                 <sc-if value="{{ s.hasImages }}" hint-placeholder-val="{{ false }}">
-                  <div style="margin-top:clamp(22px,3.2vh,32px);display:flex;flex-direction:column;gap:clamp(20px,3vh,32px);">
-                    <sc-for list="{{ s.images }}" as="img" hint-placeholder-count="2">
-                      <figure style="margin:0;">
-                        <div style="width:100%;background:#ece7dc;border:1px solid rgba(28,26,22,0.14);border-radius:5px;overflow:hidden;">
-                          <img src="{{ img.file }}" alt="{{ img.caption }}" loading="lazy" style="width:100%;height:auto;display:block;"/>
-                        </div>
-                        <figcaption style="margin-top:11px;font-size:13px;line-height:1.6;color:#5c5648;text-wrap:pretty;max-width:82ch;">{{ img.caption }}</figcaption>
-                      </figure>
-                    </sc-for>
+                  <div style="margin-top:clamp(22px,3.2vh,32px);">
+                    <detention-gallery data-images="{{ s.imagesJson }}"></detention-gallery>
                   </div>
                 </sc-if>
 
@@ -477,6 +578,11 @@ class Component extends DCLogic {
       dgfi_4:`The toilet.`,
       dgfi_5:`JIC cells with their characteristic high ceilings.`,
       dgfi_6_destruction:`The destruction of DGFI\u2019s JIC began almost immediately after 5 August 2024: corridor walls broken open, rubble left behind.`,
+      bogura_building:`Bogura Police Line Building`,
+      rab_2_cell_1:`An intact RAB-2 cell`,
+      rab_2_cell_2:`An intact RAB-2 cell`,
+      rab_2_cell_3:`An intact RAB-2 cell`,
+      rab_13_cell:`An intact RAB 13 cell.`,
       nsi_1:`The rotating-chair torture device found at NSI.`
     };
     this._IMG = {};
@@ -510,7 +616,7 @@ class Component extends DCLogic {
             location:'Bogura Police Lines, in-service building (ground floor), Bogura',
             operator:'Bangladesh Police (Bogura), with DB and CTTC officers interrogating',
             alsoUsedBy:'Detective Branch (Bogura); CTTC (its then-head, Asaduzzaman, attended)',
-            images:[],
+            images:['bogura_building'],
             description:[`A large hall room on the ground floor of the in-service building at Bogura Police Lines, used to hold a disappeared detainee for roughly four months. The hall had two doors and several windows overlooking a large field, seven to ten cots laid out inside, and a bathroom outside.`],
             happened:[`The same survivor was moved here after his week at Police Headquarters. He was interrogated by DB\u2019s Arif Mondal and SI Julhas; the then-head of CTTC, Asaduzzaman, attended on one occasion \u2014 an example of several agencies operating inside one police facility.`],
             testimonies:[
@@ -539,8 +645,8 @@ class Component extends DCLogic {
         ]
       },
       {
-        short:'RAB', badge:'10', title:'Rapid Action Battalion', authority:'Paramilitary force under the Ministry of Home Affairs',
-        count:'10 sites in this archive \u00b7 the largest network here',
+        short:'RAB', badge:'11', title:'Rapid Action Battalion', authority:'Paramilitary force under the Ministry of Home Affairs',
+        count:'11 sites in this archive \u00b7 the largest network here',
         intro:[
           `RAB is a paramilitary force established in 2004, comprising 15 battalions, each with three to four Crime Prevention Companies, and ten functional wings under its Director General; its headquarters are in Kurmitola, Dhaka. Created with early support from the United States and the United Kingdom as a counter-terrorism force, it \u201ceventually morphed into a political death squad.\u201d The UK withdrew training over a decade ago; the US imposed sanctions in December 2021 citing extrajudicial executions and enforced disappearances.`,
           `The Commission received hundreds of complaints implicating RAB in enforced disappearance, custodial torture, and extrajudicial killing. Its Intelligence Wing ran the most notorious secret sites, moving \u201ctargets\u201d between battalions, safe houses, and the TFI centre, and in many cases disposing of bodies in rivers. The Commission concludes that meaningful reform requires dismantling RAB as a force.`
@@ -606,7 +712,7 @@ class Component extends DCLogic {
             status:'NOT ASSESSED', statusNote:`Documented as a historical (pre-2018) cell; current physical status not established in the report.`,
             location:'RAB-2 Battalion',
             operator:'RAB-2',
-            images:['rab_2_tallies'],
+            images:['rab_2_cell_1','rab_2_cell_2','rab_2_cell_3','rab_2_tallies'],
             description:[`A pre-2018 RAB-2 battalion cell whose wall carries scratched tallies \u2014 marks detainees used to keep track of time. A survivor was waterboarded here and interrogated about alleged Jamaat-e-Islami / Shibir affiliation.`],
             testimonies:[
               { type:'survivor', code:'BHGJ65', meta:`Interrogated at RAB-2 by a police officer whose identity the Commission confirmed.`,
@@ -662,6 +768,19 @@ class Component extends DCLogic {
                 text:[`Blindfolded, handcuffed. \u2026 These marks still haven\u2019t gone away, it\u2019s been 10\u201311 years. \u2026 They kept me hanging naked and gave electric shock for about two hours, meaning the only demand was that I had to confess. \u2026 They attached a clip or something like that to the penis, and my hands were tied above. In this condition, they would give electric shock and beat me from behind. If I said \u2018yes,\u2019 the beating stopped, the electric shock stopped. If I said \u2018no,\u2019 the beating continued. \u2026 They would say, \u2018You are part of this organisation?\u2019 I said \u2018no.\u2019 Then the electric shock started.`] },
               { type:'survivor', code:'EDH', meta:`30-year-old male; abducted by RAB Intelligence and RAB-12 in 2014; disappeared for 39 days.`,
                 text:[`Then they started slapping and hitting me. They pulled down my pants. After pulling down my pants, they attached a clip to one of my testicles. They got into the car and closed the door. \u2026 They started giving electric shock with the clip. I was screaming loudly in the car \u2026 They gave me electric shock for about 15 to 20 minutes. During those 20 minutes the car was moving. \u2026 In the morning, they took me again and brought me into a room. \u2026 They sat me in a chair \u2026 tied my legs to the chair, tied my hands, tied my chest, tied my head. After tying me, they said, \u2018We\u2019re going to press the switch on this chair.\u2019 \u2026 What a terrifying condition that Eid morning turned into. I said, what kind of hell did Allah send me to.`] }
+            ]
+          },
+          {
+            id:'rab-13', name:'RAB-13 (Rangpur)',
+            status:'INTACT', statusNote:`Documented as an intact cell; RAB-13 is attested through survivor testimony and the officer-accountability record.`,
+            location:'Rangpur \u2014 RAB-13\u2019s battalion seat. The report does not name the location; Rangpur is RAB-13\u2019s known headquarters.',
+            operator:'RAB-13, jointly with RAB Intelligence in the documented cases',
+            images:['rab_13_cell'],
+            description:[`The Commission report gives no physical description of a RAB-13 cell; RAB-13 is attested as an abducting and detaining unit through the survivor testimony below and the officer-accountability record. Detainees were held under its command and, in documented cases, jointly abducted by RAB Intelligence.`],
+            happened:[`The CO of RAB-13 between 30 June 2014 and 26 August 2015, Lt Col Kismat Hayat (BA 4490), is listed over complainant code GBE (detained 23 February \u2013 26 August 2015). A further RAB-13 victim \u2014 a 33-year-old male abducted by RAB Intelligence and RAB-13 in 2022, disappeared for 40 days \u2014 is documented in connection with a cross-border captive exchange with India.`],
+            testimonies:[
+              { type:'survivor', code:'CEB', meta:`21-year-old male; a medical student and Shibir activist; abducted by RAB Intelligence and RAB-13 in 2016; disappeared for 2 months; left with a permanent eye injury.`,
+                text:[`They used to keep me in front of their torture room. So whenever very high volume music played, I would understand that they were beating someone. And the sound of their screams was so intense, actually at that moment I would feel a pressure for defecation\u2026 My eyes were continuously blindfolded for two months. Because they kept them tied, my eyes would hurt terribly. It felt like everything would tear apart\u2026 Later, when I got out, they had to operate on my eye. I mean, in this eye, the retina ending\u2014this part\u2014it tore.`] }
             ]
           }
         ]
@@ -797,7 +916,7 @@ class Component extends DCLogic {
       description: s.description || [],
       happened: s.happened || [], hasHappened: !!(s.happened && s.happened.length),
       detainees: s.detainees || '',
-      images: imgs, hasImages: imgs.length > 0,
+      images: imgs, hasImages: imgs.length > 0, imagesJson: JSON.stringify(imgs),
       testimonies: tq, hasTestimony: tq.length > 0,
       open,
       onToggle: () => this.setState(p => ({ openSites: Object.assign({}, p.openSites, { [s.id]: !p.openSites[s.id] }) })),
