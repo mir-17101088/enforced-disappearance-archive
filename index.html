@@ -484,8 +484,8 @@ class Component extends DCLogic {
 
     this._AG = [
       {
-        short:'Police', badge:'2', title:'Bangladesh Police', authority:'Under the Ministry of Home Affairs',
-        count:'2 sites in this archive \u00b7 plus participation in RAB\u2019s TFI centre',
+        short:'Police', badge:'5', title:'Bangladesh Police', authority:'Under the Ministry of Home Affairs',
+        count:'5 sites in this archive \u00b7 plus participation in RAB\u2019s TFI centre',
         intro:[
           `The Bangladesh Police is the country\u2019s principal law-enforcement agency, headed by the Inspector General of Police (IGP), with specialised units including the Detective Branch (DB), Special Branch (SB), the Criminal Investigation Department (CID), and, formerly, RAB. Under the Awami League government, it came under sustained scrutiny for extrajudicial killings, enforced disappearances, custodial torture, and the suppression of dissent.`,
           `From 2009 onward the force grew increasingly politicised, functioning less as a neutral institution than as an enforcer of government policy, with opposition parties \u2014 particularly the BNP and Jamaat-e-Islami \u2014 disproportionately targeted. \u201cCrossfire\u201d killings became a hallmark of police operations, and although the Torture and Custodial Death (Prevention) Act of 2013 existed on paper, it was rarely enforced. The Commission has documented hundreds of enforced disappearances carried out by the police, many ending in torture and extrajudicial killing.`
@@ -517,12 +517,30 @@ class Component extends DCLogic {
               { type:'survivor', code:'BHFD4', meta:`22-year-old male; abducted by the police in 2017; disappeared for 136 days.`,
                 text:[`After Headquarters, I was taken to Bogura. From what the guards and constables said, I became sure that it was a large hall room on the ground floor of the in-service building at Bogura Police Lines. I was disappeared there for around four months. The hall had two doors and several windows, from which a large field could be seen outside. There were seven to ten cots laid out in the room, and the bathroom was outside. They beat me physically, tortured me psychologically, regularly threatened me with crossfire, and frightened me by saying they would pick up my family members.`] }
             ]
+          },
+          {
+            id:'coxs-bazar', name:'Cox\u2019s Bazar Police Line \u2014 ground-floor training-centre rooms',
+            status:'NOT ASSESSED', statusNote:`Documented in the report; no physical inspection status is recorded for this site.`,
+            location:'Ground-floor rooms of the in-service training centre, Cox\u2019s Bazar Police Line',
+            operator:'Bangladesh Police (Cox\u2019s Bazar)',
+            images:[],
+            description:[`At the Cox\u2019s Bazar Police Line, captivity locations were not secret. Detainees were held in the ground-floor rooms of the in-service training centre, in plain sight from the entrance of the compound \u2014 placement that makes any claim of concealment implausible.`],
+            happened:[`The SP of Cox\u2019s Bazar between 18 September 2018 and 23 September 2020, BP 7505105079 ABM Masud Hossain, is listed \u2014 with complainant code BIEF (detained 26 October 2019 \u2013 29 February 2020) \u2014 among the officers whose facilities fell under his command. In Cox\u2019s Bazar, the report notes, men killed in operations were often officially recorded as narcotics traffickers \u2014 identity following geography rather than fact.`]
+          },
+          {
+            id:'bagerhat-dinajpur', name:'Bagerhat & Dinajpur Police Lines \u2014 captivity in plain sight',
+            status:'NOT ASSESSED', statusNote:`Documented together in the report; at neither line were captivity locations concealed.`,
+            location:'Ground floor of the hospital, Bagerhat Police Line; and Dinajpur Police Line',
+            operator:'Bangladesh Police (Bagerhat and Dinajpur)',
+            images:[],
+            description:[`At the Bagerhat Police Line, detainees were held on the ground floor of the hospital. The report frames Bagerhat together with Dinajpur under a single finding: \u201cAt neither of these lines were captivity locations concealed.\u201d`],
+            happened:[`For Bagerhat, the report names the SP between 21 July 2016 and 25 February 2021, BP 7403020903 Pankaj Chandra Roy \u2014 listed over complainant codes FBH, BIFJ and BIEC (all detained October\u2013November 2016) \u2014 and BP 7806117081 Goutom Kumar Biswas of the Bagerhat SP Office, named in the accused-officer table against victims BIEC and BIFJ.`]
           }
         ]
       },
       {
-        short:'RAB', badge:'9', title:'Rapid Action Battalion', authority:'Paramilitary force under the Ministry of Home Affairs',
-        count:'9 sites in this archive \u00b7 the largest network here',
+        short:'RAB', badge:'10', title:'Rapid Action Battalion', authority:'Paramilitary force under the Ministry of Home Affairs',
+        count:'10 sites in this archive \u00b7 the largest network here',
         intro:[
           `RAB is a paramilitary force established in 2004, comprising 15 battalions, each with three to four Crime Prevention Companies, and ten functional wings under its Director General; its headquarters are in Kurmitola, Dhaka. Created with early support from the United States and the United Kingdom as a counter-terrorism force, it \u201ceventually morphed into a political death squad.\u201d The UK withdrew training over a decade ago; the US imposed sanctions in December 2021 citing extrajudicial executions and enforced disappearances.`,
           `The Commission received hundreds of complaints implicating RAB in enforced disappearance, custodial torture, and extrajudicial killing. Its Intelligence Wing ran the most notorious secret sites, moving \u201ctargets\u201d between battalions, safe houses, and the TFI centre, and in many cases disposing of bodies in rivers. The Commission concludes that meaningful reform requires dismantling RAB as a force.`
@@ -630,6 +648,21 @@ class Component extends DCLogic {
             operator:'RAB-10',
             images:['rab_dholpur_sketch'],
             description:[`The RAB-10 Dholpur cells, reconstructed as a sketch drawn by a 2017 victim.`]
+          },
+          {
+            id:'rab-12', name:'RAB-12 (Sirajganj) \u2014 an abducting and detaining unit',
+            status:'NOT ASSESSED', statusNote:`The report publishes no physical description or map of a distinct RAB-12 cell; the unit is attested through survivor testimony.`,
+            location:'RAB-12 battalion jurisdiction, Sirajganj',
+            operator:'RAB-12 (with RAB Intelligence, jointly, in two of the documented cases)',
+            images:[],
+            description:[`The report does not publish a physical description or map of a distinct RAB-12 cell. RAB-12 is attested as an abducting and detaining unit through the survivor testimonies below \u2014 all three victims were abducted in 2014. A fabricated Anti-Terrorism Act charge sheet placed one of them (Code FCH) at Railway PS, Sirajganj.`],
+            happened:[`Code FCH \u2014 a 25-year-old male abducted by RAB Intelligence and RAB-12 in 2014 and disappeared for 10 days \u2014 is cited in the report\u2019s analysis of fabricated charges (Sirajganj, Anti-Terrorism Act 2009).`],
+            testimonies:[
+              { type:'survivor', code:'DHI', meta:`20-year-old male; abducted by RAB-12 in 2014; disappeared for 34 days.`,
+                text:[`Blindfolded, handcuffed. \u2026 These marks still haven\u2019t gone away, it\u2019s been 10\u201311 years. \u2026 They kept me hanging naked and gave electric shock for about two hours, meaning the only demand was that I had to confess. \u2026 They attached a clip or something like that to the penis, and my hands were tied above. In this condition, they would give electric shock and beat me from behind. If I said \u2018yes,\u2019 the beating stopped, the electric shock stopped. If I said \u2018no,\u2019 the beating continued. \u2026 They would say, \u2018You are part of this organisation?\u2019 I said \u2018no.\u2019 Then the electric shock started.`] },
+              { type:'survivor', code:'EDH', meta:`30-year-old male; abducted by RAB Intelligence and RAB-12 in 2014; disappeared for 39 days.`,
+                text:[`Then they started slapping and hitting me. They pulled down my pants. After pulling down my pants, they attached a clip to one of my testicles. They got into the car and closed the door. \u2026 They started giving electric shock with the clip. I was screaming loudly in the car \u2026 They gave me electric shock for about 15 to 20 minutes. During those 20 minutes the car was moving. \u2026 In the morning, they took me again and brought me into a room. \u2026 They sat me in a chair \u2026 tied my legs to the chair, tied my hands, tied my chest, tied my head. After tying me, they said, \u2018We\u2019re going to press the switch on this chair.\u2019 \u2026 What a terrifying condition that Eid morning turned into. I said, what kind of hell did Allah send me to.`] }
+            ]
           }
         ]
       },
@@ -1046,31 +1079,34 @@ class Component extends DCLogic {
       const grp = E('g',{}); grp.setAttribute('data-cgnode', n.id);
       grp.setAttribute('transform','translate('+n.x+' '+n.y+')');
       const r = n.r, isHub = n.hub, isFac = n.facility;
+      const skin = (n.id==='RABI') ? { fill:'#b23422', ink:'#fdf4e6', sub:'rgba(253,244,230,0.74)', hair:'rgba(253,244,230,0.42)', hatch:'#fbeede' }
+        : ((n.id==='RAB' && !exp) || (exp && n.kind==='unit')) ? { fill:'#d8a23c', ink:'#2a1c05', sub:'rgba(42,28,5,0.68)', hair:'rgba(60,42,10,0.42)', hatch:INK }
+        : { fill:(isFac?'#efe6d0':PAPER), ink:'#171009', sub:'rgba(58,47,32,0.62)', hair:HAIR, hatch:INK };
       // outer decorative halo (hub / facility)
       if (isHub || isFac){
         grp.appendChild(E('circle',{ r:r+(wide?10:7), fill:'none', stroke:'rgba('+LINE+',0.5)', 'stroke-width':1, 'stroke-dasharray': isFac?'2 5':'1.5 6' }));
       }
       // main disc
-      const disc = E('circle',{ r:r, fill:(isFac?'#efe6d0':PAPER), stroke:'#171009', 'stroke-width': isHub?2.6:1.9 });
+      const disc = E('circle',{ r:r, fill:skin.fill, stroke:'#171009', 'stroke-width': isHub?2.6:1.9 });
       grp.appendChild(disc);
-      grp.appendChild(E('circle',{ r:r-4, fill:'none', stroke:HAIR, 'stroke-width':0.7 }));
+      grp.appendChild(E('circle',{ r:r-4, fill:'none', stroke:skin.hair, 'stroke-width':0.7 }));
       // 12-o'clock registration tick
       grp.appendChild(E('line',{ x1:0, y1:-r, x2:0, y2:-r-(wide?7:5), stroke:'rgba('+LINE+',0.7)', 'stroke-width':1 }));
       // hub cross-hatch flourish
       if (isHub){
-        const hatch = E('g',{opacity:0.16}); hatch.style.pointerEvents='none';
-        for (let k=-r; k<=r; k+=5){ const h=Math.sqrt(Math.max(0,r*r-k*k)); hatch.appendChild(E('line',{ x1:k, y1:-h, x2:k, y2:h, stroke:INK, 'stroke-width':0.4 })); }
+        const hatch = E('g',{opacity: n.id==='RABI'?0.26:0.16}); hatch.style.pointerEvents='none';
+        for (let k=-r; k<=r; k+=5){ const h=Math.sqrt(Math.max(0,r*r-k*k)); hatch.appendChild(E('line',{ x1:k, y1:-h, x2:k, y2:h, stroke:skin.hatch, 'stroke-width':0.4 })); }
         grp.insertBefore(hatch, null);
-        grp.appendChild(E('circle',{ r:r, fill:'none', stroke:INK, 'stroke-width':0.6 }));
+        grp.appendChild(E('circle',{ r:r, fill:'none', stroke:skin.hatch, 'stroke-width':0.6 }));
       }
       // label
       const lblSize = n.id==='RABI' ? r*0.34 : (n.kind==='unit' ? Math.max(wide?15:13, r*0.82) : (n.label.length>3 ? r*0.44 : r*0.6));
-      const lbl = E('text',{ x:0, y: n.kind==='unit'? (isFac?-1:0) : (-r*0.06), 'text-anchor':'middle', 'dominant-baseline':'central', 'font-family': n.kind==='unit' ? "'Newsreader',serif" : "'IBM Plex Mono',monospace", 'font-weight': n.kind==='unit'?500:700, 'font-size':lblSize.toFixed(1), 'letter-spacing': n.kind==='unit'?'0':'0.02em', fill:'#171009' });
+      const lbl = E('text',{ x:0, y: n.kind==='unit'? (isFac?-1:0) : (-r*0.06), 'text-anchor':'middle', 'dominant-baseline':'central', 'font-family': n.kind==='unit' ? "'Newsreader',serif" : "'IBM Plex Mono',monospace", 'font-weight': n.kind==='unit'?500:700, 'font-size':lblSize.toFixed(1), 'letter-spacing': n.kind==='unit'?'0':'0.02em', fill:skin.ink });
       lbl.textContent = n.label; grp.appendChild(lbl);
       // count
       const showCount = r > (wide?30:26);
       if (showCount){
-        const cnt = E('text',{ x:0, y: r*0.52, 'text-anchor':'middle', 'dominant-baseline':'central', 'font-family':"'IBM Plex Mono',monospace", 'font-weight':600, 'font-size':(Math.max(9, r*0.26)).toFixed(1), fill:'rgba(58,47,32,0.62)' });
+        const cnt = E('text',{ x:0, y: r*0.52, 'text-anchor':'middle', 'dominant-baseline':'central', 'font-family':"'IBM Plex Mono',monospace", 'font-weight':600, 'font-size':(Math.max(9, r*0.26)).toFixed(1), fill:skin.sub });
         cnt.textContent = n.n; grp.appendChild(cnt);
       }
       // RAB "open" badge (collapsed)
@@ -1659,6 +1695,10 @@ class Component extends DCLogic {
       { n:'RAB-1', d:'Detention site operated by RAB-1, Dhaka.', lat:23.85744, lng:90.40351, city:'dhaka' },
       { n:'RAB-7', d:'Detention site operated by RAB-7, Chittagong.', lat:22.27144, lng:91.78401 },
       { n:'RAB-11', d:'Detention site operated by RAB-11, Narayanganj.', lat:23.67925, lng:90.51751, city:'dhaka' },
+      { n:'RAB-10 Dholpur cells', d:'Detention site operated by RAB-10, Dholpur, Dhaka.', lat:23.72317, lng:90.43367, city:'dhaka' },
+      { n:'RAB-12', d:'Detention site operated by RAB-12, Sirajganj (Rajshahi Division).', lat:24.41358, lng:89.53350 },
+      { n:'RAB-13', d:'Detention site operated by RAB-13, Rangpur Sadar (Rangpur Division).', lat:25.73901, lng:89.25441 },
+      { n:'RAB-6', d:'Detention site operated by RAB-6, Khulna \u2014 the Rupsha Bridge is visible from the cell ventilator.', lat:22.81540, lng:89.58730 },
       { n:'DGFI\u2019s JIC', d:'Joint Interrogation Cell, Directorate General of Forces Intelligence, Dhaka.', lat:23.79032, lng:90.38855, city:'dhaka' },
       { n:'NSI Gulshan Office', d:'Gulshan office, National Security Intelligence, Dhaka.', lat:23.78908, lng:90.41376, city:'dhaka' }
     ];
