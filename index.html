@@ -1,541 +1,1308 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inside the Architecture of Secret Detention | The Daily Star</title>
-<meta name="description" content="An evidence-based archive of the secret detention and torture sites run by Bangladesh's police, paramilitary, and intelligence agencies between 2009 and 2024, reconstructed from survivor testimony and the Commission of Inquiry on Enforced Disappearances.">
-<meta name="author" content="The Daily Star">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#17140f">
-<link rel="canonical" href="https://campaign.thedailystar.net/enforced-disappearance-archive/">
-<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inside the Architecture of Secret Detention | The Daily Star</title>
+  <meta name="description"
+    content="An evidence-based archive of the secret detention and torture sites run by Bangladesh's police, paramilitary, and intelligence agencies between 2009 and 2024, reconstructed from survivor testimony and the Commission of Inquiry on Enforced Disappearances.">
+  <meta name="author" content="The Daily Star">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#17140f">
+  <link rel="canonical" href="https://campaign.thedailystar.net/enforced-disappearance-archive/">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
 
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="The Daily Star">
-<meta property="og:title" content="Inside the Architecture of Secret Detention">
-<meta property="og:description" content="An evidence-based archive of Bangladesh's secret detention and torture sites (2009-2024), reconstructed from survivor testimony and the Commission of Inquiry on Enforced Disappearances.">
-<meta property="og:url" content="https://campaign.thedailystar.net/enforced-disappearance-archive/">
-<meta property="og:image" content="https://campaign.thedailystar.net/enforced-disappearance-archive/assets/og-image.jpg">
-<meta property="og:image:secure_url" content="https://campaign.thedailystar.net/enforced-disappearance-archive/assets/og-image.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="681">
-<meta property="og:image:alt" content="A reconstructed solitary confinement cell from The Daily Star's archive of secret detention in Bangladesh.">
-<meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The Daily Star">
+  <meta property="og:title" content="Inside the Architecture of Secret Detention">
+  <meta property="og:description"
+    content="An evidence-based archive of Bangladesh's secret detention and torture sites (2009-2024), reconstructed from survivor testimony and the Commission of Inquiry on Enforced Disappearances.">
+  <meta property="og:url" content="https://campaign.thedailystar.net/enforced-disappearance-archive/">
+  <meta property="og:image"
+    content="https://campaign.thedailystar.net/enforced-disappearance-archive/assets/og-image.jpg">
+  <meta property="og:image:secure_url"
+    content="https://campaign.thedailystar.net/enforced-disappearance-archive/assets/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="681">
+  <meta property="og:image:alt"
+    content="A reconstructed solitary confinement cell from The Daily Star's archive of secret detention in Bangladesh.">
+  <meta property="og:locale" content="en_US">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@dailystarnews">
-<meta name="twitter:title" content="Inside the Architecture of Secret Detention">
-<meta name="twitter:description" content="An evidence-based archive of Bangladesh's secret detention and torture sites (2009-2024), reconstructed from survivor testimony and the Commission of Inquiry on Enforced Disappearances.">
-<meta name="twitter:image" content="https://campaign.thedailystar.net/enforced-disappearance-archive/assets/og-image.jpg">
-<meta name="twitter:image:alt" content="A reconstructed solitary confinement cell from The Daily Star's archive of secret detention in Bangladesh.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@dailystarnews">
+  <meta name="twitter:title" content="Inside the Architecture of Secret Detention">
+  <meta name="twitter:description"
+    content="An evidence-based archive of Bangladesh's secret detention and torture sites (2009-2024), reconstructed from survivor testimony and the Commission of Inquiry on Enforced Disappearances.">
+  <meta name="twitter:image"
+    content="https://campaign.thedailystar.net/enforced-disappearance-archive/assets/og-image.jpg">
+  <meta name="twitter:image:alt"
+    content="A reconstructed solitary confinement cell from The Daily Star's archive of secret detention in Bangladesh.">
 
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"NewsArticle","headline":"Inside the Architecture of Secret Detention","description":"An evidence-based archive of the secret detention and torture sites run by Bangladesh's police, paramilitary, and intelligence agencies between 2009 and 2024.","image":["https://campaign.thedailystar.net/enforced-disappearance-archive/assets/og-image.jpg"],"url":"https://campaign.thedailystar.net/enforced-disappearance-archive/","inLanguage":"en","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"The Daily Star","logo":{"@type":"ImageObject","url":"https://campaign.thedailystar.net/enforced-disappearance-archive/assets/logo.svg"}}}
 </script>
-<script src="./support.js"></script>
+  <script src="./support.js"></script>
 </head>
+
 <body>
-<x-dc>
-<helmet>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
-  <style>
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      background:#ffffff;
-      color:#23201a;
-      font-family:'Newsreader',Georgia,'Times New Roman',serif;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-    a{color:#a3160f;text-decoration:none}
-    a:hover{color:#7d0f0a}
-    ::selection{background:#a3160f;color:#fff}
-    .mono{font-family:'IBM Plex Mono','SF Mono',ui-monospace,monospace}
-    @keyframes wordin{from{opacity:0;filter:blur(7px)}to{opacity:1;filter:blur(0)}}
-    @keyframes floaty{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-7px,0)}}
-    @keyframes caretblink{0%,44%{opacity:1}45%,100%{opacity:0}}
-    .wtext{display:inline-block;opacity:0;animation:wordin 0.62s ease var(--d,0s) forwards, floaty var(--f,7s) ease-in-out infinite}
-    .caret{display:inline-block;width:0.58em;height:1.02em;margin-left:2px;background:#a3160f;vertical-align:-0.13em;animation:caretblink 0.9s step-end infinite}
-    .leaflet-container{background:#0a0d10;font-family:'IBM Plex Mono',monospace;outline:none}
-    .leaflet-tooltip.fac{background:rgba(13,18,24,0.95);border:1px solid rgba(255,255,255,0.16);color:#f2efe8;border-radius:3px;padding:12px 17px;box-shadow:0 18px 40px -16px rgba(0,0,0,0.9);white-space:normal;width:max-content;max-width:360px;font-family:'IBM Plex Mono',monospace}
-    .leaflet-tooltip.fac b{display:block;font-size:13px;letter-spacing:0.01em;color:#fff;margin-bottom:5px;font-weight:600;line-height:1.3}
-    .leaflet-tooltip.fac span{display:block;font-size:11.5px;line-height:1.5;color:rgba(242,239,232,0.7);font-weight:400}
-    .leaflet-tooltip.fac.tfi{border-color:rgba(232,80,60,0.85)}
-    .leaflet-tooltip.fac:before{border-top-color:rgba(13,18,24,0.95)!important}
-    .leaflet-tooltip.fac.leaflet-tooltip-left:before{border-left-color:rgba(13,18,24,0.95)!important}
-    .leaflet-tooltip.fac.leaflet-tooltip-right:before{border-right-color:rgba(13,18,24,0.95)!important}
-    .leaflet-tooltip.fac.leaflet-tooltip-bottom:before{border-bottom-color:rgba(13,18,24,0.95)!important}
-    .leaflet-tooltip.dhakalist{max-width:320px}
-    .leaflet-tooltip.dhakalist b{margin-bottom:8px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#e0554b}
-    .leaflet-tooltip.dhakalist span{padding:3px 0;font-size:12px;line-height:1.35;color:#f2efe8;border-top:1px solid rgba(255,255,255,0.09);font-weight:400}
-    .leaflet-tooltip.dhakalist span:first-of-type{border-top:none}
-    .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(0.86) contrast(0.92) saturate(0.42)}
-    #bdmap,.leaflet-tile{transform:translateZ(0);backface-visibility:hidden}
-    #bdmap .leaflet-tile-container{will-change:transform}
-    .dhaka-ping{position:relative;pointer-events:auto;cursor:pointer;width:26px;height:26px}
-    .dhaka-ping .dot{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 40% 34%,#ff7a5c,#d2281a 72%);border:2.5px solid #fff;box-shadow:0 0 26px 7px rgba(210,40,25,0.6)}
-    .dhaka-ping .pr{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(236,86,64,0.8);animation:dping 2.6s cubic-bezier(0.22,0.61,0.36,1) infinite}
-    .dhaka-ping .tag{position:absolute;left:34px;top:1px;white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.05em;color:#fff;background:rgba(12,17,22,0.82);border:1px solid rgba(255,255,255,0.18);padding:5px 10px;border-radius:3px;box-shadow:0 10px 26px -14px rgba(0,0,0,0.8);pointer-events:none}
-    @keyframes dping{0%{transform:scale(0.7);opacity:0.85}80%{opacity:0}100%{transform:scale(4.2);opacity:0}}
-    @keyframes accIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes lbIn{from{opacity:0}to{opacity:1}}
-    @keyframes cgpulse{0%,100%{opacity:0.5;transform:scale(1)}50%{opacity:0.9;transform:scale(1.08)}}
-    [data-cgnode]{cursor:pointer;-webkit-user-select:none;user-select:none}
-    @media (hover:hover) and (pointer:fine){[data-cgctl]:hover{background:#a3160f!important;color:#fff!important;border-color:#a3160f!important}}
-    /* --- detention-gallery (image carousel) --- */
-    detention-gallery{display:block}
-    .dg-stage{position:relative;width:100%;height:min(58vh,540px);min-height:230px;background:#e7e1d4;border:1px solid rgba(28,26,22,0.14);border-radius:5px;overflow:hidden}
-    .dg-slide{position:absolute;inset:0;margin:0;padding:0;border:0;width:100%;background:transparent;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .55s ease;cursor:zoom-in}
-    .dg-slide.on{opacity:1;visibility:visible}
-    .dg-slide img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
-    .dg-nav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(20,17,12,.6);color:#fff;font-size:23px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);transition:background .18s ease}
-    .dg-prev{left:12px}.dg-next{right:12px}
-    .dg-count{position:absolute;bottom:10px;right:12px;z-index:3;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:#fff;background:rgba(20,17,12,.66);padding:4px 9px;border-radius:999px}
-    .dg-cap{margin:11px 0 0;font-size:13px;line-height:1.6;color:#5c5648;text-wrap:pretty;max-width:82ch;min-height:2.4em}
-    .dg-dots{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:13px}
-    .dg-dot{width:8px;height:8px;border-radius:50%;border:0;background:rgba(28,26,22,.22);cursor:pointer;padding:0;transition:background .2s ease,transform .2s ease}
-    .dg-dot.on{background:#a3160f;transform:scale(1.3)}
-    @media (hover:hover){.dg-nav:hover{background:#a3160f}.dg-dot:hover{background:rgba(28,26,22,.42)}}
-    .dg-lb{position:fixed;inset:0;z-index:9999;background:rgba(9,7,4,.95);display:none;align-items:center;justify-content:center;padding:clamp(52px,7vw,72px) clamp(14px,4vw,64px)}
-    .dg-lb.on{display:flex;animation:lbIn .26s ease}
-    .dg-lb-fig{margin:0;display:flex;flex-direction:column;align-items:center;gap:16px;max-width:100%;max-height:100%}
-    .dg-lb-fig img{max-width:92vw;max-height:80vh;width:auto;height:auto;object-fit:contain;box-shadow:0 30px 90px -30px rgba(0,0,0,.9)}
-    .dg-lb-fig figcaption{font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.55;color:#e7ddc9;max-width:820px;text-align:center;text-wrap:pretty}
-    .dg-lb button{position:fixed;border-radius:50%;border:1px solid rgba(255,255,255,.32);background:rgba(255,255,255,.08);color:#fff;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .18s ease,border-color .18s ease}
-    .dg-lb-x{top:16px;right:18px;width:44px;height:44px;font-size:26px}
-    .dg-lb-prev,.dg-lb-next{top:50%;transform:translateY(-50%);width:52px;height:52px;font-size:30px}
-    .dg-lb-prev{left:18px}.dg-lb-next{right:18px}
-    @media (hover:hover){.dg-lb button:hover{background:#a3160f;border-color:#a3160f}}
-  </style>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
-  <script>
-  (function(){
-    if (!('customElements' in window) || customElements.get('detention-gallery')) return;
-    var REDUCE = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var DELAY = 4200, LB = null;
-    function lb(){
-      if (LB) return LB;
-      var el = document.createElement('div'); el.className = 'dg-lb';
-      el.innerHTML = '<button class="dg-lb-x" type="button" aria-label="Close">&times;</button>'
-        + '<button class="dg-lb-prev" type="button" aria-label="Previous image">&#8249;</button>'
-        + '<figure class="dg-lb-fig"><img alt=""><figcaption></figcaption></figure>'
-        + '<button class="dg-lb-next" type="button" aria-label="Next image">&#8250;</button>';
-      document.body.appendChild(el);
-      var img = el.querySelector('img'), cap = el.querySelector('figcaption');
-      var prev = el.querySelector('.dg-lb-prev'), next = el.querySelector('.dg-lb-next');
-      var list = [], i = 0, owner = null;
-      function show(){ var it = list[i] || {}; img.src = it.file || ''; img.alt = it.caption || ''; cap.textContent = it.caption || ''; var m = list.length > 1 ? 'flex' : 'none'; prev.style.display = m; next.style.display = m; if (owner) owner._sync(i); }
-      function open(l, idx, o){ list = l; i = idx; owner = o; el.classList.add('on'); document.documentElement.style.overflow = 'hidden'; show(); }
-      function close(){ el.classList.remove('on'); document.documentElement.style.overflow = ''; owner = null; }
-      function step(d){ i = (i + d + list.length) % list.length; show(); }
-      el.querySelector('.dg-lb-x').addEventListener('click', close);
-      el.addEventListener('click', function(e){ if (e.target === el) close(); });
-      prev.addEventListener('click', function(e){ e.stopPropagation(); step(-1); });
-      next.addEventListener('click', function(e){ e.stopPropagation(); step(1); });
-      document.addEventListener('keydown', function(e){ if (!el.classList.contains('on')) return; if (e.key === 'Escape') close(); else if (e.key === 'ArrowLeft') step(-1); else if (e.key === 'ArrowRight') step(1); });
-      LB = { open: open };
-      return LB;
-    }
-    class DetentionGallery extends HTMLElement {
-      connectedCallback(){ if (this._built) return; this._built = true;
-        var imgs = []; try { imgs = JSON.parse(this.getAttribute('data-images') || '[]'); } catch(e){}
-        this._imgs = imgs; this._i = 0; this._engaged = false; this._timer = null;
-        this._build();
-      }
-      disconnectedCallback(){ this._stop(); if (this._io) this._io.disconnect(); }
-      _build(){
-        var self = this, multi = this._imgs.length > 1;
-        var stage = document.createElement('div'); stage.className = 'dg-stage';
-        this._slides = this._imgs.map(function(it, idx){
-          var s = document.createElement('button'); s.type = 'button'; s.className = 'dg-slide' + (idx === 0 ? ' on' : ''); s.setAttribute('aria-label', 'View full screen');
-          var im = document.createElement('img'); im.src = it.file; im.alt = it.caption || ''; im.loading = 'lazy'; im.decoding = 'async';
-          s.appendChild(im);
-          s.addEventListener('click', function(){ self._engage(); lb().open(self._imgs, idx, self); });
-          stage.appendChild(s); return s;
-        });
-        if (multi){
-          var prev = document.createElement('button'); prev.type = 'button'; prev.className = 'dg-nav dg-prev'; prev.setAttribute('aria-label', 'Previous image'); prev.innerHTML = '&#8249;';
-          var next = document.createElement('button'); next.type = 'button'; next.className = 'dg-nav dg-next'; next.setAttribute('aria-label', 'Next image'); next.innerHTML = '&#8250;';
-          prev.addEventListener('click', function(){ self._engage(); self._go(self._i - 1); });
-          next.addEventListener('click', function(){ self._engage(); self._go(self._i + 1); });
-          stage.appendChild(prev); stage.appendChild(next);
-          this._counter = document.createElement('span'); this._counter.className = 'dg-count'; stage.appendChild(this._counter);
-          stage.addEventListener('mouseenter', function(){ if (!self._engaged) self._stop(); });
-          stage.addEventListener('mouseleave', function(){ if (!self._engaged && self._inview) self._start(); });
+  <x-dc>
+    <helmet>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+      <style>
+        * {
+          box-sizing: border-box
         }
-        this.appendChild(stage);
-        this._cap = document.createElement('figcaption'); this._cap.className = 'dg-cap'; this.appendChild(this._cap);
-        if (multi){
-          var dots = document.createElement('div'); dots.className = 'dg-dots';
-          this._dots = this._imgs.map(function(_, idx){ var d = document.createElement('button'); d.type = 'button'; d.className = 'dg-dot' + (idx === 0 ? ' on' : ''); d.setAttribute('aria-label', 'Go to image ' + (idx + 1)); d.addEventListener('click', function(){ self._engage(); self._go(idx); }); dots.appendChild(d); return d; });
-          this.appendChild(dots);
+
+        html,
+        body {
+          margin: 0;
+          padding: 0
         }
-        this._render();
-        if (multi && !REDUCE && 'IntersectionObserver' in window){
-          this._io = new IntersectionObserver(function(es){ es.forEach(function(e){ self._inview = e.isIntersecting && e.intersectionRatio > 0.4; if (self._inview) self._start(); else self._stop(); }); }, { threshold: [0, 0.4, 0.75] });
-          this._io.observe(this);
+
+        body {
+          background: #ffffff;
+          color: #23201a;
+          font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+          -webkit-font-smoothing: antialiased;
+          text-rendering: optimizeLegibility;
         }
-      }
-      _render(){
-        var i = this._i;
-        this._slides.forEach(function(s, idx){ s.classList.toggle('on', idx === i); });
-        if (this._dots) this._dots.forEach(function(d, idx){ d.classList.toggle('on', idx === i); });
-        if (this._cap) this._cap.textContent = (this._imgs[i] || {}).caption || '';
-        if (this._counter) this._counter.textContent = (i + 1) + ' / ' + this._imgs.length;
-      }
-      _go(n){ var L = this._imgs.length; this._i = ((n % L) + L) % L; this._render(); }
-      _start(){ if (this._engaged || this._timer || this._imgs.length < 2) return; var self = this; this._timer = setInterval(function(){ self._go(self._i + 1); }, DELAY); }
-      _stop(){ if (this._timer){ clearInterval(this._timer); this._timer = null; } }
-      _engage(){ this._engaged = true; this._stop(); }
-      _sync(i){ this._go(i); }
-    }
-    customElements.define('detention-gallery', DetentionGallery);
-  })();
-  </script>
-</helmet>
-<div ref="{{ rootRef }}" style="position:relative;width:100%;background:#ffffff;">
 
-  <a href="https://www.thedailystar.net" target="_blank" rel="noopener" aria-label="The Daily Star — thedailystar.net" style="{{ logoLinkStyle }}">
-    <img src="assets/logo.svg" alt="The Daily Star" style="{{ logoImgStyle }}"/>
-  </a>
+        a {
+          color: #a3160f;
+          text-decoration: none
+        }
 
-  <section data-stage style="position:relative;height:100vh;width:100%;overflow:hidden;background:#ffffff;">
+        a:hover {
+          color: #7d0f0a
+        }
 
-    <div data-progresstrack style="position:absolute;top:0;left:0;height:3px;width:100%;background:rgba(35,32,26,0.08);z-index:70;"></div>
-    <div data-progress style="position:absolute;top:0;left:0;height:3px;width:0%;background:#a3160f;z-index:71;"></div>
+        ::selection {
+          background: #a3160f;
+          color: #fff
+        }
 
-    <div data-gbox style="position:absolute;inset:0;overflow:hidden;z-index:10;background:#ffffff;">
-      <img data-svg="nodim" src="assets/pasted-1787678046706-0.png" alt="A single solitary cell, three feet wide by four feet long" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;will-change:transform,opacity;">
-      <img data-svg="withdim" src="assets/pasted-1787678026658-0.png" alt="The same cell with its measurements: three feet wide, four feet long, a fixed toilet" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;will-change:transform,opacity;">
-      <img data-svg="block" src="assets/pasted-1787659685233-0.png" alt="The detention wing of fourteen solitary cells" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;will-change:transform,opacity;">
-      <img data-svg="floor" src="assets/pasted-1787659704929-0.png" alt="The full RAB Intelligence facility surrounding the isolation wing" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;will-change:transform,opacity;">
-    </div>
+        .mono {
+          font-family: 'IBM Plex Mono', 'SF Mono', ui-monospace, monospace
+        }
 
-    <div data-mapwrap style="position:absolute;inset:0;z-index:50;pointer-events:none;overflow:hidden;">
-      <div data-space style="position:absolute;inset:0;opacity:0;background:radial-gradient(ellipse 120% 90% at 50% 42%,#14262f 0%,#0c161e 52%,#050709 100%);"></div>
-      <div data-map id="bdmap" style="position:absolute;inset:0;opacity:0;isolation:isolate;"></div>
-      <img data-floorecho src="assets/pasted-1787659704929-0.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;z-index:3;pointer-events:none;will-change:transform,opacity;">
+        @keyframes wordin {
+          from {
+            opacity: 0;
+            filter: blur(7px)
+          }
 
-      <div data-maptitle style="position:absolute;right:clamp(18px,3.6vw,54px);left:auto;top:clamp(18px,4.5vh,52px);max-width:min(46vw,440px);text-align:right;opacity:0;pointer-events:none;z-index:20;">
-        <h2 data-title-dhaka style="margin:0;transition:opacity 0.5s ease;text-align:right;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(16px,min(2.6vw,4.4vh),30px);line-height:1.1;letter-spacing:-0.01em;color:#f6f2ea;text-wrap:balance;text-shadow:0 2px 26px rgba(0,0,0,0.65);">Secret Detention Centers all over Dhaka</h2>
-        <h2 data-title-bd style="margin:0;transition:opacity 0.5s ease;position:absolute;top:0;right:0;left:auto;text-align:right;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(16px,min(2.6vw,4.4vh),30px);line-height:1.1;letter-spacing:-0.01em;color:#f6f2ea;text-wrap:balance;text-shadow:0 2px 26px rgba(0,0,0,0.65);opacity:0;">Secret Detention Sites all over Bangladesh</h2>
-      </div>
+          to {
+            opacity: 1;
+            filter: blur(0)
+          }
+        }
 
-      <div data-mapcredit class="mono" style="position:absolute;right:12px;bottom:8px;z-index:20;opacity:0;font-size:9.5px;letter-spacing:0.04em;color:rgba(226,232,238,0.4);">Basemap © OpenStreetMap contributors · Sites: Commission of Inquiry on Enforced Disappearances</div>
-    </div>
+        @keyframes floaty {
 
-    <div data-hero style="position:absolute;inset:0;z-index:40;overflow:hidden;">
-      <div data-herobg style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 50% 46%,#17120d 0%,#0c0906 62%,#070504 100%);will-change:transform,opacity;"></div>
+          0%,
+          100% {
+            transform: translate3d(0, 0, 0)
+          }
 
-      <div data-words style="position:absolute;inset:0;pointer-events:none;">
-        <span class="word mono" data-op="0.30" style="position:absolute;left:26%;top:14%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(10px,1.2vw,17px);letter-spacing:0.22em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:0.95s;--f:8s;">Rapid Action Battalion</span></span>
-        <span class="word mono" data-op="0.24" style="position:absolute;left:76%;top:19%;transform:translate(-50%,-50%);opacity:0;color:rgba(186,30,20,1);font-size:clamp(20px,3.4vw,50px);letter-spacing:0.05em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.35s;--f:9s;">DGFI</span></span>
-        <span class="word mono" data-op="0.30" style="position:absolute;left:12%;top:45%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(12px,1.7vw,25px);letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:0.7s;--f:7.5s;">Rab Intelligence</span></span>
-        <span class="word mono" data-op="0.58" style="position:absolute;left:84%;top:47%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(16px,2.5vw,38px);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.55s;--f:8.5s;">Abducted</span></span>
-        <span class="word mono" data-op="0.25" style="position:absolute;left:17%;top:26%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(16px,2.9vw,44px);letter-spacing:0.08em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.48s;--f:7.8s;">NSI</span></span>
-        <span class="word mono" data-op="0.58" style="position:absolute;left:46%;top:84%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(14px,2.0vw,30px);letter-spacing:0.12em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.63s;--f:8.2s;">disappeared</span></span>
-        <span class="word mono" data-op="0.25" style="position:absolute;left:77%;top:73%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(16px,2.6vw,40px);letter-spacing:0.09em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.78s;--f:9.2s;">CTTC</span></span>
-        <span class="word mono" data-op="0.28" style="position:absolute;left:19%;top:71%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(12px,1.8vw,27px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:0.85s;--f:7.2s;">Rab-7</span></span>
-        <span class="word mono" data-op="0.60" style="position:absolute;left:61%;top:12%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(14px,2.2vw,33px);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.43s;--f:8.8s;">Missing</span></span>
-        <span class="word mono" data-op="0.25" style="position:absolute;left:11%;top:60%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(11px,1.5vw,22px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:1.02s;--f:7.6s;">Rab-4</span></span>
-        <span class="word mono" data-op="0.25" style="position:absolute;left:88%;top:31%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(11px,1.5vw,22px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:0.68s;--f:8.4s;">Rab-11</span></span>
-        <span class="word mono" data-op="0.25" style="position:absolute;left:34%;top:88%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(10px,1.4vw,21px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:1.1s;--f:7.1s;">Rab-10</span></span>
-        <span class="word mono" data-op="0.24" style="position:absolute;left:89%;top:66%;transform:translate(-50%,-50%);opacity:0;color:rgba(186,30,20,1);font-size:clamp(16px,2.7vw,42px);letter-spacing:0.08em;font-weight:600;white-space:nowrap;"><span class="wtext" style="--d:0.8s;--f:9s;">DB</span></span>
-        <span class="word mono" data-op="0.25" style="position:absolute;left:8%;top:34%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(13px,2.1vw,32px);letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;"><span class="wtext" style="--d:0.57s;--f:8.6s;">Rab</span></span>
-      </div>
+          50% {
+            transform: translate3d(0, -7px, 0)
+          }
+        }
 
-      <div data-casewrap style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;">
-        <div data-casebox class="mono" style="position:relative;width:min(660px,92vw);background:rgba(18,14,10,0.55);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);border:1px solid rgba(214,206,193,0.16);padding:clamp(26px,4.4vh,44px) clamp(24px,4vw,48px);box-shadow:0 40px 90px -50px rgba(0,0,0,0.9),inset 0 1px 0 rgba(255,255,255,0.04);will-change:transform,opacity;">
-          <div style="position:absolute;top:12px;left:14px;width:12px;height:12px;border-top:1px solid rgba(214,206,193,0.32);border-left:1px solid rgba(214,206,193,0.32);"></div>
-          <div style="position:absolute;top:12px;right:14px;width:12px;height:12px;border-top:1px solid rgba(214,206,193,0.32);border-right:1px solid rgba(214,206,193,0.32);"></div>
-          <div style="position:absolute;bottom:12px;left:14px;width:12px;height:12px;border-bottom:1px solid rgba(214,206,193,0.32);border-left:1px solid rgba(214,206,193,0.32);"></div>
-          <div style="position:absolute;bottom:12px;right:14px;width:12px;height:12px;border-bottom:1px solid rgba(214,206,193,0.32);border-right:1px solid rgba(214,206,193,0.32);"></div>
-          <div style="display:flex;align-items:center;gap:9px;margin-bottom:clamp(16px,3vh,26px);">
-            <span style="width:7px;height:7px;background:#a3160f;display:inline-block;"></span>
-            <span style="font-size:12px;letter-spacing:0.34em;text-transform:uppercase;color:rgba(221,213,200,0.8);">Case File</span>
+        @keyframes caretblink {
+
+          0%,
+          44% {
+            opacity: 1
+          }
+
+          45%,
+          100% {
+            opacity: 0
+          }
+        }
+
+        .wtext {
+          display: inline-block;
+          opacity: 0;
+          animation: floaty var(--f, 7s) ease-in-out infinite
+        }
+
+        .caret {
+          display: inline-block;
+          width: 0.58em;
+          height: 1.02em;
+          margin-left: 2px;
+          background: #a3160f;
+          vertical-align: -0.13em;
+          animation: caretblink 0.9s step-end infinite
+        }
+
+        /* map title: box hugs whichever title is active (no dead space); the inactive one overlays for the crossfade */
+        [data-maptitle] .mt-box {
+          position: relative;
+          display: grid
+        }
+
+        [data-maptitle] .mt-t {
+          grid-area: 1/1
+        }
+
+        [data-maptitle][data-mapstate="dhaka"] .mt-bd {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0
+        }
+
+        [data-maptitle][data-mapstate="bd"] .mt-dh {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0
+        }
+
+        /* on phones the title sits centred at the top rather than tucked into the corner */
+        @media (max-width:767px) {
+          [data-maptitle] {
+            left: 0 !important;
+            right: 0 !important;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: min(92vw, 460px) !important;
+          }
+        }
+
+        .leaflet-container {
+          background: #0a0d10;
+          font-family: 'IBM Plex Mono', monospace;
+          outline: none
+        }
+
+        .leaflet-tooltip.fac {
+          background: rgba(13, 18, 24, 0.95);
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          color: #f2efe8;
+          border-radius: 3px;
+          padding: 12px 17px;
+          box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.9);
+          white-space: normal;
+          width: max-content;
+          max-width: 360px;
+          font-family: 'IBM Plex Mono', monospace
+        }
+
+        .leaflet-tooltip.fac b {
+          display: block;
+          font-size: 13px;
+          letter-spacing: 0.01em;
+          color: #fff;
+          margin-bottom: 5px;
+          font-weight: 600;
+          line-height: 1.3
+        }
+
+        .leaflet-tooltip.fac span {
+          display: block;
+          font-size: 11.5px;
+          line-height: 1.5;
+          color: rgba(242, 239, 232, 0.7);
+          font-weight: 400
+        }
+
+        .leaflet-tooltip.fac.tfi {
+          border-color: rgba(232, 80, 60, 0.85)
+        }
+
+        .leaflet-tooltip.fac:before {
+          border-top-color: rgba(13, 18, 24, 0.95) !important
+        }
+
+        .leaflet-tooltip.fac.leaflet-tooltip-left:before {
+          border-left-color: rgba(13, 18, 24, 0.95) !important
+        }
+
+        .leaflet-tooltip.fac.leaflet-tooltip-right:before {
+          border-right-color: rgba(13, 18, 24, 0.95) !important
+        }
+
+        .leaflet-tooltip.fac.leaflet-tooltip-bottom:before {
+          border-bottom-color: rgba(13, 18, 24, 0.95) !important
+        }
+
+        .leaflet-tooltip.dhakalist {
+          max-width: 320px
+        }
+
+        .leaflet-tooltip.dhakalist b {
+          margin-bottom: 8px;
+          font-size: 12px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #e0554b
+        }
+
+        .leaflet-tooltip.dhakalist span {
+          padding: 3px 0;
+          font-size: 12px;
+          line-height: 1.35;
+          color: #f2efe8;
+          border-top: 1px solid rgba(255, 255, 255, 0.09);
+          font-weight: 400
+        }
+
+        .leaflet-tooltip.dhakalist span:first-of-type {
+          border-top: none
+        }
+
+        .leaflet-tile-pane {
+          filter: invert(1) hue-rotate(180deg) brightness(0.86) contrast(0.92) saturate(0.42)
+        }
+
+        #bdmap,
+        .leaflet-tile {
+          transform: translateZ(0);
+          backface-visibility: hidden
+        }
+
+        #bdmap .leaflet-tile-container {
+          will-change: transform
+        }
+
+        .dhaka-ping {
+          position: relative;
+          pointer-events: auto;
+          cursor: pointer;
+          width: 26px;
+          height: 26px
+        }
+
+        .dhaka-ping .dot {
+          position: absolute;
+          inset: 0;
+          border-radius: 50%;
+          background: radial-gradient(circle at 40% 34%, #ff7a5c, #d2281a 72%);
+          border: 2.5px solid #fff;
+          box-shadow: 0 0 26px 7px rgba(210, 40, 25, 0.6)
+        }
+
+        .dhaka-ping .pr {
+          position: absolute;
+          inset: 0;
+          border-radius: 50%;
+          border: 2px solid rgba(236, 86, 64, 0.8);
+          animation: dping 2.6s cubic-bezier(0.22, 0.61, 0.36, 1) infinite
+        }
+
+        .dhaka-ping .tag {
+          position: absolute;
+          left: 34px;
+          top: 1px;
+          white-space: nowrap;
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 11px;
+          letter-spacing: 0.05em;
+          color: #fff;
+          background: rgba(12, 17, 22, 0.82);
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          padding: 5px 10px;
+          border-radius: 3px;
+          box-shadow: 0 10px 26px -14px rgba(0, 0, 0, 0.8);
+          pointer-events: none
+        }
+
+        @keyframes dping {
+          0% {
+            transform: scale(0.7);
+            opacity: 0.85
+          }
+
+          80% {
+            opacity: 0
+          }
+
+          100% {
+            transform: scale(4.2);
+            opacity: 0
+          }
+        }
+
+        @keyframes accIn {
+          from {
+            opacity: 0;
+            transform: translateY(-6px)
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0)
+          }
+        }
+
+        @keyframes lbIn {
+          from {
+            opacity: 0
+          }
+
+          to {
+            opacity: 1
+          }
+        }
+
+        @keyframes cgpulse {
+
+          0%,
+          100% {
+            opacity: 0.5;
+            transform: scale(1)
+          }
+
+          50% {
+            opacity: 0.9;
+            transform: scale(1.08)
+          }
+        }
+
+        [data-cgnode] {
+          cursor: pointer;
+          -webkit-user-select: none;
+          user-select: none
+        }
+
+        @media (hover:hover) and (pointer:fine) {
+          [data-cgctl]:hover {
+            background: #a3160f !important;
+            color: #fff !important;
+            border-color: #a3160f !important
+          }
+        }
+
+        /* --- detention-gallery (image carousel) --- */
+        detention-gallery {
+          display: block
+        }
+
+        .dg-stage {
+          position: relative;
+          width: 100%;
+          height: min(58vh, 540px);
+          min-height: 230px;
+          background: #e7e1d4;
+          border: 1px solid rgba(28, 26, 22, 0.14);
+          border-radius: 5px;
+          overflow: hidden
+        }
+
+        .dg-slide {
+          position: absolute;
+          inset: 0;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          width: 100%;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity .55s ease;
+          cursor: zoom-in
+        }
+
+        .dg-slide.on {
+          opacity: 1;
+          visibility: visible
+        }
+
+        /* fill the frame (contained, centred) rather than sitting at natural size, which left small images floating in a blank stage */
+        .dg-slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          display: block
+        }
+
+        .dg-nav {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          border: 1px solid rgba(255, 255, 255, .5);
+          background: rgba(20, 17, 12, .6);
+          color: #fff;
+          font-size: 23px;
+          line-height: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          z-index: 3;
+          -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+          transition: background .18s ease
+        }
+
+        .dg-prev {
+          left: 12px
+        }
+
+        .dg-next {
+          right: 12px
+        }
+
+        .dg-count {
+          position: absolute;
+          bottom: 10px;
+          right: 12px;
+          z-index: 3;
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 11px;
+          letter-spacing: .08em;
+          color: #fff;
+          background: rgba(20, 17, 12, .66);
+          padding: 4px 9px;
+          border-radius: 999px
+        }
+
+        .dg-cap {
+          margin: 11px 0 0;
+          font-size: 13px;
+          line-height: 1.6;
+          color: #5c5648;
+          text-wrap: pretty;
+          max-width: 82ch;
+          min-height: 2.4em
+        }
+
+        .dg-dots {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          justify-content: center;
+          margin-top: 13px
+        }
+
+        .dg-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          border: 0;
+          background: rgba(28, 26, 22, .22);
+          cursor: pointer;
+          padding: 0;
+          transition: background .2s ease, transform .2s ease
+        }
+
+        .dg-dot.on {
+          background: #a3160f;
+          transform: scale(1.3)
+        }
+
+        @media (hover:hover) {
+          .dg-nav:hover {
+            background: #a3160f
+          }
+
+          .dg-dot:hover {
+            background: rgba(28, 26, 22, .42)
+          }
+        }
+
+        .dg-lb {
+          position: fixed;
+          inset: 0;
+          z-index: 9999;
+          background: rgba(9, 7, 4, .95);
+          display: none;
+          align-items: center;
+          justify-content: center;
+          padding: clamp(52px, 7vw, 72px) clamp(14px, 4vw, 64px)
+        }
+
+        .dg-lb.on {
+          display: flex;
+          animation: lbIn .26s ease
+        }
+
+        .dg-lb-fig {
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+          max-width: 100%;
+          max-height: 100%
+        }
+
+        .dg-lb-fig img {
+          max-width: 92vw;
+          max-height: 80vh;
+          width: auto;
+          height: auto;
+          object-fit: contain;
+          box-shadow: 0 30px 90px -30px rgba(0, 0, 0, .9)
+        }
+
+        .dg-lb-fig figcaption {
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 13px;
+          line-height: 1.55;
+          color: #e7ddc9;
+          max-width: 820px;
+          text-align: center;
+          text-wrap: pretty
+        }
+
+        .dg-lb button {
+          position: fixed;
+          border-radius: 50%;
+          border: 1px solid rgba(255, 255, 255, .32);
+          background: rgba(255, 255, 255, .08);
+          color: #fff;
+          line-height: 1;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background .18s ease, border-color .18s ease
+        }
+
+        .dg-lb-x {
+          top: 16px;
+          right: 18px;
+          width: 44px;
+          height: 44px;
+          font-size: 26px
+        }
+
+        .dg-lb-prev,
+        .dg-lb-next {
+          top: 50%;
+          transform: translateY(-50%);
+          width: 52px;
+          height: 52px;
+          font-size: 30px
+        }
+
+        .dg-lb-prev {
+          left: 18px
+        }
+
+        .dg-lb-next {
+          right: 18px
+        }
+
+        @media (hover:hover) {
+          .dg-lb button:hover {
+            background: #a3160f;
+            border-color: #a3160f
+          }
+        }
+      </style>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH"
+        crossorigin="anonymous"></script>
+      <script>
+        (function () {
+          if (!('customElements' in window) || customElements.get('detention-gallery')) return;
+          var REDUCE = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+          var DELAY = 4200, LB = null;
+          function lb() {
+            if (LB) return LB;
+            var el = document.createElement('div'); el.className = 'dg-lb';
+            el.innerHTML = '<button class="dg-lb-x" type="button" aria-label="Close">&times;</button>'
+              + '<button class="dg-lb-prev" type="button" aria-label="Previous image">&#8249;</button>'
+              + '<figure class="dg-lb-fig"><img alt=""><figcaption></figcaption></figure>'
+              + '<button class="dg-lb-next" type="button" aria-label="Next image">&#8250;</button>';
+            document.body.appendChild(el);
+            var img = el.querySelector('img'), cap = el.querySelector('figcaption');
+            var prev = el.querySelector('.dg-lb-prev'), next = el.querySelector('.dg-lb-next');
+            var list = [], i = 0, owner = null;
+            function show() { var it = list[i] || {}; img.src = it.file || ''; img.alt = it.caption || ''; cap.textContent = it.caption || ''; var m = list.length > 1 ? 'flex' : 'none'; prev.style.display = m; next.style.display = m; if (owner) owner._sync(i); }
+            function open(l, idx, o) { list = l; i = idx; owner = o; el.classList.add('on'); document.documentElement.style.overflow = 'hidden'; show(); }
+            function close() { el.classList.remove('on'); document.documentElement.style.overflow = ''; owner = null; }
+            function step(d) { i = (i + d + list.length) % list.length; show(); }
+            el.querySelector('.dg-lb-x').addEventListener('click', close);
+            el.addEventListener('click', function (e) { if (e.target === el) close(); });
+            prev.addEventListener('click', function (e) { e.stopPropagation(); step(-1); });
+            next.addEventListener('click', function (e) { e.stopPropagation(); step(1); });
+            document.addEventListener('keydown', function (e) { if (!el.classList.contains('on')) return; if (e.key === 'Escape') close(); else if (e.key === 'ArrowLeft') step(-1); else if (e.key === 'ArrowRight') step(1); });
+            LB = { open: open };
+            return LB;
+          }
+          class DetentionGallery extends HTMLElement {
+            connectedCallback() {
+              if (this._built) return; this._built = true;
+              var imgs = []; try { imgs = JSON.parse(this.getAttribute('data-images') || '[]'); } catch (e) { }
+              this._imgs = imgs; this._i = 0; this._engaged = false; this._timer = null;
+              this._build();
+            }
+            disconnectedCallback() { this._stop(); if (this._io) this._io.disconnect(); }
+            _build() {
+              var self = this, multi = this._imgs.length > 1;
+              var stage = document.createElement('div'); stage.className = 'dg-stage';
+              this._slides = this._imgs.map(function (it, idx) {
+                var s = document.createElement('button'); s.type = 'button'; s.className = 'dg-slide' + (idx === 0 ? ' on' : ''); s.setAttribute('aria-label', 'View full screen');
+                var im = document.createElement('img'); im.src = it.file; im.alt = it.caption || ''; im.loading = 'lazy'; im.decoding = 'async';
+                s.appendChild(im);
+                s.addEventListener('click', function () { self._engage(); lb().open(self._imgs, idx, self); });
+                stage.appendChild(s); return s;
+              });
+              if (multi) {
+                var prev = document.createElement('button'); prev.type = 'button'; prev.className = 'dg-nav dg-prev'; prev.setAttribute('aria-label', 'Previous image'); prev.innerHTML = '&#8249;';
+                var next = document.createElement('button'); next.type = 'button'; next.className = 'dg-nav dg-next'; next.setAttribute('aria-label', 'Next image'); next.innerHTML = '&#8250;';
+                prev.addEventListener('click', function () { self._engage(); self._go(self._i - 1); });
+                next.addEventListener('click', function () { self._engage(); self._go(self._i + 1); });
+                stage.appendChild(prev); stage.appendChild(next);
+                this._counter = document.createElement('span'); this._counter.className = 'dg-count'; stage.appendChild(this._counter);
+                stage.addEventListener('mouseenter', function () { if (!self._engaged) self._stop(); });
+                stage.addEventListener('mouseleave', function () { if (!self._engaged && self._inview) self._start(); });
+              }
+              this.appendChild(stage);
+              this._cap = document.createElement('figcaption'); this._cap.className = 'dg-cap'; this.appendChild(this._cap);
+              if (multi) {
+                var dots = document.createElement('div'); dots.className = 'dg-dots';
+                this._dots = this._imgs.map(function (_, idx) { var d = document.createElement('button'); d.type = 'button'; d.className = 'dg-dot' + (idx === 0 ? ' on' : ''); d.setAttribute('aria-label', 'Go to image ' + (idx + 1)); d.addEventListener('click', function () { self._engage(); self._go(idx); }); dots.appendChild(d); return d; });
+                this.appendChild(dots);
+              }
+              this._render();
+              if (multi && !REDUCE && 'IntersectionObserver' in window) {
+                this._io = new IntersectionObserver(function (es) { es.forEach(function (e) { self._inview = e.isIntersecting && e.intersectionRatio > 0.4; if (self._inview) self._start(); else self._stop(); }); }, { threshold: [0, 0.4, 0.75] });
+                this._io.observe(this);
+              }
+            }
+            _render() {
+              var i = this._i;
+              this._slides.forEach(function (s, idx) { s.classList.toggle('on', idx === i); });
+              if (this._dots) this._dots.forEach(function (d, idx) { d.classList.toggle('on', idx === i); });
+              if (this._cap) this._cap.textContent = (this._imgs[i] || {}).caption || '';
+              if (this._counter) this._counter.textContent = (i + 1) + ' / ' + this._imgs.length;
+            }
+            _go(n) { var L = this._imgs.length; this._i = ((n % L) + L) % L; this._render(); }
+            _start() { if (this._engaged || this._timer || this._imgs.length < 2) return; var self = this; this._timer = setInterval(function () { self._go(self._i + 1); }, DELAY); }
+            _stop() { if (this._timer) { clearInterval(this._timer); this._timer = null; } }
+            _engage() { this._engaged = true; this._stop(); }
+            _sync(i) { this._go(i); }
+          }
+          customElements.define('detention-gallery', DetentionGallery);
+        })();
+      </script>
+    </helmet>
+    <div ref="{{ rootRef }}" style="position:relative;width:100%;background:#ffffff;">
+
+      <a href="https://www.thedailystar.net" target="_blank" rel="noopener"
+        aria-label="The Daily Star — thedailystar.net" style="{{ logoLinkStyle }}">
+        <img src="assets/logo.svg" alt="The Daily Star" style="{{ logoImgStyle }}" />
+      </a>
+
+      <section data-stage style="position:relative;height:100vh;width:100%;overflow:hidden;background:#ffffff;">
+
+        <div data-progresstrack
+          style="position:absolute;top:0;left:0;height:3px;width:100%;background:rgba(35,32,26,0.08);z-index:70;"></div>
+        <div data-progress style="position:absolute;top:0;left:0;height:3px;width:0%;background:#a3160f;z-index:71;">
+        </div>
+
+        <div data-gbox style="position:absolute;inset:0;overflow:hidden;z-index:10;background:#ffffff;">
+          <img data-svg="nodim" src="assets/pasted-1787678046706-0.png" decoding="async" fetchpriority="high"
+            alt="A single solitary cell, three feet wide by four feet long"
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;will-change:transform,opacity;">
+          <img data-svg="withdim" src="assets/pasted-1787678026658-0.png" decoding="async"
+            alt="The same cell with its measurements: three feet wide, four feet long, a fixed toilet"
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;will-change:transform,opacity;">
+          <img data-svg="block" src="assets/pasted-1787659685233-0.png" decoding="async" fetchpriority="low"
+            alt="The detention wing of fourteen solitary cells"
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;will-change:transform,opacity;">
+          <img data-svg="floor" src="assets/pasted-1787659704929-0.png" decoding="async" fetchpriority="low"
+            alt="The full RAB Intelligence facility surrounding the isolation wing"
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;will-change:transform,opacity;">
+        </div>
+
+        <div data-mapwrap style="position:absolute;inset:0;z-index:50;pointer-events:none;overflow:hidden;">
+          <div data-space
+            style="position:absolute;inset:0;opacity:0;background:radial-gradient(ellipse 120% 90% at 50% 42%,#14262f 0%,#0c161e 52%,#050709 100%);">
           </div>
-          <div data-code style="font-size:clamp(34px,7vw,68px);line-height:1;letter-spacing:0.01em;color:#f6f1e8;font-weight:600;min-height:1em;"><span data-code-t></span><span data-caret1 class="caret"></span></div>
-          <div data-sent style="margin-top:clamp(16px,2.8vh,24px);font-size:clamp(16px,2.2vw,22px);line-height:1.6;color:rgba(233,227,215,0.95);max-width:44ch;min-height:1.6em;"><span data-sent-t></span><span data-caret2 class="caret" style="opacity:0;height:0.95em;width:0.5em;"></span></div>
+          <div data-map id="bdmap" style="position:absolute;inset:0;opacity:0;isolation:isolate;"></div>
+          <img data-floorecho src="assets/pasted-1787659704929-0.png" decoding="async" fetchpriority="low" alt=""
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;z-index:3;pointer-events:none;will-change:transform,opacity;">
+
+          <div data-maptitle data-mapstate="dhaka"
+            style="position:absolute;right:clamp(12px,3vw,40px);left:auto;top:clamp(14px,3.5vh,34px);max-width:min(84vw,460px);opacity:0;pointer-events:none;z-index:20;">
+            <div class="mt-box"
+              style="background:rgba(14,11,8,0.74);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(214,206,193,0.2);border-radius:4px;padding:clamp(12px,1.8vh,17px) clamp(14px,2vw,22px);box-shadow:0 26px 60px -42px rgba(0,0,0,0.9);">
+              <h2 data-title-dhaka class="mt-t mt-dh" style="margin:0;transition:opacity 0.5s ease;text-align:center;">
+                <span class="mono"
+                  style="display:block;font-size:clamp(9px,1vw,12px);letter-spacing:0.13em;text-transform:uppercase;color:rgba(233,183,175,0.95);font-weight:600;line-height:1.35;margin-bottom:clamp(6px,1vh,10px);">The
+                  Commission of Inquiry on Enforced Disappearances</span>
+                <span
+                  style="display:block;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(19px,min(3.1vw,4.2vh),36px);line-height:1.12;letter-spacing:-0.012em;color:#f6f2ea;text-wrap:balance;">found
+                  at least 10 detention centers all over Dhaka</span>
+              </h2>
+              <h2 data-title-bd class="mt-t mt-bd"
+                style="margin:0;transition:opacity 0.5s ease;text-align:center;opacity:0;">
+                <span class="mono"
+                  style="display:block;font-size:clamp(9px,1vw,12px);letter-spacing:0.13em;text-transform:uppercase;color:rgba(233,183,175,0.95);font-weight:600;line-height:1.35;margin-bottom:clamp(6px,1vh,10px);">The
+                  Commission of Inquiry on Enforced Disappearances</span>
+                <span
+                  style="display:block;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(19px,min(3.1vw,4.2vh),36px);line-height:1.12;letter-spacing:-0.012em;color:#f6f2ea;text-wrap:balance;">found
+                  at least 18 detention centers all over Bangladesh</span>
+              </h2>
+            </div>
+          </div>
+
+          <div data-mapcredit class="mono"
+            style="position:absolute;right:12px;bottom:8px;z-index:20;opacity:0;font-size:9.5px;letter-spacing:0.04em;color:rgba(226,232,238,0.4);">
+            Basemap © OpenStreetMap contributors · Sites: Commission of Inquiry on Enforced Disappearances</div>
         </div>
-      </div>
-    </div>
 
-    <div data-cards style="position:absolute;inset:0;z-index:30;pointer-events:none;">
+        <div data-hero style="position:absolute;inset:0;z-index:40;overflow:hidden;">
+          <div data-herobg
+            style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 50% 46%,#17120d 0%,#0c0906 62%,#070504 100%);will-change:transform,opacity;">
+          </div>
 
-      <article data-card style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,92vw);">
-        <div data-cardinner style="opacity:0;background:rgba(15,13,10,0.88);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid rgba(255,255,255,0.09);padding:clamp(20px,3vh,30px) clamp(24px,3.4vw,44px);box-shadow:0 34px 80px -44px rgba(0,0,0,0.85);display:flex;flex-direction:column;gap:clamp(10px,1.6vh,16px);will-change:transform,opacity;">
-          <h2 style="margin:0;font-weight:500;font-size:clamp(24px,2.9vw,38px);line-height:1.04;letter-spacing:-0.012em;color:#f5efe4;">Three feet by four feet</h2>
-          <p style="margin:0;font-size:clamp(14px,1.35vw,17px);line-height:1.56;color:rgba(226,220,208,0.8);text-wrap:pretty;">Solitary confinement fits a human life into about twelve square feet: floor enough to sit, to crouch, or to lie folded against the wall. A fixed toilet takes one corner. For up to twenty-two hours a day, this is the entire world.</p>
-        </div>
-      </article>
+          <div data-words style="position:absolute;inset:0;pointer-events:none;">
+            <span class="word mono" data-op="0.30"
+              style="position:absolute;left:26%;top:14%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(10px,1.2vw,17px);letter-spacing:0.22em;text-transform:uppercase;white-space:nowrap;"><span
+                class="wtext" style="--d:0.95s;--f:8s;">Rapid Action Battalion</span></span>
+            <span class="word mono" data-op="0.24"
+              style="position:absolute;left:76%;top:19%;transform:translate(-50%,-50%);opacity:0;color:rgba(186,30,20,1);font-size:clamp(20px,3.4vw,50px);letter-spacing:0.05em;font-weight:600;white-space:nowrap;"><span
+                class="wtext" style="--d:0.35s;--f:9s;">DGFI</span></span>
+            <span class="word mono" data-op="0.30"
+              style="position:absolute;left:12%;top:45%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(12px,1.7vw,25px);letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;"><span
+                class="wtext" style="--d:0.7s;--f:7.5s;">Rab Intelligence</span></span>
+            <span class="word mono" data-op="0.58"
+              style="position:absolute;left:84%;top:47%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(16px,2.5vw,38px);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span
+                class="wtext" style="--d:0.55s;--f:8.5s;">Abducted</span></span>
+            <span class="word mono" data-op="0.25"
+              style="position:absolute;left:17%;top:26%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(16px,2.9vw,44px);letter-spacing:0.08em;font-weight:600;white-space:nowrap;"><span
+                class="wtext" style="--d:0.48s;--f:7.8s;">NSI</span></span>
+            <span class="word mono" data-op="0.58"
+              style="position:absolute;left:46%;top:84%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(14px,2.0vw,30px);letter-spacing:0.12em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span
+                class="wtext" style="--d:0.63s;--f:8.2s;">disappeared</span></span>
+            <span class="word mono" data-op="0.25"
+              style="position:absolute;left:77%;top:73%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(16px,2.6vw,40px);letter-spacing:0.09em;font-weight:600;white-space:nowrap;"><span
+                class="wtext" style="--d:0.78s;--f:9.2s;">CTTC</span></span>
+            <span class="word mono" data-op="0.28"
+              style="position:absolute;left:19%;top:71%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(12px,1.8vw,27px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span
+                class="wtext" style="--d:0.85s;--f:7.2s;">Rab-7</span></span>
+            <span class="word mono" data-op="0.60"
+              style="position:absolute;left:61%;top:12%;transform:translate(-50%,-50%);opacity:0;color:rgba(232,96,82,1);font-size:clamp(14px,2.2vw,33px);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;white-space:nowrap;"><span
+                class="wtext" style="--d:0.43s;--f:8.8s;">Missing</span></span>
+            <span class="word mono" data-op="0.25"
+              style="position:absolute;left:11%;top:60%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(11px,1.5vw,22px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span
+                class="wtext" style="--d:1.02s;--f:7.6s;">Rab-4</span></span>
+            <span class="word mono" data-op="0.25"
+              style="position:absolute;left:88%;top:31%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(11px,1.5vw,22px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span
+                class="wtext" style="--d:0.68s;--f:8.4s;">Rab-11</span></span>
+            <span class="word mono" data-op="0.25"
+              style="position:absolute;left:34%;top:88%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(10px,1.4vw,21px);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;"><span
+                class="wtext" style="--d:1.1s;--f:7.1s;">Rab-10</span></span>
+            <span class="word mono" data-op="0.24"
+              style="position:absolute;left:89%;top:66%;transform:translate(-50%,-50%);opacity:0;color:rgba(186,30,20,1);font-size:clamp(16px,2.7vw,42px);letter-spacing:0.08em;font-weight:600;white-space:nowrap;"><span
+                class="wtext" style="--d:0.8s;--f:9s;">DB</span></span>
+            <span class="word mono" data-op="0.25"
+              style="position:absolute;left:8%;top:34%;transform:translate(-50%,-50%);opacity:0;color:rgba(240,235,225,1);font-size:clamp(13px,2.1vw,32px);letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap;"><span
+                class="wtext" style="--d:0.57s;--f:8.6s;">Rab</span></span>
+          </div>
 
-      <article data-card style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,92vw);">
-        <div data-cardinner style="opacity:0;background:rgba(15,13,10,0.88);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid rgba(255,255,255,0.09);padding:clamp(20px,3vh,30px) clamp(24px,3.4vw,44px);box-shadow:0 34px 80px -44px rgba(0,0,0,0.85);display:flex;flex-direction:column;gap:clamp(10px,1.6vh,16px);will-change:transform,opacity;">
-          <h2 style="margin:0;font-weight:500;font-size:clamp(24px,2.9vw,38px);line-height:1.04;letter-spacing:-0.012em;color:#f5efe4;">One of fourteen</h2>
-          <p style="margin:0;font-size:clamp(14px,1.35vw,17px);line-height:1.56;color:rgba(226,220,208,0.8);text-wrap:pretty;">Pull back and the cell is one of fourteen, sealed along a single controlled corridor. Each door faces a wall, not another person. Whatever contact remains passes through the officers who work the block.</p>
-        </div>
-      </article>
-
-      <article data-card style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,92vw);">
-        <div data-cardinner style="opacity:0;background:rgba(15,13,10,0.88);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid rgba(255,255,255,0.09);padding:clamp(20px,3vh,30px) clamp(24px,3.4vw,44px);box-shadow:0 34px 80px -44px rgba(0,0,0,0.85);display:flex;flex-direction:column;gap:clamp(10px,1.6vh,16px);will-change:transform,opacity;">
-          <h2 style="margin:0;font-weight:500;font-size:clamp(24px,2.9vw,38px);line-height:1.04;letter-spacing:-0.012em;color:#f5efe4;">Hidden inside a working base</h2>
-          <p style="margin:0;font-size:clamp(14px,1.35vw,17px);line-height:1.56;color:rgba(226,220,208,0.8);text-wrap:pretty;">Keep pulling back and the wing all but disappears. Around it runs the RAB Intelligence compound: armories, offices, a field, a common cell. The isolation unit is one quiet corner, easy to walk past and never see.</p>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section data-archive style="position:relative;z-index:2;background:#f5f4ef;color:#2b2720;">
-
-    <div aria-hidden="true" style="height:clamp(88px,14vh,150px);background:linear-gradient(180deg,#06090c 0%,#0b1117 24%,#33322d 66%,#f5f4ef 100%);"></div>
-
-    <div style="max-width:840px;margin:0 auto;padding:clamp(24px,5vh,64px) clamp(22px,5vw,40px) clamp(14px,3vh,28px);text-align:center;">
-      <span class="mono" style="display:inline-flex;align-items:center;padding:9px 21px 10px;border-radius:999px;background:#a3160f;color:#fff;font-size:13.5px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;line-height:1;">The Archive</span>
-      <h2 style="margin:clamp(14px,2.4vh,22px) 0 0;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,6vw,58px);line-height:1.03;letter-spacing:-0.016em;color:#1c1a16;text-wrap:balance;">Inside the Architecture of Secret Detention</h2>
-      <p style="margin:clamp(16px,2.6vh,26px) auto 0;max-width:660px;font-size:clamp(16px,2vw,21px);line-height:1.5;color:#4a4438;text-wrap:pretty;">An evidence-based archive of the secret detention and torture sites run by Bangladesh&rsquo;s police, paramilitary, and intelligence agencies between 2009 and 2024 &mdash; reconstructed from survivor testimony and the findings of the Commission of Inquiry on Enforced Disappearances.</p>
-    </div>
-
-    <div style="max-width:680px;margin:0 auto;padding:0 clamp(22px,5vw,40px);">
-      <p style="margin:0 0 1.15em;font-size:clamp(15px,1.6vw,18px);line-height:1.72;color:#2b2720;text-wrap:pretty;">For fifteen years, people across Bangladesh were taken from streets, homes, and workplaces by men who never gave their names, held in rooms that officially did not exist, and returned &mdash; when they were returned at all &mdash; under orders to say nothing. When the Awami League government fell in August 2024, the Commission of Inquiry on Enforced Disappearances began documenting what those rooms had been. What it found was not a series of isolated abuses but the functioning of a system: a network of cells inside police headquarters, battalion compounds, intelligence facilities, and unmarked &ldquo;safe houses,&rdquo; each with its own routines of interrogation and torture.</p>
-      <p style="margin:0;font-size:clamp(15px,1.6vw,18px);line-height:1.72;color:#2b2720;text-wrap:pretty;">This archive maps that network, agency by agency. Some of these sites still stand as they were. Others were repainted, retiled, or demolished in the weeks after the government fell &mdash; an attempt to erase the evidence that is itself part of the record.</p>
-      <div class="mono" style="margin-top:clamp(20px,3vh,30px);font-size:11px;letter-spacing:0.06em;line-height:1.6;color:#6d665a;">Source: Commission of Inquiry on Enforced Disappearances, Bangladesh &middot; report updated 12 January 2026</div>
-    </div>
-
-    <div data-tabbar style="position:sticky;top:0;z-index:20;margin-top:clamp(30px,5vh,56px);background:#17140f;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(0,0,0,0.5);box-shadow:0 12px 34px -20px rgba(0,0,0,0.7);">
-      <div style="max-width:1080px;margin:0 auto;padding:clamp(11px,1.7vh,15px) clamp(12px,4vw,32px);display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="7">
-          <button type="button" onClick="{{ t.onClick }}" style="{{ t.style }}" style-hover="{{ t.hoverStyle }}">
-            <span>{{ t.short }}</span>
-            <span class="mono" style="{{ t.countStyle }}">{{ t.count }}</span>
-          </button>
-        </sc-for>
-      </div>
-    </div>
-
-    <div style="max-width:960px;margin:0 auto;padding:clamp(28px,5vh,54px) clamp(16px,5vw,36px) clamp(48px,9vh,92px);">
-
-      <div data-intro style="border-bottom:1px solid rgba(28,26,22,0.14);padding-bottom:clamp(18px,3vh,28px);margin-bottom:clamp(20px,3.4vh,34px);scroll-margin-top:70px;">
-        <div style="text-align:center;"><div class="mono" style="font-size:clamp(15px,1.7vw,17.5px);letter-spacing:0.02em;text-transform:uppercase;color:#8f120c;font-weight:700;line-height:1.25;">{{ active.authority }}</div>
-        <h3 style="margin:clamp(12px,1.8vh,18px) auto 0;max-width:26ch;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(33px,5.8vw,56px);line-height:1.04;letter-spacing:-0.015em;color:#1c1a16;text-wrap:balance;">{{ active.title }}</h3>
-        <div class="mono" style="margin-top:clamp(12px,1.8vh,16px);font-size:14px;letter-spacing:0.05em;color:#4a4438;">{{ active.count }}</div></div>
-        <div style="margin-top:clamp(20px,3vh,30px);display:flex;flex-direction:column;gap:0.95em;">
-          <sc-for list="{{ active.intro }}" as="ip" hint-placeholder-count="2">
-            <p style="margin:0;font-size:clamp(16.5px,1.8vw,19px);line-height:1.72;color:#2b2720;text-wrap:pretty;">{{ ip }}</p>
-          </sc-for>
-        </div>
-      </div>
-
-      <div style="display:flex;flex-direction:column;gap:clamp(10px,1.6vh,14px);">
-        <sc-for list="{{ sites }}" as="s" hint-placeholder-count="3">
-          <article style="background:#ffffff;border:1px solid rgba(28,26,22,0.13);border-radius:4px;overflow:hidden;box-shadow:0 1px 2px rgba(28,26,22,0.04);">
-
-            <button type="button" onClick="{{ s.onToggle }}" style="{{ s.headerStyle }}" style-hover="{{ s.headerHoverStyle }}">
-              <span style="display:flex;align-items:center;gap:12px;min-width:0;flex:1 1 260px;">
-                <span style="{{ s.dotStyle }}">{{ s.statusGlyph }}</span>
-                <span style="font-family:'Newsreader',serif;font-size:clamp(16px,1.9vw,20px);font-weight:500;color:#1c1a16;line-height:1.22;">{{ s.name }}</span>
-              </span>
-              <span style="display:flex;align-items:center;gap:13px;flex-shrink:0;">
-                <span class="mono" style="{{ s.statusChipStyle }}">{{ s.statusLabel }}</span>
-                <span style="{{ s.chevStyle }}">&#8964;</span>
-              </span>
-            </button>
-
-            <sc-if value="{{ s.open }}" hint-placeholder-val="{{ false }}">
-              <div style="animation:accIn .34s cubic-bezier(.22,.61,.36,1);border-top:1px solid rgba(28,26,22,0.1);padding:clamp(20px,3.4vh,32px) clamp(16px,3.4vw,38px) clamp(26px,4vh,40px);">
-
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(18px,2.4vw,28px) clamp(22px,3vw,36px);margin-bottom:clamp(24px,3.6vh,34px);">
-                  <div>
-                    <span class="mono" style="display:inline-flex;align-items:center;padding:5px 12px 6px;border-radius:999px;background:#26231d;color:#f2eee4;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;">Status</span>
-                    <div style="{{ s.statusTextStyle }}">{{ s.statusLabel }}</div>
-                    <div style="font-size:14px;line-height:1.55;color:#565044;margin-top:5px;">{{ s.statusNote }}</div>
-                  </div>
-                  <div>
-                    <span class="mono" style="display:inline-flex;align-items:center;padding:5px 12px 6px;border-radius:999px;background:#26231d;color:#f2eee4;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;">Location</span>
-                    <div style="margin-top:10px;font-size:16.5px;line-height:1.55;color:#2b2720;">{{ s.location }}</div>
-                  </div>
-                  <div>
-                    <span class="mono" style="display:inline-flex;align-items:center;padding:5px 12px 6px;border-radius:999px;background:#26231d;color:#f2eee4;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;">Operated / owned by</span>
-                    <div style="margin-top:10px;font-size:16.5px;line-height:1.55;color:#2b2720;">{{ s.operator }}</div>
-                  </div>
-                  <sc-if value="{{ s.alsoUsedBy }}" hint-placeholder-val="{{ false }}">
-                    <div>
-                      <span class="mono" style="display:inline-flex;align-items:center;padding:5px 12px 6px;border-radius:999px;background:#26231d;color:#f2eee4;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;">Also used by</span>
-                      <div style="margin-top:10px;font-size:16.5px;line-height:1.55;color:#2b2720;">{{ s.alsoUsedBy }}</div>
-                    </div>
-                  </sc-if>
-                </div>
-
-                <div style="max-width:72ch;display:flex;flex-direction:column;gap:0.9em;">
-                  <sc-for list="{{ s.description }}" as="dp" hint-placeholder-count="1">
-                    <p style="margin:0;font-size:clamp(16.5px,1.7vw,18.5px);line-height:1.72;color:#2b2720;text-wrap:pretty;">{{ dp }}</p>
-                  </sc-for>
-                </div>
-
-                <sc-if value="{{ s.hasImages }}" hint-placeholder-val="{{ false }}">
-                  <div style="margin-top:clamp(22px,3.2vh,32px);">
-                    <detention-gallery data-images="{{ s.imagesJson }}"></detention-gallery>
-                  </div>
-                </sc-if>
-
-                <sc-if value="{{ s.hasHappened }}" hint-placeholder-val="{{ false }}">
-                  <div style="margin-top:clamp(22px,3.4vh,32px);">
-                    <span class="mono" style="display:inline-flex;align-items:center;padding:6px 13px 7px;border-radius:999px;background:#a3160f;color:#fff;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;">What happened here</span>
-                    <div style="max-width:72ch;display:flex;flex-direction:column;gap:0.9em;margin-top:11px;">
-                      <sc-for list="{{ s.happened }}" as="hp" hint-placeholder-count="1">
-                        <p style="margin:0;font-size:clamp(16.5px,1.7vw,18.5px);line-height:1.72;color:#2b2720;text-wrap:pretty;">{{ hp }}</p>
-                      </sc-for>
-                    </div>
-                  </div>
-                </sc-if>
-
-                <sc-if value="{{ s.detainees }}" hint-placeholder-val="{{ false }}">
-                  <div style="margin-top:clamp(20px,3vh,28px);padding:15px 18px;background:#f6f4ed;border:1px solid rgba(28,26,22,0.1);border-radius:3px;">
-                    <span class="mono" style="display:inline-flex;align-items:center;padding:5px 12px 6px;border-radius:999px;background:#26231d;color:#f2eee4;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;margin-bottom:11px;">Named detainees</span>
-                    <div style="font-family:'Newsreader',serif;font-size:16px;line-height:1.55;color:#2a2620;">{{ s.detainees }}</div>
-                  </div>
-                </sc-if>
-
-                <sc-if value="{{ s.hasTestimony }}" hint-placeholder-val="{{ false }}">
-                  <div style="margin-top:clamp(26px,4vh,40px);display:flex;flex-direction:column;gap:clamp(16px,2.6vh,24px);">
-                    <sc-for list="{{ s.testimonies }}" as="q" hint-placeholder-count="1">
-
-                      <sc-if value="{{ q.isSurvivor }}" hint-placeholder-val="{{ false }}">
-                        <blockquote style="position:relative;margin:0;background:linear-gradient(180deg,#fdf3e6 0%,#fbead6 100%);border:1px solid rgba(163,22,15,0.22);border-left:4px solid #a3160f;border-right:4px solid #a3160f;border-radius:5px;padding:clamp(28px,3.8vh,44px) clamp(22px,3.4vw,40px) clamp(20px,3vh,28px);overflow:hidden;box-shadow:0 14px 40px -26px rgba(120,30,10,0.4);">
-                          <span aria-hidden="true" style="position:absolute;top:6px;left:15px;font-family:'Newsreader',serif;font-size:clamp(96px,15vw,158px);line-height:1;color:rgba(163,22,15,0.18);pointer-events:none;user-select:none;">&ldquo;</span>
-                          <div style="position:relative;display:flex;flex-direction:column;gap:0.85em;">
-                            <sc-for list="{{ q.text }}" as="qp" hint-placeholder-count="1">
-                              <p style="margin:0;font-family:'Newsreader',serif;font-size:clamp(16px,2vw,21px);line-height:1.62;color:#2a2620;text-wrap:pretty;">{{ qp }}</p>
-                            </sc-for>
-                          </div>
-                          <div style="position:relative;margin-top:clamp(18px,2.6vh,26px);display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-                            <span class="mono" style="font-size:11.5px;letter-spacing:0.12em;color:#fff;background:#a3160f;border-radius:999px;padding:6px 13px;font-weight:600;white-space:nowrap;">{{ q.codeLabel }}</span>
-                            <span style="font-size:13.5px;line-height:1.5;color:#6e4a3a;text-wrap:pretty;">{{ q.meta }}</span>
-                          </div>
-                        </blockquote>
-                      </sc-if>
-
-                      <sc-if value="{{ q.isOperative }}" hint-placeholder-val="{{ false }}">
-                        <blockquote style="position:relative;margin:0;background:#211f1b;border:1px solid rgba(255,255,255,0.08);border-radius:5px;padding:clamp(26px,3.6vh,40px) clamp(22px,3.4vw,40px) clamp(22px,3vh,30px);overflow:hidden;box-shadow:0 22px 54px -34px rgba(0,0,0,0.7);">
-                          <span aria-hidden="true" style="position:absolute;top:2px;left:15px;font-family:'Newsreader',serif;font-size:clamp(96px,15vw,158px);line-height:1;color:rgba(210,168,108,0.16);pointer-events:none;user-select:none;">&ldquo;</span>
-                          <div class="mono" style="position:relative;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#cf9a3c;font-weight:600;margin-bottom:clamp(14px,2vh,18px);display:flex;align-items:center;gap:9px;"><span style="width:6px;height:6px;background:#cf9a3c;display:inline-block;flex-shrink:0;"></span>{{ q.tag }}</div>
-                          <div style="position:relative;display:flex;flex-direction:column;gap:0.85em;">
-                            <sc-for list="{{ q.text }}" as="qp" hint-placeholder-count="1">
-                              <p style="margin:0;font-family:'Newsreader',serif;font-size:clamp(16px,2vw,21px);line-height:1.62;color:#e8e3d8;text-wrap:pretty;">{{ qp }}</p>
-                            </sc-for>
-                          </div>
-                          <div style="position:relative;margin-top:clamp(18px,2.6vh,26px);padding-top:14px;border-top:1px solid rgba(255,255,255,0.12);">
-                            <div style="font-family:'Newsreader',serif;font-size:16.5px;line-height:1.4;color:#f3efe5;">{{ q.role }}</div>
-                            <div class="mono" style="margin-top:5px;font-size:11px;letter-spacing:0.03em;line-height:1.5;color:rgba(232,227,216,0.55);">{{ q.note }}</div>
-                          </div>
-                        </blockquote>
-                      </sc-if>
-
-                    </sc-for>
-                  </div>
-                </sc-if>
-
+          <div data-casewrap
+            style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;">
+            <div data-casebox class="mono"
+              style="position:relative;width:min(660px,92vw);background:rgba(18,14,10,0.55);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);border:1px solid rgba(214,206,193,0.16);padding:clamp(26px,4.4vh,44px) clamp(24px,4vw,48px);box-shadow:0 40px 90px -50px rgba(0,0,0,0.9),inset 0 1px 0 rgba(255,255,255,0.04);will-change:transform,opacity;">
+              <div
+                style="position:absolute;top:12px;left:14px;width:12px;height:12px;border-top:1px solid rgba(214,206,193,0.32);border-left:1px solid rgba(214,206,193,0.32);">
               </div>
-            </sc-if>
-          </article>
-        </sc-for>
+              <div
+                style="position:absolute;top:12px;right:14px;width:12px;height:12px;border-top:1px solid rgba(214,206,193,0.32);border-right:1px solid rgba(214,206,193,0.32);">
+              </div>
+              <div
+                style="position:absolute;bottom:12px;left:14px;width:12px;height:12px;border-bottom:1px solid rgba(214,206,193,0.32);border-left:1px solid rgba(214,206,193,0.32);">
+              </div>
+              <div
+                style="position:absolute;bottom:12px;right:14px;width:12px;height:12px;border-bottom:1px solid rgba(214,206,193,0.32);border-right:1px solid rgba(214,206,193,0.32);">
+              </div>
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:clamp(16px,3vh,26px);">
+                <span style="width:7px;height:7px;background:#a3160f;display:inline-block;"></span>
+                <span
+                  style="font-size:12px;letter-spacing:0.34em;text-transform:uppercase;color:rgba(221,213,200,0.8);">Case
+                  File</span>
+              </div>
+              <div data-code
+                style="font-size:clamp(34px,7vw,68px);line-height:1;letter-spacing:0.01em;color:#f6f1e8;font-weight:600;min-height:1em;">
+                <span data-code-t></span><span data-caret1 class="caret"></span>
+              </div>
+              <div data-sent
+                style="margin-top:clamp(16px,2.8vh,24px);font-size:clamp(16px,2.2vw,22px);line-height:1.6;color:rgba(233,227,215,0.95);max-width:44ch;min-height:1.6em;">
+                <span data-sent-t></span><span data-caret2 class="caret"
+                  style="opacity:0;height:0.95em;width:0.5em;"></span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <sc-if value="{{ active.hasCrossBorder }}" hint-placeholder-val="{{ false }}">
-          <article style="background:#ffffff;border:1px solid rgba(28,26,22,0.13);border-radius:4px;padding:clamp(24px,3.8vh,38px) clamp(18px,3.6vw,40px);box-shadow:0 1px 2px rgba(28,26,22,0.04);">
-            <span class="mono" style="display:inline-flex;align-items:center;padding:6px 13px 7px;border-radius:999px;background:#a3160f;color:#fff;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;">{{ active.crossBorderHeading }}</span>
-            <div style="max-width:72ch;display:flex;flex-direction:column;gap:0.95em;margin-top:14px;">
-              <sc-for list="{{ active.crossBorderParas }}" as="cp" hint-placeholder-count="3">
-                <p style="margin:0;font-size:clamp(16.5px,1.7vw,18.5px);line-height:1.72;color:#2b2720;text-wrap:pretty;">{{ cp }}</p>
-              </sc-for>
+        <div data-cards style="position:absolute;inset:0;z-index:30;pointer-events:none;">
+
+          <article data-card
+            style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,92vw);">
+            <div data-cardinner
+              style="opacity:0;background:rgba(15,13,10,0.88);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid rgba(255,255,255,0.09);padding:clamp(20px,3vh,30px) clamp(24px,3.4vw,44px);box-shadow:0 34px 80px -44px rgba(0,0,0,0.85);display:flex;flex-direction:column;gap:clamp(10px,1.6vh,16px);will-change:transform,opacity;">
+              <h2
+                style="margin:0;font-weight:500;font-size:clamp(24px,2.9vw,38px);line-height:1.04;letter-spacing:-0.012em;color:#f5efe4;">
+                Three feet by four feet</h2>
+              <p
+                style="margin:0;font-size:clamp(14px,1.35vw,17px);line-height:1.56;color:rgba(226,220,208,0.8);text-wrap:pretty;">
+                Solitary confinement fits a human life into about twelve square feet: floor enough to sit, to crouch, or
+                to lie folded against the wall. A fixed toilet takes one corner. For up to twenty-two hours a day, this
+                is the entire world.</p>
             </div>
           </article>
-        </sc-if>
-      </div>
-    </div>
 
-    <section data-coord style="position:relative;z-index:2;background:#1b1610;color:#e9e0cc;border-top:1px solid rgba(0,0,0,0.4);overflow:hidden;">
-      <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#f5f4ef 0%,#e7ddc7 6%,#2a2114 24%,#1c1710 58%,#191309 100%);"></div>
-      <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;opacity:0.4;background:repeating-linear-gradient(96deg,rgba(226,210,170,0.03) 0 2px,transparent 2px 5px),repeating-linear-gradient(4deg,rgba(226,210,170,0.022) 0 2px,transparent 2px 6px);"></div>
-      <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 72% 54% at 50% 46%,rgba(255,240,205,0.06) 0%,transparent 70%);"></div>
+          <article data-card
+            style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,92vw);">
+            <div data-cardinner
+              style="opacity:0;background:rgba(15,13,10,0.88);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid rgba(255,255,255,0.09);padding:clamp(20px,3vh,30px) clamp(24px,3.4vw,44px);box-shadow:0 34px 80px -44px rgba(0,0,0,0.85);display:flex;flex-direction:column;gap:clamp(10px,1.6vh,16px);will-change:transform,opacity;">
+              <h2
+                style="margin:0;font-weight:500;font-size:clamp(24px,2.9vw,38px);line-height:1.04;letter-spacing:-0.012em;color:#f5efe4;">
+                One of fourteen</h2>
+              <p
+                style="margin:0;font-size:clamp(14px,1.35vw,17px);line-height:1.56;color:rgba(226,220,208,0.8);text-wrap:pretty;">
+                Pull back and the cell is one of fourteen, sealed along a single controlled corridor. Each door faces a
+                wall, not another person. Whatever contact remains passes through the officers who work the block.</p>
+            </div>
+          </article>
 
-      <div style="position:relative;max-width:880px;margin:0 auto;padding:clamp(56px,9vh,110px) clamp(22px,5vw,40px) clamp(4px,1.5vh,14px);text-align:center;">
-        <span class="mono" style="display:inline-flex;align-items:center;padding:9px 21px 10px;border-radius:999px;background:#a3160f;color:#fff;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;line-height:1;">The Network</span>
-        <h2 style="margin:clamp(14px,2.4vh,22px) 0 0;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,6vw,58px);line-height:1.03;letter-spacing:-0.016em;color:#f6efdd;text-wrap:balance;">A Single Machinery of Disappearance</h2>
-        <p style="margin:clamp(16px,2.6vh,26px) auto 0;max-width:690px;font-size:clamp(16px,2vw,20px);line-height:1.6;color:rgba(233,223,201,0.82);text-wrap:pretty;">Six agencies carried out the disappearances &mdash; but rarely alone. A person seized by one force was passed to the next: questioned by military intelligence, held in a battalion cell, moved to a shared torture centre. This plate traces who worked with whom, drawn from a subset of cases documented by the Commission of Inquiry on Enforced Disappearances.</p>
-      </div>
+          <article data-card
+            style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,92vw);">
+            <div data-cardinner
+              style="opacity:0;background:rgba(15,13,10,0.88);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid rgba(255,255,255,0.09);padding:clamp(20px,3vh,30px) clamp(24px,3.4vw,44px);box-shadow:0 34px 80px -44px rgba(0,0,0,0.85);display:flex;flex-direction:column;gap:clamp(10px,1.6vh,16px);will-change:transform,opacity;">
+              <h2
+                style="margin:0;font-weight:500;font-size:clamp(24px,2.9vw,38px);line-height:1.04;letter-spacing:-0.012em;color:#f5efe4;">
+                Hidden inside a working base</h2>
+              <p
+                style="margin:0;font-size:clamp(14px,1.35vw,17px);line-height:1.56;color:rgba(226,220,208,0.8);text-wrap:pretty;">
+                Keep pulling back and the wing all but disappears. Around it runs the RAB Intelligence compound:
+                armories, offices, a field, a common cell. The isolation unit is one quiet corner, easy to walk past and
+                never see.</p>
+            </div>
+          </article>
 
-      <div data-coordroot style="position:relative;max-width:1500px;margin:0 auto;padding:clamp(10px,2vh,22px) clamp(10px,2.5vw,30px) clamp(40px,7vh,84px);min-height:520px;"></div>
-    </section>
+        </div>
+      </section>
 
-    <footer style="background:#17140f;color:#e7e1d6;padding:clamp(44px,7vh,78px) clamp(22px,6vw,60px) clamp(34px,5vh,52px);border-top:1px solid rgba(255,255,255,0.06);">
-      <div style="max-width:1080px;margin:0 auto;">
-        <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;">
-          <div style="max-width:440px;">
-            <a href="https://www.thedailystar.net" target="_blank" rel="noopener" aria-label="The Daily Star" style="display:inline-block;text-decoration:none;">
-              <img src="assets/logo.svg" alt="The Daily Star" style="height:36px;width:auto;display:block;filter:brightness(0) invert(1);opacity:0.96;"/>
-            </a>
-            <div style="margin-top:16px;font-size:13.5px;line-height:1.62;color:rgba(231,225,214,0.7);text-wrap:pretty;">Based on the findings of the <span style="color:#f0ece2;">Commission of Inquiry on Enforced Disappearances</span>, Bangladesh.</div>
-          </div>
-          <div style="display:flex;gap:11px;align-items:center;">
-            <a href="https://www.facebook.com/dailystarnews" target="_blank" rel="noopener" aria-label="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.045);color:rgba(231,225,214,0.85);transition:all .2s ease;" style-hover="background:#1877F2;border-color:#1877F2;color:#fff">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-            <a href="https://twitter.com/dailystarnews" target="_blank" rel="noopener" aria-label="X" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.045);color:rgba(231,225,214,0.85);transition:all .2s ease;" style-hover="background:#ffffff;border-color:#ffffff;color:#000000">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/user/TheDailyStarNews" target="_blank" rel="noopener" aria-label="YouTube" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.045);color:rgba(231,225,214,0.85);transition:all .2s ease;" style-hover="background:#FF0000;border-color:#FF0000;color:#fff">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/thedailystarnews" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.045);color:rgba(231,225,214,0.85);transition:all .2s ease;" style-hover="background:#E4405F;border-color:#E4405F;color:#fff">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/company/the-daily-star" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.045);color:rgba(231,225,214,0.85);transition:all .2s ease;" style-hover="background:#0A66C2;border-color:#0A66C2;color:#fff">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
-            </a>
+      <section data-archive style="position:relative;z-index:2;background:#f5f4ef;color:#2b2720;">
+
+        <div aria-hidden="true"
+          style="height:clamp(88px,14vh,150px);background:linear-gradient(180deg,#06090c 0%,#0b1117 24%,#33322d 66%,#f5f4ef 100%);">
+        </div>
+
+        <div
+          style="max-width:840px;margin:0 auto;padding:clamp(24px,5vh,64px) clamp(22px,5vw,40px) clamp(14px,3vh,28px);text-align:center;">
+          <span class="mono"
+            style="display:inline-flex;align-items:center;padding:9px 21px 10px;border-radius:999px;background:#a3160f;color:#fff;font-size:13.5px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;line-height:1;">The
+            Archive</span>
+          <h2
+            style="margin:clamp(14px,2.4vh,22px) 0 0;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,6vw,58px);line-height:1.03;letter-spacing:-0.016em;color:#1c1a16;text-wrap:balance;">
+            Inside the Architecture of Secret Detention</h2>
+          <p
+            style="margin:clamp(16px,2.6vh,26px) auto 0;max-width:660px;font-size:clamp(16px,2vw,21px);line-height:1.5;color:#4a4438;text-wrap:pretty;">
+            An evidence-based archive of the secret detention and torture sites run by Bangladesh&rsquo;s police,
+            paramilitary, and intelligence agencies between 2009 and 2024 &mdash; reconstructed from survivor testimony
+            and the findings of the Commission of Inquiry on Enforced Disappearances.</p>
+        </div>
+
+        <div style="max-width:680px;margin:0 auto;padding:0 clamp(22px,5vw,40px);">
+          <p
+            style="margin:0 0 1.15em;font-size:clamp(15px,1.6vw,18px);line-height:1.72;color:#2b2720;text-wrap:pretty;">
+            For fifteen years, people across Bangladesh were taken from streets, homes, and workplaces by men who never
+            gave their names, held in rooms that officially did not exist, and returned &mdash; when they were returned
+            at all &mdash; under orders to say nothing. When the Awami League government fell in August 2024, the
+            Commission of Inquiry on Enforced Disappearances began documenting what those rooms had been. What it found
+            was not a series of isolated abuses but the functioning of a system: a network of cells inside police
+            headquarters, battalion compounds, intelligence facilities, and unmarked &ldquo;safe houses,&rdquo; each
+            with its own routines of interrogation and torture.</p>
+          <p style="margin:0;font-size:clamp(15px,1.6vw,18px);line-height:1.72;color:#2b2720;text-wrap:pretty;">This
+            archive maps that network, agency by agency. Some of these sites still stand as they were. Others were
+            repainted, retiled, or demolished in the weeks after the government fell &mdash; an attempt to erase the
+            evidence that is itself part of the record.</p>
+          <div class="mono"
+            style="margin-top:clamp(20px,3vh,30px);font-size:11px;letter-spacing:0.06em;line-height:1.6;color:#6d665a;">
+            Source: Commission of Inquiry on Enforced Disappearances, Bangladesh &middot; report updated 12 January 2026
           </div>
         </div>
-      </div>
-    </footer>
 
-  </section>
-
-  <div data-sheet-scrim style="{{ scrimStyle }}" onClick="{{ closeSheet }}" aria-hidden="true"></div>
-  <aside data-sheet data-lenis-prevent role="dialog" aria-modal="true" aria-label="Site details" style="{{ sheetStyle }}">
-    <div style="display:flex;justify-content:center;padding:6px 0 12px;"><span style="width:42px;height:4px;border-radius:999px;background:rgba(255,255,255,0.24);display:block;"></span></div>
-    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
-      <div style="min-width:0;">
-        <div style="font-family:'Newsreader',serif;font-size:19px;font-weight:600;color:#fff;line-height:1.24;text-wrap:pretty;">{{ sheet.title }}</div>
-        <sc-if value="{{ sheet.subtitle }}" hint-placeholder-val="{{ false }}"><div class="mono" style="margin-top:5px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#e0554b;">{{ sheet.subtitle }}</div></sc-if>
-      </div>
-      <button type="button" onClick="{{ closeSheet }}" aria-label="Close" style="flex-shrink:0;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.06);color:#f2efe8;font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#215;</button>
-    </div>
-    <sc-if value="{{ sheet.hasDesc }}" hint-placeholder-val="{{ false }}">
-      <p style="margin:14px 0 0;font-size:13px;line-height:1.6;color:rgba(242,239,232,0.74);text-wrap:pretty;">{{ sheet.desc }}</p>
-    </sc-if>
-    <sc-if value="{{ sheet.hasItems }}" hint-placeholder-val="{{ false }}">
-      <div style="margin:16px 0 0;display:flex;flex-direction:column;gap:0;">
-        <sc-for list="{{ sheet.items }}" as="it" hint-placeholder-count="3">
-          <div style="border-top:1px solid rgba(255,255,255,0.09);padding:11px 0;">
-            <div style="font-family:'Newsreader',serif;font-size:15px;font-weight:600;color:#fff;line-height:1.28;">{{ it.name }}</div>
-            <div style="margin-top:3px;font-size:11.5px;line-height:1.5;color:rgba(242,239,232,0.62);text-wrap:pretty;">{{ it.desc }}</div>
+        <div data-tabbar
+          style="position:sticky;top:0;z-index:20;margin-top:clamp(30px,5vh,56px);background:#17140f;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(0,0,0,0.5);box-shadow:0 12px 34px -20px rgba(0,0,0,0.7);">
+          <div
+            style="max-width:1080px;margin:0 auto;padding:clamp(11px,1.7vh,15px) clamp(12px,4vw,32px);display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+            <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="7">
+              <button type="button" onClick="{{ t.onClick }}" style="{{ t.style }}" style-hover="{{ t.hoverStyle }}">
+                <span>{{ t.short }}</span>
+                <span class="mono" style="{{ t.countStyle }}">{{ t.count }}</span>
+              </button>
+            </sc-for>
           </div>
-        </sc-for>
-      </div>
-    </sc-if>
-  </aside>
+        </div>
 
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;}}">
+        <div
+          style="max-width:960px;margin:0 auto;padding:clamp(28px,5vh,54px) clamp(16px,5vw,36px) clamp(48px,9vh,92px);">
+
+          <div data-intro
+            style="border-bottom:1px solid rgba(28,26,22,0.14);padding-bottom:clamp(18px,3vh,28px);margin-bottom:clamp(20px,3.4vh,34px);scroll-margin-top:70px;">
+            <div style="text-align:center;">
+              <div class="mono"
+                style="font-size:clamp(15px,1.7vw,17.5px);letter-spacing:0.02em;text-transform:uppercase;color:#8f120c;font-weight:700;line-height:1.25;">
+                {{ active.authority }}</div>
+              <h3
+                style="margin:clamp(12px,1.8vh,18px) auto 0;max-width:26ch;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(33px,5.8vw,56px);line-height:1.04;letter-spacing:-0.015em;color:#1c1a16;text-wrap:balance;">
+                {{ active.title }}</h3>
+              <div class="mono"
+                style="margin-top:clamp(12px,1.8vh,16px);font-size:14px;letter-spacing:0.05em;color:#4a4438;">{{
+                active.count }}</div>
+            </div>
+            <div style="margin-top:clamp(20px,3vh,30px);display:flex;flex-direction:column;gap:0.95em;">
+              <sc-for list="{{ active.intro }}" as="ip" hint-placeholder-count="2">
+                <p style="margin:0;font-size:clamp(16.5px,1.8vw,19px);line-height:1.72;color:#2b2720;text-wrap:pretty;">
+                  {{ ip }}</p>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:clamp(10px,1.6vh,14px);">
+            <sc-for list="{{ sites }}" as="s" hint-placeholder-count="3">
+              <article
+                style="background:#ffffff;border:1px solid rgba(28,26,22,0.13);border-radius:4px;overflow:hidden;box-shadow:0 1px 2px rgba(28,26,22,0.04);">
+
+                <button type="button" onClick="{{ s.onToggle }}" style="{{ s.headerStyle }}"
+                  style-hover="{{ s.headerHoverStyle }}">
+                  <span style="display:flex;align-items:center;gap:12px;min-width:0;flex:1 1 260px;">
+                    <span style="{{ s.dotStyle }}">{{ s.statusGlyph }}</span>
+                    <span
+                      style="font-family:'Newsreader',serif;font-size:clamp(16px,1.9vw,20px);font-weight:500;color:#1c1a16;line-height:1.22;">{{
+                      s.name }}</span>
+                  </span>
+                  <span style="display:flex;align-items:center;gap:13px;flex-shrink:0;">
+                    <span class="mono" style="{{ s.statusChipStyle }}">{{ s.statusLabel }}</span>
+                    <span style="{{ s.chevStyle }}">&#8964;</span>
+                  </span>
+                </button>
+
+                <sc-if value="{{ s.open }}" hint-placeholder-val="{{ false }}">
+                  <div
+                    style="animation:accIn .34s cubic-bezier(.22,.61,.36,1);border-top:1px solid rgba(28,26,22,0.1);padding:clamp(20px,3.4vh,32px) clamp(16px,3.4vw,38px) clamp(26px,4vh,40px);">
+
+                    <div
+                      style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(18px,2.4vw,28px) clamp(22px,3vw,36px);margin-bottom:clamp(24px,3.6vh,34px);">
+                      <div>
+                        <span class="mono"
+                          style="display:inline-flex;align-items:center;padding:5px 12px 6px;border-radius:999px;background:#26231d;color:#f2eee4;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;">Status</span>
+                        <div style="{{ s.statusTextStyle }}">{{ s.statusLabel }}</div>
+                        <div style="font-size:14px;line-height:1.55;color:#565044;margin-top:5px;">{{ s.statusNote }}
+                        </div>
+                      </div>
+                      <div>
+                        <span class="mono"
+                          style="display:inline-flex;align-items:center;padding:5px 12px 6px;border-radius:999px;background:#26231d;color:#f2eee4;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;">Location</span>
+                        <div style="margin-top:10px;font-size:16.5px;line-height:1.55;color:#2b2720;">{{ s.location }}
+                        </div>
+                      </div>
+                      <div>
+                        <span class="mono"
+                          style="display:inline-flex;align-items:center;padding:5px 12px 6px;border-radius:999px;background:#26231d;color:#f2eee4;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;">Operated
+                          / owned by</span>
+                        <div style="margin-top:10px;font-size:16.5px;line-height:1.55;color:#2b2720;">{{ s.operator }}
+                        </div>
+                      </div>
+                      <sc-if value="{{ s.alsoUsedBy }}" hint-placeholder-val="{{ false }}">
+                        <div>
+                          <span class="mono"
+                            style="display:inline-flex;align-items:center;padding:5px 12px 6px;border-radius:999px;background:#26231d;color:#f2eee4;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;">Also
+                            used by</span>
+                          <div style="margin-top:10px;font-size:16.5px;line-height:1.55;color:#2b2720;">{{ s.alsoUsedBy
+                            }}</div>
+                        </div>
+                      </sc-if>
+                    </div>
+
+                    <div style="max-width:72ch;display:flex;flex-direction:column;gap:0.9em;">
+                      <sc-for list="{{ s.description }}" as="dp" hint-placeholder-count="1">
+                        <p
+                          style="margin:0;font-size:clamp(16.5px,1.7vw,18.5px);line-height:1.72;color:#2b2720;text-wrap:pretty;">
+                          {{ dp }}</p>
+                      </sc-for>
+                    </div>
+
+                    <sc-if value="{{ s.hasImages }}" hint-placeholder-val="{{ false }}">
+                      <div style="margin-top:clamp(22px,3.2vh,32px);">
+                        <detention-gallery data-images="{{ s.imagesJson }}"></detention-gallery>
+                      </div>
+                    </sc-if>
+
+                    <sc-if value="{{ s.hasHappened }}" hint-placeholder-val="{{ false }}">
+                      <div style="margin-top:clamp(22px,3.4vh,32px);">
+                        <span class="mono"
+                          style="display:inline-flex;align-items:center;padding:9px 19px 10px;border-radius:999px;background:#a3160f;color:#fff;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;line-height:1;">What
+                          happened here</span>
+                        <div style="max-width:76ch;display:flex;flex-direction:column;gap:0.95em;margin-top:15px;">
+                          <sc-for list="{{ s.happened }}" as="hp" hint-placeholder-count="1">
+                            <p
+                              style="margin:0;font-size:clamp(18px,2vw,22px);line-height:1.68;color:#2b2720;text-wrap:pretty;">
+                              {{ hp }}</p>
+                          </sc-for>
+                        </div>
+                      </div>
+                    </sc-if>
+
+                    <sc-if value="{{ s.detainees }}" hint-placeholder-val="{{ false }}">
+                      <div
+                        style="margin-top:clamp(20px,3vh,28px);padding:15px 18px;background:#f6f4ed;border:1px solid rgba(28,26,22,0.1);border-radius:3px;">
+                        <span class="mono"
+                          style="display:inline-flex;align-items:center;padding:5px 12px 6px;border-radius:999px;background:#26231d;color:#f2eee4;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;margin-bottom:11px;">Named
+                          detainees</span>
+                        <div style="font-family:'Newsreader',serif;font-size:16px;line-height:1.55;color:#2a2620;">{{
+                          s.detainees }}</div>
+                      </div>
+                    </sc-if>
+
+                    <sc-if value="{{ s.hasTestimony }}" hint-placeholder-val="{{ false }}">
+                      <div
+                        style="margin-top:clamp(26px,4vh,40px);display:flex;flex-direction:column;gap:clamp(16px,2.6vh,24px);">
+                        <sc-for list="{{ s.testimonies }}" as="q" hint-placeholder-count="1">
+
+                          <sc-if value="{{ q.isSurvivor }}" hint-placeholder-val="{{ false }}">
+                            <blockquote
+                              style="position:relative;margin:0;background:linear-gradient(180deg,#fdf3e6 0%,#fbead6 100%);border:1px solid rgba(163,22,15,0.22);border-left:4px solid #a3160f;border-right:4px solid #a3160f;border-radius:5px;padding:clamp(28px,3.8vh,44px) clamp(22px,3.4vw,40px) clamp(20px,3vh,28px);overflow:hidden;box-shadow:0 14px 40px -26px rgba(120,30,10,0.4);">
+                              <span aria-hidden="true"
+                                style="position:absolute;top:6px;left:15px;font-family:'Newsreader',serif;font-size:clamp(96px,15vw,158px);line-height:1;color:rgba(163,22,15,0.18);pointer-events:none;user-select:none;">&ldquo;</span>
+                              <div style="position:relative;display:flex;flex-direction:column;gap:0.85em;">
+                                <sc-for list="{{ q.text }}" as="qp" hint-placeholder-count="1">
+                                  <p
+                                    style="margin:0;font-family:'Newsreader',serif;font-size:clamp(16px,2vw,21px);line-height:1.62;color:#2a2620;text-wrap:pretty;">
+                                    {{ qp }}</p>
+                                </sc-for>
+                              </div>
+                              <div
+                                style="position:relative;margin-top:clamp(18px,2.6vh,26px);display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                                <span class="mono"
+                                  style="font-size:11.5px;letter-spacing:0.12em;color:#fff;background:#a3160f;border-radius:999px;padding:6px 13px;font-weight:600;white-space:nowrap;">{{
+                                  q.codeLabel }}</span>
+                                <span style="font-size:13.5px;line-height:1.5;color:#6e4a3a;text-wrap:pretty;">{{ q.meta
+                                  }}</span>
+                              </div>
+                            </blockquote>
+                          </sc-if>
+
+                          <sc-if value="{{ q.isOperative }}" hint-placeholder-val="{{ false }}">
+                            <blockquote
+                              style="position:relative;margin:0;background:#211f1b;border:1px solid rgba(255,255,255,0.08);border-radius:5px;padding:clamp(26px,3.6vh,40px) clamp(22px,3.4vw,40px) clamp(22px,3vh,30px);overflow:hidden;box-shadow:0 22px 54px -34px rgba(0,0,0,0.7);">
+                              <span aria-hidden="true"
+                                style="position:absolute;top:2px;left:15px;font-family:'Newsreader',serif;font-size:clamp(96px,15vw,158px);line-height:1;color:rgba(210,168,108,0.16);pointer-events:none;user-select:none;">&ldquo;</span>
+                              <div class="mono"
+                                style="position:relative;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#cf9a3c;font-weight:600;margin-bottom:clamp(14px,2vh,18px);display:flex;align-items:center;gap:9px;">
+                                <span
+                                  style="width:6px;height:6px;background:#cf9a3c;display:inline-block;flex-shrink:0;"></span>{{
+                                q.tag }}
+                              </div>
+                              <div style="position:relative;display:flex;flex-direction:column;gap:0.85em;">
+                                <sc-for list="{{ q.text }}" as="qp" hint-placeholder-count="1">
+                                  <p
+                                    style="margin:0;font-family:'Newsreader',serif;font-size:clamp(16px,2vw,21px);line-height:1.62;color:#e8e3d8;text-wrap:pretty;">
+                                    {{ qp }}</p>
+                                </sc-for>
+                              </div>
+                              <div
+                                style="position:relative;margin-top:clamp(18px,2.6vh,26px);padding-top:14px;border-top:1px solid rgba(255,255,255,0.12);">
+                                <div
+                                  style="font-family:'Newsreader',serif;font-size:16.5px;line-height:1.4;color:#f3efe5;">
+                                  {{ q.role }}</div>
+                                <div class="mono"
+                                  style="margin-top:5px;font-size:11px;letter-spacing:0.03em;line-height:1.5;color:rgba(232,227,216,0.55);">
+                                  {{ q.note }}</div>
+                              </div>
+                            </blockquote>
+                          </sc-if>
+
+                        </sc-for>
+                      </div>
+                    </sc-if>
+
+                  </div>
+                </sc-if>
+              </article>
+            </sc-for>
+
+            <sc-if value="{{ active.hasCrossBorder }}" hint-placeholder-val="{{ false }}">
+              <article
+                style="background:#ffffff;border:1px solid rgba(28,26,22,0.13);border-radius:4px;padding:clamp(24px,3.8vh,38px) clamp(18px,3.6vw,40px);box-shadow:0 1px 2px rgba(28,26,22,0.04);">
+                <span class="mono"
+                  style="display:inline-flex;align-items:center;padding:6px 13px 7px;border-radius:999px;background:#a3160f;color:#fff;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;line-height:1;">{{
+                  active.crossBorderHeading }}</span>
+                <div style="max-width:72ch;display:flex;flex-direction:column;gap:0.95em;margin-top:14px;">
+                  <sc-for list="{{ active.crossBorderParas }}" as="cp" hint-placeholder-count="3">
+                    <p
+                      style="margin:0;font-size:clamp(16.5px,1.7vw,18.5px);line-height:1.72;color:#2b2720;text-wrap:pretty;">
+                      {{ cp }}</p>
+                  </sc-for>
+                </div>
+              </article>
+            </sc-if>
+          </div>
+        </div>
+
+        <section data-coord
+          style="position:relative;z-index:2;background:#1b1610;color:#e9e0cc;border-top:1px solid rgba(0,0,0,0.4);overflow:hidden;">
+          <div aria-hidden="true"
+            style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#f5f4ef 0%,#e7ddc7 6%,#2a2114 24%,#1c1710 58%,#191309 100%);">
+          </div>
+          <div aria-hidden="true"
+            style="position:absolute;inset:0;pointer-events:none;opacity:0.4;background:repeating-linear-gradient(96deg,rgba(226,210,170,0.03) 0 2px,transparent 2px 5px),repeating-linear-gradient(4deg,rgba(226,210,170,0.022) 0 2px,transparent 2px 6px);">
+          </div>
+          <div aria-hidden="true"
+            style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 72% 54% at 50% 46%,rgba(255,240,205,0.06) 0%,transparent 70%);">
+          </div>
+
+          <div
+            style="position:relative;max-width:880px;margin:0 auto;padding:clamp(56px,9vh,110px) clamp(22px,5vw,40px) clamp(4px,1.5vh,14px);text-align:center;">
+            <span class="mono"
+              style="display:inline-flex;align-items:center;padding:9px 21px 10px;border-radius:999px;background:#a3160f;color:#fff;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;line-height:1;">The
+              Network</span>
+            <h2
+              style="margin:clamp(14px,2.4vh,22px) 0 0;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(30px,6vw,58px);line-height:1.03;letter-spacing:-0.016em;color:#f6efdd;text-wrap:balance;">
+              A Single Machinery of Disappearance</h2>
+            <p
+              style="margin:clamp(16px,2.6vh,26px) auto 0;max-width:690px;font-size:clamp(16px,2vw,20px);line-height:1.6;color:rgba(233,223,201,0.82);text-wrap:pretty;">
+              Six agencies carried out the disappearances &mdash; but rarely alone. A person seized by one force was
+              passed to the next: questioned by military intelligence, held in a battalion cell, moved to a shared
+              torture centre. This plate traces who worked with whom, drawn from a subset of cases documented by the
+              Commission of Inquiry on Enforced Disappearances.</p>
+          </div>
+
+          <div data-coordroot
+            style="position:relative;max-width:1500px;margin:0 auto;padding:clamp(10px,2vh,22px) clamp(10px,2.5vw,30px) clamp(40px,7vh,84px);min-height:520px;">
+          </div>
+        </section>
+
+        <footer
+          style="background:#17140f;color:#e7e1d6;padding:clamp(44px,7vh,78px) clamp(22px,6vw,60px) clamp(34px,5vh,52px);border-top:1px solid rgba(255,255,255,0.06);">
+          <div style="max-width:1080px;margin:0 auto;">
+            <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;">
+              <div style="max-width:440px;">
+                <a href="https://www.thedailystar.net" target="_blank" rel="noopener" aria-label="The Daily Star"
+                  style="display:inline-block;text-decoration:none;">
+                  <img src="assets/logo.svg" alt="The Daily Star"
+                    style="height:36px;width:auto;display:block;filter:brightness(0) invert(1);opacity:0.96;" />
+                </a>
+                <div
+                  style="margin-top:16px;font-size:13.5px;line-height:1.62;color:rgba(231,225,214,0.7);text-wrap:pretty;">
+                  Based on the findings of the <span style="color:#f0ece2;">Commission of Inquiry on Enforced
+                    Disappearances</span>, Bangladesh.</div>
+              </div>
+              <div style="display:flex;gap:11px;align-items:center;">
+                <a href="https://www.facebook.com/dailystarnews" target="_blank" rel="noopener" aria-label="Facebook"
+                  style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.045);color:rgba(231,225,214,0.85);transition:all .2s ease;"
+                  style-hover="background:#1877F2;border-color:#1877F2;color:#fff">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+                <a href="https://twitter.com/dailystarnews" target="_blank" rel="noopener" aria-label="X"
+                  style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.045);color:rgba(231,225,214,0.85);transition:all .2s ease;"
+                  style-hover="background:#ffffff;border-color:#ffffff;color:#000000">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
+                <a href="https://www.youtube.com/user/TheDailyStarNews" target="_blank" rel="noopener"
+                  aria-label="YouTube"
+                  style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.045);color:rgba(231,225,214,0.85);transition:all .2s ease;"
+                  style-hover="background:#FF0000;border-color:#FF0000;color:#fff">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                </a>
+                <a href="https://www.instagram.com/thedailystarnews" target="_blank" rel="noopener"
+                  aria-label="Instagram"
+                  style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.045);color:rgba(231,225,214,0.85);transition:all .2s ease;"
+                  style-hover="background:#E4405F;border-color:#E4405F;color:#fff">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/the-daily-star" target="_blank" rel="noopener"
+                  aria-label="LinkedIn"
+                  style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.045);color:rgba(231,225,214,0.85);transition:all .2s ease;"
+                  style-hover="background:#0A66C2;border-color:#0A66C2;color:#fff">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+      </section>
+
+      <div data-sheet-scrim style="{{ scrimStyle }}" onClick="{{ closeSheet }}" aria-hidden="true"></div>
+      <aside data-sheet data-lenis-prevent role="dialog" aria-modal="true" aria-label="Site details"
+        style="{{ sheetStyle }}">
+        <div style="display:flex;justify-content:center;padding:6px 0 12px;"><span
+            style="width:42px;height:4px;border-radius:999px;background:rgba(255,255,255,0.24);display:block;"></span>
+        </div>
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+          <div style="min-width:0;">
+            <div
+              style="font-family:'Newsreader',serif;font-size:19px;font-weight:600;color:#fff;line-height:1.24;text-wrap:pretty;">
+              {{ sheet.title }}</div>
+            <sc-if value="{{ sheet.subtitle }}" hint-placeholder-val="{{ false }}">
+              <div class="mono"
+                style="margin-top:5px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#e0554b;">{{
+                sheet.subtitle }}</div>
+            </sc-if>
+          </div>
+          <button type="button" onClick="{{ closeSheet }}" aria-label="Close"
+            style="flex-shrink:0;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.06);color:#f2efe8;font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#215;</button>
+        </div>
+        <sc-if value="{{ sheet.hasDesc }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:14px 0 0;font-size:13px;line-height:1.6;color:rgba(242,239,232,0.74);text-wrap:pretty;">{{
+            sheet.desc }}</p>
+        </sc-if>
+        <sc-if value="{{ sheet.hasItems }}" hint-placeholder-val="{{ false }}">
+          <div style="margin:16px 0 0;display:flex;flex-direction:column;gap:0;">
+            <sc-for list="{{ sheet.items }}" as="it" hint-placeholder-count="3">
+              <div style="border-top:1px solid rgba(255,255,255,0.09);padding:11px 0;">
+                <div style="font-family:'Newsreader',serif;font-size:15px;font-weight:600;color:#fff;line-height:1.28;">
+                  {{ it.name }}</div>
+                <div
+                  style="margin-top:3px;font-size:11.5px;line-height:1.5;color:rgba(242,239,232,0.62);text-wrap:pretty;">
+                  {{ it.desc }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </aside>
+
+    </div>
+  </x-dc>
+  <script type="text/x-dc" data-dc-script
+    data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;}}">
 class Component extends DCLogic {
   constructor(props){
     super(props);
@@ -553,7 +1320,7 @@ class Component extends DCLogic {
       'NOT ASSESSED': { color:'#616161', text:'#5A5A5A', glyph:'\u25CB', label:'Not assessed' }
     };
     const cap = {
-      police_1:`A hand-drawn floor map of the LIC-team detention site at the Police Headquarters, ground floor, reconstructed from victim testimony and verified during the Commission\u2019s visit.`,
+      police_1:`A hand-drawn floor map of the LIC-team detention site at the Police Headquarters, ground floor, reconstructed from victim testimony and verified during the Commission\u2019s visit. The room in the top right corner marked "X" shows where the detainees were kept`,
       rab_1:`Sketch of the RAB-1 ground-floor cells.`,
       rab_2:`A RAB-1 cell deceptively hidden behind a door labelled \u201cration store\u201d, and freshly painted.`,
       rab_3:`Cloth partitions used to form temporary cells for captives at the TFI centre.`,
@@ -598,12 +1365,12 @@ class Component extends DCLogic {
         ],
         sites:[
           {
-            id:'police-hq', name:'Police Headquarters, Dhaka \u2014 LIC-team cell (ground floor)',
+            id:'police-hq', name:'Police Headquarters, Dhaka \u2014 Lawful Interception Cell (ground floor)',
             status:'INTACT', statusNote:`Reconstructed from victim testimony and verified during the Commission\u2019s visit in the presence of the current IGP.`,
             location:'Bangladesh Police Headquarters, Dhaka (ground floor)',
             operator:'Bangladesh Police (LIC team)',
             images:['police_1'],
-            description:[`A detention room on the ground floor of the Police Headquarters, maintained by the LIC team. Survivors describe a relatively spacious room with a wooden door and sealed windows, a fan and a light, but no bed \u2014 only a prayer mat on a tiled floor. Guards were present at all times.`],
+            description:[`A detention room on the ground floor of the Police Headquarters, maintained by the Lawful Interception Cell (LIC) team. The LIC is a unit that specialises in digital forensics and surveillance. Survivors describe a relatively spacious room with a wooden door and sealed windows, a fan and a light, but no bed \u2014 only a prayer mat on a tiled floor. Guards were present at all times.`],
             happened:[`The site was reconstructed from victim testimony and then confirmed by the Commission during an on-site visit conducted in the presence of the current IGP.`],
             testimonies:[
               { type:'survivor', code:'BHFD4', meta:`22-year-old male; abducted by the police in 2017; disappeared for 136 days.`,
@@ -693,16 +1460,20 @@ class Component extends DCLogic {
           {
             id:'rab-11', name:'RAB-11 Battalion cells',
             status:'ALTERED', statusNote:`One intact cell is documented, but a three-cell room was stripped of its partitions and freshly painted to obscure the evidence.`,
-            location:'RAB-11 Battalion',
+            location:'RAB-11 Battalion, Narayanganj',
             operator:'RAB-11',
             images:['rab_4','rab_11_subdivided'],
             description:[`RAB-11 detention space includes at least one cell documented intact and a larger room that had previously been subdivided into three detention cells.`],
-            happened:[`Before the Commission\u2019s inspection, the partition walls and cell doors of the three-cell room were removed and the walls and ceiling freshly painted to obscure the evidence \u2014 but the difference between the old and new paint itself proved indicative. RAB-11 recurs across the case data: a vehicle marked RAB-11 was seen at abduction scenes, and survivors\u2019 conditions matched RAB-11 facilities.`]
+            happened:[`Before the Commission\u2019s inspection, the partition walls and cell doors of the three-cell room were removed and the walls and ceiling freshly painted to obscure the evidence \u2014 but the difference between the old and new paint itself proved indicative. RAB-11 recurs across the case data: a vehicle marked RAB-11 was seen at abduction scenes, and survivors\u2019 conditions matched RAB-11 facilities.`],
+            testimonies:[
+              { type:'survivor', code:'DGD', meta:`56-year-old male; abducted by RAB-11 in 2017; disappeared for 56 days.`,
+                text:[`So Alep Uddin\u2014I learned his name later, I didn\u2019t know it at the time\u2014he tortured [me] a lot with a stick. \u2026 One day he tortured me more than usual. After torturing me, he said to hang him up, keep him hanging. There\u2019s a cell grille, right? The rods that are there\u2026 [with those] they kept me hanging like that.\u2026 Tied up with handcuffs. \u2026 So after being kept like this for many hours, I couldn\u2019t take it anymore. That day, when they tortured me again later, my fingernail came off completely.`] }
+            ]
           },
           {
             id:'rab-7', name:'RAB-7 Battalion cell',
             status:'INTACT', statusNote:`No post-2024 alteration recorded; the report documents the cell as built.`,
-            location:'RAB-7 Battalion',
+            location:'RAB-7 Battalion,Bypass Road (Sagarika Road), Chattogram',
             operator:'RAB-7',
             images:['rab_5'],
             description:[`A RAB-7 cell built some time in 2017 by subdividing larger rooms into smaller detention cells.`]
@@ -801,7 +1572,10 @@ class Component extends DCLogic {
             alsoUsedBy:'Shared its Minto Road compound with CTTC (tin-shed offices) while CTTC\u2019s building was under construction',
             images:['db_1','db_2_jomtupi'],
             description:[`At Minto Road, DB kept its detainees on the ground floor. Survivors describe the deliberate mixing of legal and illegal detainees, and transfers between unlawful and lawful cells timed to court appearances.`],
-            happened:[`Among implements recovered in connection with DB is a \u201cjom tupi\u201d \u2014 a blindfold hood used to keep detainees from seeing. It is an implement of captivity, not a cell.`]
+            happened:[
+              `Among implements recovered in connection with DB is a \u201cjom tupi\u201d \u2014 a blindfold hood used to keep detainees from seeing. It is an implement of captivity, not a cell.`,
+              `Not every officer was untroubled by the work. One detainee reported that as he was being transferred into DGFI custody, the DB officer riding with him in the car appeared visibly shaken \u2014 his eyes welling up, asking for forgiveness \u2014 seemingly disturbed at having to carry out the order himself.`
+            ]
           }
         ]
       },
@@ -821,7 +1595,13 @@ class Component extends DCLogic {
             alsoUsedBy:'Shared office space with DB (tin-shed buildings in the same compound) while the current Minto Road building was being built',
             images:['cttc_1','cttc_2'],
             description:[`CTTC kept its detainees in ground-floor and seventh-floor cells. The seventh-floor cells, for \u201cspecial detainees,\u201d are smaller than the ground-floor cells and contain a toilet separated by a half-wall at the back; the ground-floor cells have similar toilets but to the side. While the current building was under construction, CTTC shared tin-shed offices with DB in the same compound; detainees were kept under desks and handcuffed to chairs.`],
-            happened:[`Detainees describe brutal torture to extract confessions. In one documented case, a detainee was beaten for nearly 24 hours at CTTC, with his captors taking turns \u2014 the kind of sustained abuse the Commission recorded in CTTC custody.`]
+            happened:[`Detainees describe brutal torture to extract confessions. In one documented case, a detainee was beaten for nearly 24 hours at CTTC, with his captors taking turns \u2014 the kind of sustained abuse the Commission recorded in CTTC custody.`],
+            testimonies:[
+              { type:'survivor', code:'EDB', meta:`27-year-old male; abducted by CTTC in 2021; disappeared for 25 days.`,
+                text:[`They kept telling me the whole way: \u2018If you act up, or if you don\u2019t give a 164 [confessional statement], we\u2019ll bring your wife here. We\u2019ll beat you however we like. \u2026 There are no rules for us here, and no one can do anything about it.\u2019`] },
+              { type:'survivor', code:'BGIH', meta:`45-year-old male; abducted by CTTC in 2023; disappeared for 4 days.`,
+                text:[`They made me write down various things, made me memorize them, and told me to say these things when I went before the magistrate. Otherwise, they said, they would bring me back on remand as many times as they wished.`] }
+            ]
           }
         ]
       },
@@ -836,7 +1616,7 @@ class Component extends DCLogic {
           {
             id:'dgfi-jic', name:'Joint Interrogation Centre (JIC) \u2014 \u201cAynaghor,\u201d the House of Mirrors',
             status:'ALTERED', statusNote:`Partial structural alterations after 5 August 2024 \u2014 walls where prisoners had carved their details were painted over, and sections were broken open; destruction ordered by the outgoing DG.`,
-            location:'Within Dhaka Cantonment',
+            location:'DGFI Headquarters, Dhaka Cantonment, Dhaka',
             operator:'DGFI \u2014 run by CTIB, staffed entirely by military officers seconded to DGFI',
             alsoUsedBy:'Detainees frequently transferred to and from RAB Intelligence and DB',
             images:['dgfi_1','dgfi_2','dgfi_3','dgfi_5','dgfi_4','dgfi_6_destruction'],
@@ -866,7 +1646,7 @@ class Component extends DCLogic {
           {
             id:'nsi-cell', name:'NSI detention cell',
             status:'INTACT', statusNote:`The rotating-chair torture device was recovered in place at NSI.`,
-            location:'NSI facility',
+            location:'NSI Gulshan Office, Dhaka',
             operator:'National Security Intelligence',
             alsoUsedBy:'Victim abducted jointly by NSI and RAB-4',
             images:['nsi_1'],
@@ -1552,6 +2332,7 @@ class Component extends DCLogic {
     if (this._tw) clearTimeout(this._tw);
     if (this._resize) window.removeEventListener('resize', this._resize);
     if (this._rt) clearTimeout(this._rt);
+    if (this._rfTimer) clearTimeout(this._rfTimer);
     if (this._st) this._st.kill(true);
     if (this._tl) this._tl.kill();
     if (this._map) this._map.remove();
@@ -1580,6 +2361,9 @@ class Component extends DCLogic {
 
   _init(g, ST, L){
     g.registerPlugin(ST);
+    // Don't treat the mobile address-bar show/hide (a height-only "resize") as a real resize —
+    // it otherwise churns the pinned trigger and can fling the page to the top.
+    try { ST.config({ ignoreMobileResize: true }); } catch (e) {}
     const root = this.rootRef.current; if (!root) return;
     const q = (s) => root.querySelector(s);
     const qa = (s) => Array.from(root.querySelectorAll(s));
@@ -1590,7 +2374,7 @@ class Component extends DCLogic {
       nodim: q('[data-svg="nodim"]'), withdim: q('[data-svg="withdim"]'),
       block: q('[data-svg="block"]'), floor: q('[data-svg="floor"]'),
       hero: q('[data-hero]'), herobg: q('[data-herobg]'), casebox: q('[data-casebox]'),
-      words: qa('.word'),
+      words: qa('.word'), wtexts: qa('.wtext'),
       inners: qa('[data-cardinner]'),
       floorEcho: q('[data-floorecho]'), space: q('[data-space]'), mapEl: q('[data-map]'),
       maptitle: q('[data-maptitle]'), titleDhaka: q('[data-title-dhaka]'), titleBd: q('[data-title-bd]'), mapcredit: q('[data-mapcredit]')
@@ -1655,8 +2439,20 @@ class Component extends DCLogic {
       g.set([e.floorEcho, e.space, e.mapEl, e.maptitle, e.mapcredit], { opacity:0 });
       const _bd = this._mapState === 'bd';
       g.set(e.titleDhaka, { opacity: _bd ? 0 : 1 }); g.set(e.titleBd, { opacity: _bd ? 1 : 0 });
+      if (e.maptitle) e.maptitle.setAttribute('data-mapstate', _bd ? 'bd' : 'dhaka');
       g.set(e.floorEcho, { transformOrigin:'50% 50%', scale:1 });
       e.words.forEach((w) => g.set(w, { opacity:(+w.dataset.op||0.14), x:0, y:0 }));
+      // Word fade-in is driven here (not by a CSS entrance animation) so that ScrollTrigger's
+      // pin refreshes — which detach/re-insert the pinned stage and would restart any CSS
+      // animation — cannot replay it. Inline styles survive re-insertion, so it runs exactly once.
+      if (e.wtexts && e.wtexts.length){
+        if (reduce){ g.set(e.wtexts, { opacity:1, filter:'none' }); }
+        else if (!this._introDone){
+          this._introDone = true;
+          g.fromTo(e.wtexts, { opacity:0, filter:'blur(7px)' },
+            { opacity:1, filter:'blur(0px)', duration:0.6, ease:'power2.out', stagger:{ each:0.05, from:'random' }, delay:0.12 });
+        }
+      }
       e.inners.forEach((i) => g.set(i, { opacity:0, y:startY }));
 
       const tl = g.timeline({ defaults:{ ease:'none' } });
@@ -1726,9 +2522,27 @@ class Component extends DCLogic {
 
     build();
     this._revealB = 0;
-    this._resize = () => { if (this._rt) clearTimeout(this._rt); this._rt = setTimeout(() => { build(); if (this._map) this._map.invalidateSize(); }, 220); };
+    // Coalesce the flurry of post-load layout refreshes (window load, each hero image, fonts ready)
+    // into ONE. Each ScrollTrigger.refresh() reverts + re-applies the pin, so fewer calls = a
+    // smoother, quieter load with no repeated re-layout of the pinned stage.
+    const scheduleRefresh = () => { if (this._rfTimer) clearTimeout(this._rfTimer); this._rfTimer = setTimeout(() => { this._rfTimer = null; ST.refresh(); }, 200); };
+    this._lastW = window.innerWidth;
+    this._resize = () => { if (this._rt) clearTimeout(this._rt); this._rt = setTimeout(() => {
+      const w = window.innerWidth;
+      // Height-only change (mobile address bar, on-screen keyboard, etc.): don't rebuild —
+      // rebuilding kills+recreates the pin and jumps the page to the top. Just re-measure the map.
+      if (w === this._lastW) { if (this._map) this._map.invalidateSize(); return; }
+      this._lastW = w;
+      // A real width change needs a rebuild (hero zoom geometry depends on width). Capture and
+      // restore the scroll position across it so the resize doesn't fling the reader into the hero.
+      const y = window.scrollY || window.pageYOffset || 0;
+      build();
+      if (this._map) this._map.invalidateSize();
+      if (this._lenis) this._lenis.scrollTo(y, { immediate: true, force: true });
+      else window.scrollTo(0, y);
+    }, 220); };
     window.addEventListener('resize', this._resize);
-    window.addEventListener('load', () => ST.refresh());
+    window.addEventListener('load', scheduleRefresh);
     const _tabbar = q('[data-tabbar]'), _coordSec = q('[data-coord]');
     if (_tabbar && _coordSec){
       _tabbar.style.transition = 'transform .4s cubic-bezier(.4,0,.2,1), opacity .3s ease';
@@ -1739,10 +2553,9 @@ class Component extends DCLogic {
         this._cgTabIO.observe(_coordSec);
       }
     }
-    Object.values(this._el).forEach(v => { if (v && v.tagName === 'IMG') v.addEventListener('load', () => ST.refresh()); });
-    setTimeout(() => ST.refresh(), 500);
-    setTimeout(() => ST.refresh(), 1400);
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => ST.refresh());
+    Object.values(this._el).forEach(v => { if (v && v.tagName === 'IMG') v.addEventListener('load', scheduleRefresh); });
+    setTimeout(scheduleRefresh, 900);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleRefresh);
   }
 
   _reveal(b){
@@ -1791,7 +2604,7 @@ class Component extends DCLogic {
       touchZoom:false, inertia:true, worldCopyJump:false });
     this._map = map;
     this._tfi = L.latLng(23.85742, 90.40339);
-    this._focus = L.latLng(23.78908, 90.41376); // NSI Gulshan office — Dhaka map recentred here per feedback
+    this._focus = L.latLng(23.79988723482887, 90.41459545216073); // NSI Gulshan office — Dhaka map recentred here per feedback
     this._isMobile = !!(window.matchMedia && window.matchMedia('(max-width: 767px)').matches);
     this._bdBounds = L.latLngBounds([[20.55, 88.00], [26.72, 92.72]]);
     this._bdCenter = this._bdBounds.getCenter();
@@ -1819,7 +2632,7 @@ class Component extends DCLogic {
       { n:'RAB-13', d:'Detention site operated by RAB-13, Rangpur Sadar (Rangpur Division).', lat:25.73901, lng:89.25441 },
       { n:'RAB-6', d:'Detention site operated by RAB-6, Khulna \u2014 the Rupsha Bridge is visible from the cell ventilator.', lat:22.81540, lng:89.58730 },
       { n:'DGFI\u2019s JIC', d:'Joint Interrogation Cell, Directorate General of Forces Intelligence, Dhaka.', lat:23.79032, lng:90.38855, city:'dhaka' },
-      { n:'NSI Gulshan Office', d:'Gulshan office, National Security Intelligence, Dhaka.', lat:23.78908, lng:90.41376, city:'dhaka' }
+      { n:'NSI Gulshan Office', d:'Gulshan office, National Security Intelligence, Dhaka.', lat:23.79988723482887, lng:90.41459545216073, city:'dhaka' }
     ];
 
     this._dhakaGroup = L.layerGroup();
@@ -1902,6 +2715,7 @@ class Component extends DCLogic {
     if (toBd) this._showPing(); else this._showDhakaSites();
     g.set(e.titleDhaka, { opacity: toBd ? 0 : 1 });
     g.set(e.titleBd, { opacity: toBd ? 1 : 0 });
+    if (e.maptitle) e.maptitle.setAttribute('data-mapstate', toBd ? 'bd' : 'dhaka');
     const center = toBd ? this._bdCenter : [this._dhakaCenter.lat, this._dhakaCenter.lng];
     const zoom = toBd ? this._fitZ : this._dhakaZoom;
     if (this._reduce){ m.setView(center, zoom, { animate:false }); this._flying = false; if (this._mapVisible) e.mapEl.style.pointerEvents = 'auto'; }
@@ -1910,4 +2724,5 @@ class Component extends DCLogic {
 }
 </script>
 </body>
+
 </html>
