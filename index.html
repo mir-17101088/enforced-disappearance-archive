@@ -1618,7 +1618,7 @@
         <div data-tabbar
           style="position:sticky;top:0;z-index:20;margin-top:clamp(30px,5vh,56px);background:#17140f;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(0,0,0,0.5);box-shadow:0 12px 34px -20px rgba(0,0,0,0.7);">
           <div
-            style="max-width:1080px;margin:0 auto;padding:clamp(11px,1.7vh,15px) clamp(12px,4vw,32px);display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+            style="max-width:1080px;margin:0 auto;padding:clamp(8px,1.4vh,13px) clamp(8px,2.5vw,26px);display:flex;flex-wrap:wrap;gap:clamp(5px,0.75vw,8px);justify-content:center;align-items:center;">
             <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="7">
               <button type="button" onClick="{{ t.onClick }}" style="{{ t.style }}" style-hover="{{ t.hoverStyle }}">
                 <span>{{ t.short }}</span>
@@ -2541,7 +2541,7 @@ class Component extends DCLogic {
         { t:'see inside RAB', px:440, py:495, lx:440, ly:445, align:'middle' }
       ] : [
         { t:'the core \u2014 23 cases together', px:350, py:255, lx:385, ly:415, align:'middle' },
-        { t:'tap to see 15 units inside RAB', px:270, py:620, lx:280, ly:570, align:'middle' },
+        { t:'see inside RAB', px:270, py:620, lx:280, ly:570, align:'middle' },
         { t:'same cells as DB, for years', px:525, py:840, lx:520, ly:695, align:'middle' }
       ];
       return { vb, nodes, edges, notes };
@@ -3180,14 +3180,14 @@ class Component extends DCLogic {
         short: a.short, count: a.badge || '',
         onClick: () => this._selectTab(i),
         style: Object.assign({
-          display:'inline-flex', alignItems:'center', gap:'8px',
-          padding:'11px 18px', borderRadius:'999px',
-          fontFamily:"'Newsreader',Georgia,serif", fontSize:'clamp(15px,1.6vw,17.5px)',
+          display:'inline-flex', alignItems:'center', gap:'clamp(5px, 0.65vw, 8px)',
+          padding:'clamp(6px, 0.9vw, 10px) clamp(10px, 1.25vw, 18px)', borderRadius:'999px',
+          fontFamily:"'Newsreader',Georgia,serif", fontSize:'clamp(13px, 1.4vw, 17px)',
           fontWeight:550, lineHeight:'1', cursor:'pointer', transition:'all .2s ease', whiteSpace:'nowrap'
         }, on ? { background:'#f3ecdd', color:'#17140f', border:'1px solid #f3ecdd', boxShadow:'0 6px 18px -8px rgba(0,0,0,0.6)' }
               : { background:'rgba(255,255,255,0.045)', color:'rgba(240,235,225,0.72)', border:'1px solid rgba(255,255,255,0.18)' }),
         hoverStyle: on ? {} : { borderColor:'rgba(255,255,255,0.4)', background:'rgba(255,255,255,0.12)', color:'#fff' },
-        countStyle: { fontSize:'11.5px', fontWeight:700, letterSpacing:'0.02em', color: on ? '#a3160f' : '#e0554b' }
+        countStyle: { fontSize:'clamp(10px, 1vw, 12px)', fontWeight:700, letterSpacing:'0.02em', color: on ? '#a3160f' : '#e0554b' }
       };
     });
     const ag = this._AG[this.state.activeTab];
